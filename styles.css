@@ -798,35 +798,94 @@ strong { font-weight: 600; }
   max-width: 64ch;
 }
 
-.cap03-palancas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  max-width: var(--max-wide);
-  margin-bottom: 2rem;
+/* Archivador con pestañas: las 7 fichas-palanca como tabs.
+   La pestaña activa tiene fondo paper-soft (el mismo del panel)
+   y se "fusiona" visualmente con la ficha que está debajo. */
+.cap03-tabs { max-width: var(--max-wide); margin-bottom: 2rem; }
+
+.cap03-tabs__nav {
+  display: flex;
+  gap: 4px;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 2;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
 }
-.cap03-ficha {
-  background: var(--paper-soft);
-  border-left: 3px solid var(--red);
-  padding: 1.4rem 1.5rem 1.2rem;
+.cap03-tab {
+  flex: 0 0 auto;
+  min-width: 7.5rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 0.55rem 0.85rem 0.7rem;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
   display: flex;
   flex-direction: column;
+  gap: 0.18rem;
+  color: var(--ink-soft);
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  scroll-snap-align: start;
 }
-.cap03-ficha__num {
+.cap03-tab:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+.cap03-tab.is-active {
+  background: var(--paper-soft);
+  color: var(--ink);
+  border-color: var(--rule-strong);
+  border-top: 3px solid var(--red);
+  padding-top: calc(0.55rem - 2px);
+  transform: translateY(0);
+  z-index: 3;
+}
+.cap03-tab__num {
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   letter-spacing: 0.06em;
   color: var(--red);
-  text-transform: lowercase;
   font-weight: 500;
+}
+.cap03-tab__title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  line-height: 1.25;
+}
+.cap03-tab.is-active .cap03-tab__title { color: var(--ink); }
+
+.cap03-tabs__panels {
+  position: relative;
+  border: 1px solid var(--rule-strong);
+  border-radius: 0 4px 4px 4px;
+  background: var(--paper-soft);
+  min-height: 280px;
+}
+.cap03-ficha {
+  display: none;
+  padding: 1.5rem 1.8rem 1.4rem;
+  flex-direction: column;
+  animation: cap03FichaIn 0.3s var(--ease);
+}
+.cap03-ficha.is-active { display: flex; }
+@keyframes cap03FichaIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
 }
 .cap03-ficha__titulo {
   font-family: var(--display);
   font-weight: 500;
-  font-size: 1.45rem;
-  line-height: 1.18;
-  letter-spacing: -0.01em;
-  margin: 0.35rem 0 0.75rem;
+  font-size: 1.65rem;
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+  margin: 0 0 0.85rem;
   color: var(--ink);
 }
 .cap03-ficha__def {
@@ -879,12 +938,18 @@ strong { font-weight: 600; }
 }
 
 @media (max-width: 900px) {
-  .cap03-palancas {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
+  .cap03-tabs__nav {
+    gap: 3px;
+    padding-bottom: 2px;
   }
+  .cap03-tab {
+    min-width: 6.4rem;
+    padding: 0.5rem 0.7rem 0.6rem;
+  }
+  .cap03-tab__title { font-size: 0.72rem; }
   .cap03-ficha { padding: 1.15rem 1.2rem 1rem; }
   .cap03-ficha__titulo { font-size: 1.3rem; }
+  .cap03-ficha__def { font-size: 0.95rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
