@@ -1,32 +1,34 @@
-/* Cap. 03.b · archivador con pestañas para las 7 palancas. */
+/* Cap. 03.b · abanico de cartas para las 7 palancas. */
 
 (() => {
   const root = document.querySelector("[data-cap03-tabs]");
   if (!root) return;
 
-  const tabs = Array.from(root.querySelectorAll(".cap03-tab"));
-  const panels = Array.from(root.querySelectorAll(".cap03-ficha"));
+  const fichas = Array.from(root.querySelectorAll(".cap03-ficha"));
 
   function activate(id) {
-    tabs.forEach((t) => {
-      const on = t.dataset.tab === id;
-      t.classList.toggle("is-active", on);
-      t.setAttribute("aria-selected", on ? "true" : "false");
+    fichas.forEach((f) => {
+      const on = f.dataset.panel === id;
+      f.classList.toggle("is-active", on);
+      f.setAttribute("aria-selected", on ? "true" : "false");
     });
-    panels.forEach((p) => p.classList.toggle("is-active", p.dataset.panel === id));
   }
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => activate(tab.dataset.tab));
-    tab.addEventListener("keydown", (e) => {
-      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-      e.preventDefault();
-      const idx = tabs.indexOf(tab);
-      const next = e.key === "ArrowRight"
-        ? (idx + 1) % tabs.length
-        : (idx - 1 + tabs.length) % tabs.length;
-      tabs[next].focus();
-      activate(tabs[next].dataset.tab);
+  fichas.forEach((f) => {
+    f.addEventListener("click", () => activate(f.dataset.panel));
+    f.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        activate(f.dataset.panel);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        const idx = fichas.indexOf(f);
+        const next = e.key === "ArrowRight"
+          ? (idx + 1) % fichas.length
+          : (idx - 1 + fichas.length) % fichas.length;
+        fichas[next].focus();
+        activate(fichas[next].dataset.panel);
+      }
     });
   });
 })();

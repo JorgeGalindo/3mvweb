@@ -798,97 +798,94 @@ strong { font-weight: 600; }
   max-width: 64ch;
 }
 
-/* Archivador físico: 7 pestañas escalonadas en diagonal, una asomando
-   detrás de la siguiente. Click → trae la ficha al frente. */
-.cap03-tabs { max-width: var(--max-wide); margin-bottom: 2rem; }
-
-.cap03-tabs__nav {
+/* Abanico de cartas: 7 fichas apiladas con rotación simétrica
+   desde la base. La activa pivota a vertical y se trae al frente
+   con su contenido. Las inactivas asoman su cabecera rotada. */
+.cap03-tabs {
   position: relative;
-  height: 5.4rem;
-  margin-bottom: -1px;
-}
-.cap03-tab {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 9.2rem;
-  background: var(--paper-deep);
-  border: 1px solid var(--rule);
-  border-bottom: none;
-  border-radius: 6px 6px 0 0;
-  padding: 0.55rem 0.85rem 0.7rem;
-  cursor: pointer;
-  font-family: inherit;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0.18rem;
-  color: var(--ink-soft);
-  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
-}
-/* offsets escalonados: cada pestaña asoma 5.4rem a la derecha
-   y 0.5rem hacia abajo respecto a la anterior */
-.cap03-tab:nth-child(1) { transform: translate(0,        0);       z-index: 7; }
-.cap03-tab:nth-child(2) { transform: translate(5.4rem,   0.5rem);  z-index: 6; }
-.cap03-tab:nth-child(3) { transform: translate(10.8rem,  1rem);    z-index: 5; }
-.cap03-tab:nth-child(4) { transform: translate(16.2rem,  1.5rem);  z-index: 4; }
-.cap03-tab:nth-child(5) { transform: translate(21.6rem,  2rem);    z-index: 3; }
-.cap03-tab:nth-child(6) { transform: translate(27rem,    2.5rem);  z-index: 2; }
-.cap03-tab:nth-child(7) { transform: translate(32.4rem,  3rem);    z-index: 1; }
-.cap03-tab:hover {
-  background: var(--paper);
-  color: var(--ink);
-}
-.cap03-tab.is-active {
-  background: var(--paper-soft);
-  color: var(--ink);
-  border-color: var(--rule-strong);
-  border-top: 3px solid var(--red);
-  padding-top: calc(0.55rem - 2px);
-  z-index: 99;
-}
-.cap03-tab__num {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  color: var(--red);
-  font-weight: 500;
-}
-.cap03-tab__title {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
-  text-transform: lowercase;
-  line-height: 1.25;
-}
-.cap03-tab.is-active .cap03-tab__title { color: var(--ink); }
-
-.cap03-tabs__panels {
-  position: relative;
-  border: 1px solid var(--rule-strong);
-  border-radius: 0 4px 4px 4px;
-  background: var(--paper-soft);
-  min-height: 280px;
+  max-width: var(--max-wide);
+  height: 28rem;
+  margin: 1rem 0 2rem;
 }
 .cap03-ficha {
-  display: none;
-  padding: 1.5rem 1.8rem 1.4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 22rem;
+  margin-left: -11rem;
+  background: var(--paper-soft);
+  border: 1px solid var(--rule-strong);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 0.9rem 1.2rem 1rem;
+  cursor: pointer;
+  display: flex;
   flex-direction: column;
-  animation: cap03FichaIn 0.3s var(--ease);
+  transform-origin: bottom center;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), background 0.3s var(--ease);
+  box-shadow: 0 -1px 4px rgba(26, 28, 36, 0.04);
+  outline: none;
 }
-.cap03-ficha.is-active { display: flex; }
-@keyframes cap03FichaIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: none; }
+.cap03-ficha:hover { background: var(--paper); }
+.cap03-ficha:focus-visible { box-shadow: 0 0 0 2px var(--red), 0 -1px 4px rgba(26, 28, 36, 0.04); }
+
+/* Abanico simétrico: rotación creciente hacia los extremos */
+.cap03-ficha:nth-child(1) { transform: rotate(-18deg); z-index: 1; }
+.cap03-ficha:nth-child(2) { transform: rotate(-12deg); z-index: 2; }
+.cap03-ficha:nth-child(3) { transform: rotate(-6deg);  z-index: 3; }
+.cap03-ficha:nth-child(4) { transform: rotate(0deg);   z-index: 4; }
+.cap03-ficha:nth-child(5) { transform: rotate(6deg);   z-index: 3; }
+.cap03-ficha:nth-child(6) { transform: rotate(12deg);  z-index: 2; }
+.cap03-ficha:nth-child(7) { transform: rotate(18deg);  z-index: 1; }
+
+/* Estado activo: pivota a vertical, sube al frente, se expande */
+.cap03-ficha.is-active {
+  transform: rotate(0deg) translateY(-1.2rem);
+  z-index: 99;
+  background: var(--paper);
+  border-top: 3px solid var(--red);
+  padding-top: calc(0.9rem - 2px);
+  box-shadow: 0 -8px 28px rgba(26, 28, 36, 0.18);
+}
+
+.cap03-ficha__head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  pointer-events: none;
+}
+.cap03-ficha__num {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  text-transform: lowercase;
+  font-weight: 500;
 }
 .cap03-ficha__titulo {
   font-family: var(--display);
   font-weight: 500;
-  font-size: 1.65rem;
+  font-size: 1.2rem;
   line-height: 1.15;
   letter-spacing: -0.012em;
-  margin: 0 0 0.85rem;
+  margin: 0;
   color: var(--ink);
+}
+.cap03-ficha.is-active .cap03-ficha__titulo { font-size: 1.55rem; }
+
+.cap03-ficha__body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s var(--ease), opacity 0.3s var(--ease), margin-top 0.4s var(--ease);
+  pointer-events: none;
+  margin-top: 0;
+}
+.cap03-ficha.is-active .cap03-ficha__body {
+  max-height: 28rem;
+  opacity: 1;
+  pointer-events: auto;
+  margin-top: 0.85rem;
 }
 .cap03-ficha__def {
   font-family: var(--serif);
@@ -939,40 +936,45 @@ strong { font-weight: 600; }
   border-top: 1px dashed var(--rule);
 }
 
-/* Móvil: la diagonal no entra. Vuelve a layout en fila con scroll horizontal,
-   sin solapamiento. */
+/* Móvil: el abanico no funciona en pantalla estrecha; las fichas
+   pasan a un acordeón vertical limpio. Click → expande body. */
 @media (max-width: 900px) {
-  .cap03-tabs__nav {
-    position: relative;
+  .cap03-tabs {
     height: auto;
     display: flex;
-    gap: 4px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
-    padding-bottom: 0;
-    margin-bottom: -1px;
+    flex-direction: column;
+    gap: 0.4rem;
   }
-  .cap03-tab,
-  .cap03-tab:nth-child(1),
-  .cap03-tab:nth-child(2),
-  .cap03-tab:nth-child(3),
-  .cap03-tab:nth-child(4),
-  .cap03-tab:nth-child(5),
-  .cap03-tab:nth-child(6),
-  .cap03-tab:nth-child(7) {
+  .cap03-ficha,
+  .cap03-ficha:nth-child(1),
+  .cap03-ficha:nth-child(2),
+  .cap03-ficha:nth-child(3),
+  .cap03-ficha:nth-child(4),
+  .cap03-ficha:nth-child(5),
+  .cap03-ficha:nth-child(6),
+  .cap03-ficha:nth-child(7) {
     position: relative;
+    bottom: auto;
+    left: auto;
+    margin-left: 0;
+    width: 100%;
     transform: none;
     z-index: auto;
-    flex: 0 0 auto;
-    width: auto;
-    min-width: 6.4rem;
-    padding: 0.5rem 0.7rem 0.6rem;
-    scroll-snap-align: start;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    box-shadow: none;
+    padding: 0.9rem 1.1rem;
   }
-  .cap03-tab__title { font-size: 0.72rem; }
-  .cap03-ficha { padding: 1.15rem 1.2rem 1rem; }
-  .cap03-ficha__titulo { font-size: 1.3rem; }
+  .cap03-ficha.is-active {
+    transform: none;
+    border-left: 3px solid var(--red);
+    border-top: 1px solid var(--rule);
+    padding-top: 0.9rem;
+    background: var(--paper);
+    box-shadow: 0 1px 4px rgba(26, 28, 36, 0.06);
+  }
+  .cap03-ficha__titulo { font-size: 1.15rem; }
+  .cap03-ficha.is-active .cap03-ficha__titulo { font-size: 1.3rem; }
   .cap03-ficha__def { font-size: 0.95rem; }
 }
 
