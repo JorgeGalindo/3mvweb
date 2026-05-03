@@ -924,15 +924,19 @@ strong { font-weight: 600; }
   .cap03-tabs__nav {
     gap: 3px;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
   }
   .cap03-tab {
-    flex: 0 0 auto;
-    min-width: 4.6rem;
-    padding: 0.5rem 0.7rem 0.7rem;
-    scroll-snap-align: start;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.55rem 0.4rem 0.7rem;
+    text-align: center;
+    align-items: center;
+  }
+  /* Sólo número visible en móvil, las pestañas quedan más estrechas */
+  .cap03-tab__title { display: none; }
+  .cap03-tab__num {
+    font-size: 0.95rem;
+    opacity: 1;
   }
   .cap03-tabs__panel { padding: 1.15rem 1.2rem 1rem; }
   .cap03-ficha__titulo { font-size: 1.3rem; }
