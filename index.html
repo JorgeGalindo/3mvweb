@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="styles.css?v=20260503AR" />
+  <link rel="stylesheet" href="styles.css?v=20260503AS" />
 </head>
 <body>
   <a href="#main" class="skip">Saltar al contenido</a>
@@ -520,8 +520,78 @@
         </p>
 
         <h3 class="cap03__sub">03.a · cuánto</h3>
-        <div class="chapter__body">
-          <p class="chapter__placeholder">// pendiente · simulador estático con datos del brief EsadeEcPol "Por qué no construimos" (Galindo &amp; Raya, 2026).</p>
+        <p class="cap03-sim__intro">Mueve el ritmo de construcción y mira cuánto tarda España en cerrar la brecha. Punto de partida: <strong>739 k</strong> de déficit acumulado básico al cierre de 2025 (<em>brief EsadeEcPol, abr 2026</em>); demanda esperada de <strong>250 k hogares/año</strong> hasta 2039 (proyección INE: 3,7 M de hogares 2024-2039); cero a partir de ahí.</p>
+
+        <div class="cap03-sim" data-cap03-sim>
+          <div class="cap03-sim__chart">
+            <svg viewBox="0 0 720 360" role="img" aria-label="Construcción acumulada vs necesidad de vivienda en el tiempo">
+              <!-- ejes -->
+              <g class="cap03-sim__axis">
+                <line x1="60" y1="320" x2="700" y2="320"/>
+                <line x1="60" y1="20"  x2="60"  y2="320"/>
+                <text class="cap03-sim__axis-label" x="60"  y="345">2026</text>
+                <text class="cap03-sim__axis-label" x="380" y="345" text-anchor="middle">año</text>
+                <text class="cap03-sim__axis-label" x="700" y="345" text-anchor="end" data-axis-end>2070</text>
+                <text class="cap03-sim__axis-y" x="55" y="22"  text-anchor="end">5 M</text>
+                <text class="cap03-sim__axis-y" x="55" y="170" text-anchor="end">millones de viviendas</text>
+                <text class="cap03-sim__axis-y" x="55" y="320" text-anchor="end">0</text>
+              </g>
+
+              <!-- línea objetivo: 3 M -->
+              <g class="cap03-sim__target">
+                <line x1="60" y1="140" x2="700" y2="140" stroke-dasharray="4 3"/>
+                <text x="700" y="134" text-anchor="end">3 M · "tres millones de viviendas"</text>
+              </g>
+
+              <!-- curvas -->
+              <path class="cap03-sim__curve cap03-sim__curve--need" data-curve="need" d=""/>
+              <path class="cap03-sim__curve cap03-sim__curve--build" data-curve="build" d=""/>
+
+              <!-- punto de cruce -->
+              <g class="cap03-sim__cross" data-cross>
+                <circle r="5"/>
+                <line class="cap03-sim__cross-line" x1="0" y1="0" x2="0" y2="0"/>
+                <text class="cap03-sim__cross-label" data-cross-label></text>
+              </g>
+
+              <!-- leyenda -->
+              <g class="cap03-sim__legend" transform="translate(80,40)">
+                <line x1="0" y1="0" x2="20" y2="0" class="cap03-sim__curve--need"/>
+                <text x="26" y="4">necesidad acumulada (déficit + demanda)</text>
+                <line x1="0" y1="18" x2="20" y2="18" class="cap03-sim__curve--build"/>
+                <text x="26" y="22">viviendas construidas (al ritmo elegido)</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="cap03-sim__controls">
+            <label class="cap03-sim__slider-label">
+              <span class="cap03-sim__slider-text">ritmo de construcción</span>
+              <span class="cap03-sim__slider-value"><strong data-value>95.000</strong> viviendas/año · <span data-factor>×1,0</span> respecto a hoy</span>
+              <input type="range" class="cap03-sim__slider" data-slider min="60000" max="450000" step="1000" value="95000">
+              <span class="cap03-sim__slider-marks">
+                <span>95 k actual</span>
+                <span>250 k igualar demanda</span>
+                <span>333 k ritmo brief</span>
+                <span>450 k</span>
+              </span>
+            </label>
+
+            <div class="cap03-sim__outputs">
+              <div class="cap03-sim__output">
+                <span class="cap03-sim__output-num" data-out-cierre>—</span>
+                <span class="cap03-sim__output-label">años hasta cerrar la brecha</span>
+              </div>
+              <div class="cap03-sim__output">
+                <span class="cap03-sim__output-num" data-out-tres>—</span>
+                <span class="cap03-sim__output-label">años hasta los 3 M de viviendas</span>
+              </div>
+              <div class="cap03-sim__output">
+                <span class="cap03-sim__output-num" data-out-anyo>—</span>
+                <span class="cap03-sim__output-label">año natural de cierre</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <h3 class="cap03__sub">03.b · cómo</h3>
@@ -696,11 +766,12 @@
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="app.js?v=20260503AR"></script>
-  <script type="module" src="cap01-mapa.js?v=20260503AR"></script>
-  <script type="module" src="cap01-edificio.js?v=20260503AR"></script>
-  <script type="module" src="cap01-tiempo.js?v=20260503AR"></script>
-  <script type="module" src="cap01-coste.js?v=20260503AR"></script>
-  <script type="module" src="cap03-tabs.js?v=20260503AR"></script>
+  <script type="module" src="app.js?v=20260503AS"></script>
+  <script type="module" src="cap01-mapa.js?v=20260503AS"></script>
+  <script type="module" src="cap01-edificio.js?v=20260503AS"></script>
+  <script type="module" src="cap01-tiempo.js?v=20260503AS"></script>
+  <script type="module" src="cap01-coste.js?v=20260503AS"></script>
+  <script type="module" src="cap03-tabs.js?v=20260503AS"></script>
+  <script type="module" src="cap03-sim.js?v=20260503AS"></script>
 </body>
 </html>

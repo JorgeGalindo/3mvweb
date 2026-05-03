@@ -776,6 +776,183 @@ strong { font-weight: 600; }
 .reveal.is-in { opacity: 1; transform: none; }
 
 /* ─────────────────────────────────────────────────────────────
+   Cap. 03.a · Simulador del cuánto
+   ───────────────────────────────────────────────────────────── */
+.cap03-sim__intro {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 64ch;
+  margin: 0 0 1.4rem;
+}
+.cap03-sim__intro em { color: var(--ink-mute); font-style: normal; font-family: var(--mono); font-size: 0.85em; }
+
+.cap03-sim {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 2rem;
+}
+.cap03-sim__chart svg { width: 100%; height: auto; display: block; }
+
+.cap03-sim__axis line { stroke: var(--ink); stroke-width: 1; }
+.cap03-sim__axis-label,
+.cap03-sim__axis-y {
+  font-family: var(--mono);
+  font-size: 11px;
+  fill: var(--ink-soft);
+}
+
+.cap03-sim__target line { stroke: var(--ink-mute); stroke-width: 0.8; }
+.cap03-sim__target text {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--ink-mute);
+}
+
+.cap03-sim__curve {
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+.cap03-sim__curve--need  { stroke: var(--ink-soft); stroke-dasharray: 6 3; }
+.cap03-sim__curve--build { stroke: var(--green-deep); }
+
+.cap03-sim__legend line {
+  stroke-width: 2.4;
+}
+.cap03-sim__legend text {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--ink-soft);
+}
+
+.cap03-sim__cross { opacity: 0; transition: opacity 0.3s var(--ease); }
+.cap03-sim__cross.is-on { opacity: 1; }
+.cap03-sim__cross circle { fill: var(--red); }
+.cap03-sim__cross-line { stroke: var(--red); stroke-width: 1; stroke-dasharray: 2 2; }
+.cap03-sim__cross-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--red);
+}
+
+.cap03-sim__controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+.cap03-sim__slider-label {
+  display: grid;
+  gap: 0.45rem;
+}
+.cap03-sim__slider-text {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--red);
+}
+.cap03-sim__slider-value {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+.cap03-sim__slider-value strong {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--green-deep);
+  font-variant-numeric: tabular-nums;
+}
+.cap03-sim__slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  margin: 0.4rem 0 0;
+}
+.cap03-sim__slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(to right, var(--green) 0%, var(--green-pastel) 100%);
+  border-radius: 3px;
+}
+.cap03-sim__slider::-moz-range-track {
+  height: 6px;
+  background: var(--green);
+  border-radius: 3px;
+}
+.cap03-sim__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 3px solid var(--paper);
+  margin-top: -8px;
+  box-shadow: 0 2px 6px rgba(26, 28, 36, 0.25);
+  cursor: pointer;
+}
+.cap03-sim__slider::-moz-range-thumb {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 3px solid var(--paper);
+  box-shadow: 0 2px 6px rgba(26, 28, 36, 0.25);
+  cursor: pointer;
+}
+.cap03-sim__slider-marks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-mute);
+  letter-spacing: 0.02em;
+  margin-top: 0.2rem;
+}
+
+.cap03-sim__outputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border-top: 1px dashed var(--rule);
+  padding-top: 1.1rem;
+}
+.cap03-sim__output {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.cap03-sim__output-num {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--red);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.cap03-sim__output-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--ink-soft);
+  line-height: 1.3;
+}
+
+@media (max-width: 720px) {
+  .cap03-sim { padding: 1.2rem 1.1rem; }
+  .cap03-sim__outputs { grid-template-columns: 1fr; gap: 0.7rem; }
+  .cap03-sim__output-num { font-size: 1.6rem; }
+  .cap03-sim__slider-marks { font-size: 9px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
    Cap. 03 · Construir · subapartados y fichas-palanca
    ───────────────────────────────────────────────────────────── */
 .cap03__sub {
