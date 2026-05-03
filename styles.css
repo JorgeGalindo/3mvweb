@@ -775,6 +775,118 @@ strong { font-weight: 600; }
 }
 .reveal.is-in { opacity: 1; transform: none; }
 
+/* ─────────────────────────────────────────────────────────────
+   Cap. 03 · Construir · subapartados y fichas-palanca
+   ───────────────────────────────────────────────────────────── */
+.cap03__sub {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--red);
+  margin: clamp(2.5rem, 5vw, 4rem) 0 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--rule);
+  font-weight: 500;
+}
+.cap03__intro {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 1.6rem;
+  max-width: 64ch;
+}
+
+.cap03-palancas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: var(--max-wide);
+  margin-bottom: 2rem;
+}
+.cap03-ficha {
+  background: var(--paper-soft);
+  border-left: 3px solid var(--red);
+  padding: 1.4rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.cap03-ficha__num {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  text-transform: lowercase;
+  font-weight: 500;
+}
+.cap03-ficha__titulo {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin: 0.35rem 0 0.75rem;
+  color: var(--ink);
+}
+.cap03-ficha__def {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 0.95rem;
+  color: var(--ink);
+}
+.cap03-ficha__cita {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  border-left: 2px solid var(--rule);
+  padding: 0.1rem 0 0.1rem 0.85rem;
+  margin: 0 0 0.95rem;
+  color: var(--ink-soft);
+}
+.cap03-ficha__cita em { font-style: normal; font-weight: 500; color: var(--ink); }
+.cap03-ficha__casos {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.cap03-ficha__casos li {
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.32rem;
+  line-height: 1.4;
+}
+.cap03-ficha__casos li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-family: var(--mono);
+}
+.cap03-ficha__cite {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-mute);
+  margin: auto 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--rule);
+}
+
+@media (max-width: 900px) {
+  .cap03-palancas {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .cap03-ficha { padding: 1.15rem 1.2rem 1rem; }
+  .cap03-ficha__titulo { font-size: 1.3rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
