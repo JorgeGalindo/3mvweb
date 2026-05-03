@@ -799,53 +799,55 @@ strong { font-weight: 600; }
 }
 
 /* Abanico de cartas: 7 fichas apiladas con rotación simétrica
-   desde la base. La activa pivota a vertical y se trae al frente
-   con su contenido. Las inactivas asoman su cabecera rotada. */
+   pequeña, ancladas a la base del container. La activa pivota a
+   vertical, sube al frente con sombra y expande su body. */
 .cap03-tabs {
   position: relative;
   max-width: var(--max-wide);
-  height: 28rem;
-  margin: 1rem 0 2rem;
+  min-height: 36rem;
+  margin: 2rem 0 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 .cap03-ficha {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 50%;
-  width: 22rem;
-  margin-left: -11rem;
+  width: 20rem;
+  margin-left: -10rem;
   background: var(--paper-soft);
   border: 1px solid var(--rule-strong);
-  border-bottom: none;
-  border-radius: 6px 6px 0 0;
-  padding: 0.9rem 1.2rem 1rem;
+  border-radius: 4px;
+  padding: 0.85rem 1.1rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   transform-origin: bottom center;
   transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), background 0.3s var(--ease);
-  box-shadow: 0 -1px 4px rgba(26, 28, 36, 0.04);
+  box-shadow: 0 2px 6px rgba(26, 28, 36, 0.06);
   outline: none;
 }
 .cap03-ficha:hover { background: var(--paper); }
-.cap03-ficha:focus-visible { box-shadow: 0 0 0 2px var(--red), 0 -1px 4px rgba(26, 28, 36, 0.04); }
+.cap03-ficha:focus-visible { box-shadow: 0 0 0 2px var(--red), 0 2px 6px rgba(26, 28, 36, 0.06); }
 
-/* Abanico simétrico: rotación creciente hacia los extremos */
-.cap03-ficha:nth-child(1) { transform: rotate(-18deg); z-index: 1; }
-.cap03-ficha:nth-child(2) { transform: rotate(-12deg); z-index: 2; }
-.cap03-ficha:nth-child(3) { transform: rotate(-6deg);  z-index: 3; }
-.cap03-ficha:nth-child(4) { transform: rotate(0deg);   z-index: 4; }
-.cap03-ficha:nth-child(5) { transform: rotate(6deg);   z-index: 3; }
-.cap03-ficha:nth-child(6) { transform: rotate(12deg);  z-index: 2; }
-.cap03-ficha:nth-child(7) { transform: rotate(18deg);  z-index: 1; }
+/* Abanico simétrico, rotación más cerrada para que las cartas
+   no se salgan ni el cuerpo activo se cruce con las inactivas. */
+.cap03-ficha:nth-child(1) { transform: rotate(-9deg); z-index: 1; }
+.cap03-ficha:nth-child(2) { transform: rotate(-6deg); z-index: 2; }
+.cap03-ficha:nth-child(3) { transform: rotate(-3deg); z-index: 3; }
+.cap03-ficha:nth-child(4) { transform: rotate(0deg);  z-index: 4; }
+.cap03-ficha:nth-child(5) { transform: rotate(3deg);  z-index: 3; }
+.cap03-ficha:nth-child(6) { transform: rotate(6deg);  z-index: 2; }
+.cap03-ficha:nth-child(7) { transform: rotate(9deg);  z-index: 1; }
 
-/* Estado activo: pivota a vertical, sube al frente, se expande */
 .cap03-ficha.is-active {
-  transform: rotate(0deg) translateY(-1.2rem);
+  transform: rotate(0deg) translateY(-1.5rem);
   z-index: 99;
   background: var(--paper);
   border-top: 3px solid var(--red);
-  padding-top: calc(0.9rem - 2px);
-  box-shadow: 0 -8px 28px rgba(26, 28, 36, 0.18);
+  padding-top: calc(0.85rem - 2px);
+  box-shadow: 0 8px 28px rgba(26, 28, 36, 0.15);
 }
 
 .cap03-ficha__head {
