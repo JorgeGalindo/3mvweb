@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Sectores PGOU Madrid 1997 anulados por TS 28 sep 2012",
+    "fuente": "Sentencias TS 28-09-2012; revisión TS 20-09-2016 (21 de 22 salvados); idealista, Ecologistas en Acción.",
+    "geometria": "Aproximada para visualización; pendiente de sustituir por polígonos oficiales del Geoportal IDEE Madrid.",
+    "version": "0.1-iter1"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "berrocales", "nombre": "Los Berrocales", "estado_2016": "salvado", "viv_previstas": 22000 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.575,40.385],[-3.530,40.385],[-3.530,40.420],[-3.575,40.420],[-3.575,40.385]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "valdecarros", "nombre": "Valdecarros", "estado_2016": "salvado", "viv_previstas": 51200 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.620,40.340],[-3.560,40.340],[-3.560,40.385],[-3.620,40.385],[-3.620,40.340]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "ahijones", "nombre": "Los Ahijones", "estado_2016": "salvado", "viv_previstas": 15300 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.620,40.385],[-3.575,40.385],[-3.575,40.405],[-3.620,40.405],[-3.620,40.385]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "cerros", "nombre": "Los Cerros", "estado_2016": "salvado", "viv_previstas": 14300 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.620,40.405],[-3.575,40.405],[-3.575,40.430],[-3.620,40.430],[-3.620,40.405]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "canaveral", "nombre": "El Cañaveral", "estado_2016": "salvado", "viv_previstas": 12000 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.585,40.430],[-3.540,40.430],[-3.540,40.460],[-3.585,40.460],[-3.585,40.430]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "valdebebas", "nombre": "Valdebebas", "estado_2016": "salvado", "viv_previstas": 12500 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.625,40.475],[-3.585,40.475],[-3.585,40.505],[-3.625,40.505],[-3.625,40.475]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "arroyo-fresno", "nombre": "Arroyo del Fresno", "estado_2016": "salvado", "viv_previstas": 4200 },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.745,40.485],[-3.715,40.485],[-3.715,40.505],[-3.745,40.505],[-3.745,40.485]]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "campamento", "nombre": "Operación Campamento", "estado_2016": "salvado", "viv_previstas": 10700, "destacado": true },
+      "geometry": { "type": "Polygon", "coordinates": [[[-3.787,40.394],[-3.755,40.394],[-3.755,40.412],[-3.787,40.412],[-3.787,40.394]]] }
+    }
+  ]
+}

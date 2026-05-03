@@ -1,0 +1,11 @@
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+*.log
+
+# PDF del libro: copyright Penguin/Debate, NO se publica.
+data/tmvlibro.pdf
+
+# Archivos legacy de iteraciones descartadas (mantener fuera del repo público)
+legacy/

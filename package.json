@@ -1,0 +1,13 @@
+{
+  "name": "tresmillonesweb",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "tresmillonesdeviviendas.es — el libro contado",
+  "scripts": {
+    "dev": "python3 -m http.server 5174"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tres millones de viviendas</title>
+  <meta name="description" content="Sin viviendas no hay oportunidades. El libro de Jorge Galindo, contado capítulo a capítulo, con los datos por delante." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tres millones de viviendas" />
+  <meta property="og:description" content="Sin viviendas no hay oportunidades. El libro contado, con datos." />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="styles.css?v=20260503AE" />
+</head>
+<body>
+  <a href="#main" class="skip">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <div class="container container--wide nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__brand-bracket">[</span>3.000.000<span class="nav__brand-bracket">]</span><span class="nav__brand-house" aria-hidden="true">⌂</span>
+      </a>
+      <nav aria-label="Capítulos">
+        <ul class="nav__list">
+          <li><a href="#porque-no"><span class="nav__num">01</span>por qué no construimos</a></li>
+          <li><a href="#crisis"><span class="nav__num">02</span>las consecuencias</a></li>
+          <li><a href="#construir"><span class="nav__num">03</span>construir</a></li>
+          <li><a href="#regular"><span class="nav__num">04</span>¿regular?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO oscuro · portada + texto -->
+    <section id="top" class="hero">
+      <div class="container container--wide hero__inner">
+        <div class="hero__cover" data-cover>
+          <img src="assets/libro.png" alt="Tres millones de viviendas" class="hero__cover-img" />
+        </div>
+        <div class="hero__copy">
+          <h1 class="hero__title" data-typing-title>
+            <span class="hero__line">Solo en los últimos <span class="num num--green">cinco años</span> hay <span class="num num--green">1,2 millones</span> de nuevos hogares en España. ¿Y cuántas viviendas hemos construido para ellos? <span class="num num--red">Menos de 500.000</span>.</span>
+            <span class="hero__line">Sin <span class="ul">viviendas</span> no hay <span class="ul"><em>oportunidades</em></span>.</span>
+          </h1>
+        </div>
+      </div>
+      <span data-hero-end aria-hidden="true"></span>
+    </section>
+
+    <!-- 01 · POR QUÉ NO CONSTRUIMOS · scrollytelling con mapa de Madrid -->
+    <section id="porque-no" class="chapter chapter--red reveal is-in">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">01</span>
+        <p class="chapter__head"><span class="ch-num">01</span> por qué no construimos</p>
+        <h2 class="chapter__title">Las viviendas que no llegan.</h2>
+        <p class="chapter__lede">Madrid y el suelo bloqueado.</p>
+      </div>
+
+      <div class="cap01-mapa" data-cap01-mapa>
+        <div class="cap01-mapa__sticky">
+          <div class="cap01-mapa__map" id="cap01-map" aria-label="Mapa de Madrid con sectores del PGOU 1997, Operación Campamento y Cocheras de Cuatro Caminos"></div>
+          <div class="cap01-mapa__legend" data-cap01-legend>
+            <p class="cap01-mapa__legend-title" data-legend-title>// Madrid · PGOU 1997</p>
+            <p class="cap01-mapa__legend-body" data-legend-body>Aproximación visual.</p>
+          </div>
+        </div>
+
+        <div class="cap01-mapa__steps" data-cap01-steps>
+          <article class="cap01-step" data-step="0">
+            <p class="cap01-step__tag">// 00 · marco</p>
+            <p>Madrid sigue gobernada por un <strong>Plan General de 1997</strong>. Un Plan General fija qué suelo es urbanizable y qué no, qué densidades, qué usos.</p>
+            <p>Renovar el de Madrid lleva décadas en intentarse. Mientras tanto, todo lo nuevo se cuela por modificaciones puntuales y planes parciales que tardan años en cada paso.</p>
+          </article>
+
+          <article class="cap01-step" data-step="A">
+            <p class="cap01-step__tag">// 01 · sectores anulados</p>
+            <p><strong>El 28 de septiembre de 2012, el Tribunal Supremo anuló 22 sectores del Plan</strong>. De golpe, hasta <strong>135.000 viviendas</strong> previstas quedaron en el aire por defectos formales en la tramitación.</p>
+            <p>En 2016 el Supremo salvó 21 de los 22 tras la revisión del Ayuntamiento. Pero entre sentencia y rescate pasaron <strong>cuatro años</strong> en los que esos suelos no se podían tocar.</p>
+            <p><strong>BBVA Research calcula que dos terceras partes de los Planes vigentes en España son previos a 2008.</strong> Hay atasco urbanístico.</p>
+          </article>
+
+          <article class="cap01-step" data-step="B">
+            <p class="cap01-step__tag">// 02 · operación campamento</p>
+            <p><strong>211 hectáreas en el suroeste de Madrid. 10.700 viviendas, el 65 % protegidas.</strong> El primer convenio entre Defensa, Comunidad y Ayuntamiento se firmó el <strong>6 de junio de 1989</strong>.</p>
+            <p>Defensa cobró el primer plazo en 2011. El Plan Parcial cayó con la sentencia de 2012. SEPES compró formalmente el suelo en octubre de 2023. El proyecto de urbanización se aprobó inicialmente el <strong>27 de febrero de 2025</strong>. Las primeras viviendas no estarán antes de <strong>2027-2028</strong>: <strong>casi cuatro décadas</strong> desde el convenio.</p>
+          </article>
+
+          <article class="cap01-step" data-step="C">
+            <p class="cap01-step__tag">// 03 · cocheras de cuatro caminos</p>
+            <p><strong>Antonio Palacios y Miguel Otamendi proyectaron en 1917 las cocheras del Metro de Madrid en Cuatro Caminos.</strong> El primer convoy de la Línea 1 salió de allí el 17 de octubre de 1919.</p>
+            <p>En 2014, bajo Botella, se aprobó un plan para sustituir las cocheras por <strong>443 viviendas</strong>. La cooperativa adjudicataria demolió el edificio entre marzo y junio de 2021, pese a recursos pendientes. El TSJM anuló el plan el <strong>9 de mayo de 2025</strong>. El Supremo lo confirmó el <strong>11 de febrero de 2026</strong>. El solar sigue vacío.</p>
+          </article>
+
+          <article class="cap01-step" data-step="D">
+            <p class="cap01-step__tag">// 04 · la corona</p>
+            <p><strong>Salgamos de la capital.</strong> La presión sobre la vivienda no la asume sólo Madrid: tendría que repartirse con los municipios de su corona metropolitana. No lo hace.</p>
+            <p>Once alcaldes de la corona —entre ellos Alcorcón, Fuenlabrada o Getafe— han presentado una iniciativa legislativa municipal para forzar la declaración de zonas de mercado tensionado. Mientras tanto, varios desarrollos llevan dos décadas en cartera sin moverse.</p>
+          </article>
+
+          <article class="cap01-step" data-step="E">
+            <p class="cap01-step__tag">// 05 · rivas-vaciamadrid</p>
+            <p><strong>Rivas-Vaciamadrid presentó el 5 de junio de 2025 el avance de su nuevo Plan General.</strong> El modelo declarado: consolidar el tejido urbano existente. La etiqueta oficial: <em>"Rivas será la Casa de Campo del Sureste"</em>.</p>
+            <p>Sobre los planos: <strong>−46 % de edificabilidad en el barrio Cristo de Rivas</strong> y la eliminación de cerca de <strong>3.000 viviendas</strong> previstas en Mirador Sur. Hace años Rivas ya paralizó licencias de obra por falta de servicios básicos. La presión por más vivienda asequible para jóvenes choca con el límite que el propio municipio se autoimpone.</p>
+          </article>
+
+          <article class="cap01-step" data-step="F">
+            <p class="cap01-step__tag">// 06 · majadahonda</p>
+            <p><strong>Majadahonda, noroeste metropolitano, gobierno municipal del PP.</strong> El sector Arroyo del Arcipreste —363.000 m², 620 viviendas previstas, 286 protegidas— lleva pidiendo su urbanización <strong>desde 2004</strong>.</p>
+            <p>Veinte años parado. Sin sentencia que lo bloquee, sin colector pendiente, sin recurso judicial. La aprobación inicial llegó por fin el <strong>29 de mayo de 2025</strong>. Otros dos sectores —Huerto del Parrito y Valles de la Mina, 1.257 viviendas más— se aprobaron poco después. Veinte años no eran trabas técnicas, sólo voluntad política.</p>
+          </article>
+
+          <article class="cap01-step cap01-step--cierre" data-step="cierre">
+            <p class="cap01-step__tag">// cierre</p>
+            <p><strong>Nada de esto es exclusivo de Madrid.</strong></p>
+            <p class="cap01-step__sub">Casos en otras ciudades</p>
+            <ul class="cap01-step__bullets">
+              <li><strong>A Coruña · O Castrillón</strong>: rechazo vecinal frena las torres de 17 plantas previstas en el Parque de Oza <em>(El Español, La Voz de Galicia, 2024)</em>.</li>
+              <li><strong>A Coruña · As Percebeiras (Labañou)</strong>: el plan inicial contemplaba un rascacielos de 47 plantas y 180 metros; se redujo a 16 y, finalmente, a 8 plantas tras dialogar con los vecinos <em>(El Ideal Gallego, La Voz de Galicia, 2023)</em>.</li>
+              <li><strong>Zaragoza · barrio Jesús</strong>: 120 viviendas de alquiler joven frenadas por más de 250 alegaciones vecinales <em>(Heraldo de Aragón, 2024)</em>.</li>
+              <li><strong>Sevilla · Cortijo del Cuarto</strong>: vecinos defienden un "pulmón verde" frente a las 5.500 viviendas que planea la Diputación <em>(elDiario.es, nov 2024)</em>.</li>
+              <li><strong>Valencia · cuarteles de Ingenieros y Artillería</strong>: el derribo del cuartel de la calle San Vicente se inició en 2019 tras dieciséis años de negociaciones con el Gobierno <em>(Las Provincias, oct 2019)</em>.</li>
+              <li><strong>Tiana (Barcelona)</strong> y <strong>Calvià (Mallorca)</strong>: oposición vecinal a nuevas promociones de vivienda <em>(Verificat, Última Hora, 2024-25)</em>.</li>
+            </ul>
+            <p class="cap01-step__sub">El atasco urbanístico en cifras</p>
+            <ul class="cap01-step__bullets cap01-step__bullets--dotted">
+              <li><strong>~100 informes sectoriales</strong> son necesarios para tramitar un nuevo plan general, según el Director General de Urbanismo de la Junta de Andalucía. <strong>Algunos duplicados o cuasiduplicados</strong>: una evaluación ambiental general y otra específica de biodiversidad, por ejemplo <em>(Rebs Executive, 2019; libro, p. 87)</em>.</li>
+              <li>A los sectoriales clásicos —carreteras, patrimonio, comunicaciones— se han ido sumando <strong>estudios de integración paisajística, evaluaciones de impacto en la salud e informes de sostenibilidad económica</strong> de varios tipos <em>(libro, p. 86)</em>.</li>
+              <li>En urbanismo, el <strong>silencio administrativo es negativo</strong>: si la Administración no responde a tiempo, el trámite se da por denegado <em>(libro, p. 88)</em>.</li>
+              <li><strong>Sandra Bestraten</strong>, presidenta del Col·legi d'Arquitectes de Catalunya en Barcelona: <em>"Las normativas se contradicen, porque se hacen normas nuevas y no se eliminan las antiguas"</em> <em>(El País; libro, p. 89)</em>.</li>
+              <li>Bestraten, sobre los efectos del silencio: <em>"Proyectos que han caído, después de años de trabajo, por la falta de un informe de género o de un informe ambiental sobre determinados aspectos"</em> <em>(libro, p. 90)</em>.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- 01.b · proyecto-tipo · diagrama isométrico de las restricciones -->
+      <div class="container chapter__inner cap01-edif__intro">
+        <h3 class="cap01-edif__title">Bajemos a un proyecto-tipo.</h3>
+        <p class="cap01-edif__lede">Aún con el suelo y el plan en regla, levantar un edificio de viviendas.</p>
+      </div>
+
+      <div class="cap01-edif" data-cap01-edif>
+        <div class="cap01-edif__sticky">
+          <div class="cap01-edif__stage" data-edif-stage data-step="0">
+            <svg class="cap01-edif__svg" viewBox="-260 -580 600 800" role="img" aria-label="Diagrama isométrico de un edificio de viviendas con las restricciones de altura, CTE y conexión a la red eléctrica">
+
+              <!-- ─── suelo (paralelogramo isométrico alrededor del edificio) ─── -->
+              <g class="cap01-edif-layer cap01-edif-layer--ground">
+                <polygon points="0,-24 166.3,72 41.5,144 -124.7,48" fill="#E0D7BE" stroke="#BFB6A2" stroke-width="1"/>
+              </g>
+
+              <!-- volumen entre techo edificio y cota AESA — eliminado: la altura aeronáutica no es lo que limita -->
+              <g class="cap01-edif-layer cap01-edif-layer--A cap01-edif-prohib"></g>
+
+              <!-- ─── edificio "tall" (13 plantas · 45 m) — techo de la servidumbre AESA ─── -->
+              <g class="cap01-edif-layer cap01-edif-layer--tall">
+                <polygon points="-83.1,48 41.5,120 41.5,-420 -83.1,-492" fill="#7A6B57" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="-83.1" y1="6.5"    x2="41.5" y2="78.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-35"    x2="41.5" y2="37"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-76.6"  x2="41.5" y2="-4.6"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-118.1" x2="41.5" y2="-46.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-159.6" x2="41.5" y2="-87.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-201.1" x2="41.5" y2="-129.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-242.6" x2="41.5" y2="-170.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-284.2" x2="41.5" y2="-212.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-325.7" x2="41.5" y2="-253.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-367.2" x2="41.5" y2="-295.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-408.7" x2="41.5" y2="-336.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-450.2" x2="41.5" y2="-378.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="124.7,72 41.5,120 41.5,-420 124.7,-468" fill="#988572" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="124.7" y1="30.5"   x2="41.5" y2="78.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-11"    x2="41.5" y2="37"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-52.6"  x2="41.5" y2="-4.6"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-94.1"  x2="41.5" y2="-46.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-135.6" x2="41.5" y2="-87.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-177.1" x2="41.5" y2="-129.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-218.6" x2="41.5" y2="-170.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-260.2" x2="41.5" y2="-212.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-301.7" x2="41.5" y2="-253.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-343.2" x2="41.5" y2="-295.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-384.7" x2="41.5" y2="-336.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-426.2" x2="41.5" y2="-378.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="0,-540 124.7,-468 41.5,-420 -83.1,-492" fill="#B4A289" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+              </g>
+
+              <!-- ─── edificio "short" (6 plantas · 18.75 m) — PAUs recientes oeste Barajas ─── -->
+              <g class="cap01-edif-layer cap01-edif-layer--short">
+                <polygon points="-83.1,48 41.5,120 41.5,-105 -83.1,-177" fill="#7A6B57" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="-83.1" y1="10.5"   x2="41.5" y2="82.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-27"    x2="41.5" y2="45"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-64.5"  x2="41.5" y2="7.5"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-102"   x2="41.5" y2="-30"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-139.5" x2="41.5" y2="-67.5" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="124.7,72 41.5,120 41.5,-105 124.7,-153" fill="#988572" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="124.7" y1="34.5"   x2="41.5" y2="82.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-3"     x2="41.5" y2="45"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-40.5"  x2="41.5" y2="7.5"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-78"    x2="41.5" y2="-30"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-115.5" x2="41.5" y2="-67.5" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="0,-225 124.7,-153 41.5,-105 -83.1,-177" fill="#B4A289" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+              </g>
+
+              <!-- ─── altura: AESA · 45 m vs lo construido · ~6 plantas ─── -->
+              <g class="cap01-edif-layer cap01-edif-layer--A cap01-edif-heights">
+                <line x1="-200" y1="-540" x2="180" y2="-540" stroke="#0F1118" stroke-width="1" stroke-dasharray="3 3"/>
+                <text x="-200" y="-546" class="cap01-edif-label cap01-edif-label--ink">techo AESA Barajas · 45 m</text>
+                <line x1="-200" y1="-225" x2="180" y2="-225" stroke="#C13027" stroke-width="1" stroke-dasharray="3 3"/>
+                <text x="-200" y="-231" class="cap01-edif-label cap01-edif-label--red">PAUs oeste Barajas · ~19 m · 6 plantas</text>
+              </g>
+
+              <!-- ─── envolvente CTE (step B) · contorno negro grueso sobre el edificio short ─── -->
+              <g class="cap01-edif-layer cap01-edif-layer--B cap01-edif-cte">
+                <polygon points="-83.1,48 41.5,120 41.5,-105 -83.1,-177" fill="none" stroke="#0F1118" stroke-width="4.5" stroke-linejoin="round"/>
+                <polygon points="124.7,72 41.5,120 41.5,-105 124.7,-153" fill="none" stroke="#0F1118" stroke-width="4.5" stroke-linejoin="round"/>
+                <polygon points="0,-225 124.7,-153 41.5,-105 -83.1,-177" fill="none" stroke="#0F1118" stroke-width="4.5" stroke-linejoin="round"/>
+              </g>
+
+              <!-- ─── red eléctrica (step C) · enchufe tachado pegado al suelo junto al edificio ─── -->
+              <g class="cap01-edif-layer cap01-edif-layer--C cap01-edif-grid">
+                <g transform="translate(150, 110)">
+                  <circle r="30" fill="#FAF6ED" stroke="#0F1118" stroke-width="1.6"/>
+                  <rect x="-13" y="-4" width="26" height="20" rx="3" fill="none" stroke="#0F1118" stroke-width="2"/>
+                  <line x1="-6" y1="-4" x2="-6" y2="-12" stroke="#0F1118" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="6"  y1="-4" x2="6"  y2="-12" stroke="#0F1118" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="0"  y1="16" x2="0"  y2="22" stroke="#0F1118" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="-24" y1="-24" x2="24" y2="24" stroke="#C13027" stroke-width="3.5" stroke-linecap="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cap01-edif__steps" data-cap01-edif-steps>
+          <article class="cap01-edif-step" data-step="0">
+            <p class="cap01-step__tag">// 04 · proyecto-tipo</p>
+            <p>El edificio que España podría levantar al oeste de Barajas, hasta donde la servidumbre aérea de AESA permite construir sin autorización previa: <strong>trece plantas, 45 metros</strong>.</p>
+            <p>A partir de aquí, sobre este mismo edificio, se activan las restricciones.</p>
+          </article>
+
+          <article class="cap01-edif-step" data-step="A">
+            <p class="cap01-step__tag">// 05 · altura</p>
+            <p>Al oeste de Barajas la servidumbre aeronáutica de <strong>AESA (Agencia Estatal de Seguridad Aérea)</strong> permite hasta <strong>45 metros</strong> sin autorización previa.</p>
+            <p>Sin embargo, los desarrollos recientes del entorno —Sanchinarro, Las Tablas, Valdebebas— se han quedado en torno a <strong>seis plantas, unos 19 metros</strong>. ¿Por qué? Porque las normas zonales del PGOU y los planes parciales de cada PAU lo fijaron así. Donde había margen aéreo y de suelo, se pactó construir por debajo.</p>
+          </article>
+
+          <article class="cap01-edif-step" data-step="B">
+            <p class="cap01-step__tag">// 06 · envolvente y CTE</p>
+            <p>El Código Técnico de la Edificación vigente — última gran revisión en el <strong>Real Decreto 732/2019</strong>, en vigor desde septiembre de 2020 — exige envolventes más espesas, aerotermia o equivalentes para el agua caliente, fotovoltaica obligatoria en cubierta y demanda casi nula. Todo ello a la vez.</p>
+            <p>Hay un nuevo proyecto de Real Decreto en tramitación para transponer la directiva europea de eficiencia energética. El <strong>Colegio de Aparejadores de Madrid lo cifra en 18.000 euros más por vivienda</strong>. El Ministerio de Vivienda lo niega. La cifra — y su disputa pública — es uno de los frentes activos de 2026.</p>
+          </article>
+
+          <article class="cap01-edif-step" data-step="C">
+            <p class="cap01-step__tag">// 07 · red eléctrica</p>
+            <p>Bajamos a la calle. Para que el edificio funcione, hay que conectarlo a la red de baja tensión. Que un proyecto avance depende de que la distribuidora confirme capacidad firme en su nodo.</p>
+            <p>En 2024, según <strong>BBVA Research, el 88 % de los nodos de distribución estaba saturado</strong>. El sector urbanístico solicitó <strong>6,7 GW de acceso a la red</strong> y la mayoría no pudo atenderse. La Comunidad de Madrid denuncia que <strong>116.000 viviendas</strong> previstas en los desarrollos del sureste han quedado fuera del plan eléctrico estatal 2025-2030.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 01.c · todo esto se convierte en tiempo · timeline horizontal -->
+      <div class="container chapter__inner cap01-tiempo__intro">
+        <h3 class="cap01-tiempo__title">Todo esto se convierte en tiempo…</h3>
+      </div>
+
+      <div class="cap01-tiempo" data-cap01-tiempo>
+        <div class="cap01-tiempo__sticky">
+          <div class="cap01-tiempo__stage" data-tiempo-stage data-step="0">
+            <svg class="cap01-tiempo__svg" viewBox="0 0 720 320" role="img" aria-label="Timeline horizontal con las cuatro fases del proceso de hacer una vivienda nueva">
+              <!-- cifra-bofetada total -->
+              <text class="cap01-tiempo-total" x="40" y="58">20 años</text>
+              <text class="cap01-tiempo-total-sub" x="40" y="84">de mediana en suelo urbanizable, desde decisión municipal hasta entrega de llaves</text>
+
+              <!-- segmentos timeline (medianas: PGOU 12 · PP+urb 5 · licencia 1 · obra 2 → 20 a; eje X 0..20 a 32 px/año) -->
+              <g class="cap01-tiempo-bar">
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--A" x="40"  y="130" width="384" height="60"/>
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--B" x="424" y="130" width="160" height="60"/>
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--C" x="584" y="130" width="32"  height="60"/>
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--D" x="616" y="130" width="64"  height="60"/>
+
+                <!-- todas las etiquetas fuera del segmento, arriba (label) + abajo (años) -->
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--A" x="232" y="118">Plan general</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--A" x="232" y="208">10–12 años</text>
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--B" x="504" y="118">Plan parcial · urb.</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--B" x="504" y="208">3–7 años</text>
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--C" x="600" y="118">licencia</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--C" x="600" y="208">12 m</text>
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--D" x="648" y="118">obra</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--D" x="648" y="208">2 a</text>
+              </g>
+
+              <!-- eje X 0..20 años · 11 ticks cada 2 años -->
+              <g class="cap01-tiempo-axis">
+                <line x1="40" y1="220" x2="680" y2="220"/>
+                <g><line x1="40"  y1="220" x2="40"  y2="226"/><text x="40"  y="240">0</text></g>
+                <g><line x1="104" y1="220" x2="104" y2="226"/><text x="104" y="240">2</text></g>
+                <g><line x1="168" y1="220" x2="168" y2="226"/><text x="168" y="240">4</text></g>
+                <g><line x1="232" y1="220" x2="232" y2="226"/><text x="232" y="240">6</text></g>
+                <g><line x1="296" y1="220" x2="296" y2="226"/><text x="296" y="240">8</text></g>
+                <g><line x1="360" y1="220" x2="360" y2="226"/><text x="360" y="240">10</text></g>
+                <g><line x1="424" y1="220" x2="424" y2="226"/><text x="424" y="240">12</text></g>
+                <g><line x1="488" y1="220" x2="488" y2="226"/><text x="488" y="240">14</text></g>
+                <g><line x1="552" y1="220" x2="552" y2="226"/><text x="552" y="240">16</text></g>
+                <g><line x1="616" y1="220" x2="616" y2="226"/><text x="616" y="240">18</text></g>
+                <g><line x1="680" y1="220" x2="680" y2="226"/><text x="680" y="240">20</text></g>
+                <text class="cap01-tiempo-axis-title" x="360" y="270">años</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cap01-tiempo__steps" data-cap01-tiempo-steps>
+          <article class="cap01-tiempo-step" data-step="0">
+            <p class="cap01-step__tag">// 08 · todo se convierte en tiempo</p>
+            <p>Cada uno de los bloqueos anteriores —el suelo, el plan, las restricciones del proyecto— tiene una traducción muy concreta: <strong>tiempo</strong>. Vamos a sumarlo, fase a fase, con su fuente al lado.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="A">
+            <p class="cap01-step__tag">// 09 · plan general</p>
+            <p>Aprobar un nuevo Plan General de Ordenación Urbana lleva en España <strong>entre 10 y 12 años</strong>. Lo reconoce la propia Comunidad de Madrid al presentar su Plan de Choque de Vivienda 2026-2027 <em>(Idealista, sept 2025)</em>.</p>
+            <p>La Ley de Medidas Urgentes aprobada en abril de 2026 prometía bajar ese plazo a seis años. Queda por verse <em>(Comunidad de Madrid, 22 abr 2026)</em>.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="B">
+            <p class="cap01-step__tag">// 10 · plan parcial y urbanización</p>
+            <p>Una vez clasificado el suelo como urbanizable, aprobar el plan parcial junto con la reparcelación y las obras de urbanización tarda <strong>entre 3 y 7 años adicionales</strong> <em>(APCE; libro, p. 89)</em>.</p>
+            <p>Operación Campamento se firmó en 1989 y aún no tiene viviendas entregadas; Los Berrocales acumula veinte años desde su Plan Parcial original; El Cañaveral entregó las primeras viviendas en 2016, trece años después de iniciarse la tramitación. Madrid Nuevo Norte, considerado <em>"plazo récord"</em>, tardó seis años y medio entre aprobación inicial y desestimación de los últimos recursos <em>(Idealista, may 2025)</em>.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="C">
+            <p class="cap01-step__tag">// 11 · licencia</p>
+            <p>El plazo legal para resolver una licencia de obra mayor es de <strong>tres meses</strong>. Ningún gran ayuntamiento lo cumple <em>(ASPRIMA)</em>. El estudio EY/ASPRIMA cifró el retraso medio en doce meses y el sobrecoste para el comprador en <strong>~13.000 € por vivienda</strong> <em>(EY, may 2020)</em>.</p>
+            <p>El rango va desde unos seis meses en municipios pequeños hasta <strong>veinticuatro meses en Madrid capital</strong> <em>(Idealista, may 2025)</em>.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="D">
+            <p class="cap01-step__tag">// 12 · construcción y entrega</p>
+            <p>Construir un edificio residencial típico desde la licencia hasta la entrega de llaves: <strong>entre 18 y 30 meses</strong>. La promoción de Neinor en Esplugues, anunciada en 2025, calcula 29 meses hasta abril de 2028 <em>(Observatorio Inmobiliario, 2025)</em>.</p>
+            <p>Si todo ha ido bien hasta aquí.</p>
+          </article>
+
+          <article class="cap01-tiempo-step cap01-tiempo-step--cierre" data-step="cierre">
+            <p class="cap01-step__tag">// cierre del módulo tiempo</p>
+            <p>Desde que un ayuntamiento decide planear un suelo hasta que <strong>una familia entra en un nuevo barrio que no estaba planificado</strong>: <strong>hasta 20 años</strong>.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 01.d · construir no sale rentable · barra de costes vs precio -->
+      <div class="container chapter__inner cap01-coste__intro">
+        <h3 class="cap01-coste__title">…y el tiempo es coste fijo más el riesgo de que el proyecto no salga.</h3>
+      </div>
+
+      <div class="cap01-coste" data-cap01-coste>
+        <div class="cap01-coste__sticky">
+          <div class="cap01-coste__stage" data-coste-stage data-step="0">
+            <svg class="cap01-coste__svg" viewBox="0 0 480 380" role="img" aria-label="Torre de costes acumulados frente a la capacidad de pago de los hogares">
+              <text class="cap01-coste-total" x="36" y="44">No salen los números.</text>
+
+              <!-- línea de suelo -->
+              <line class="cap01-coste-floor" x1="36" y1="320" x2="444" y2="320"/>
+
+              <!-- torre única apilada · tiempo+regulación pesa la mitad,
+                   las otras cuatro capas se reparten la otra mitad -->
+              <g class="cap01-coste-tower-costes">
+                <rect class="cap01-coste-seg cap01-coste-seg--A" x="200" y="224" width="80" height="96"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--B" x="200" y="200" width="80" height="24"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--C" x="200" y="176" width="80" height="24"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--D" x="200" y="152" width="80" height="24"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--E" x="200" y="128" width="80" height="24"/>
+
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--A" x="190" y="276">tiempo + regulación</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--B" x="190" y="216">crédito</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--C" x="190" y="192">mano de obra</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--D" x="190" y="168">materiales</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--E" x="190" y="144">productividad</text>
+              </g>
+
+              <!-- líneas horizontales de referencia (van por encima de la torre) -->
+              <g class="cap01-coste-caps">
+                <!-- precio de mercado (la torre acaba aquí en el último step) -->
+                <line class="cap01-coste-cap cap01-coste-cap--mercado" x1="36" y1="128" x2="444" y2="128" stroke-dasharray="4 3"/>
+                <text class="cap01-coste-cap-label cap01-coste-cap-label--mercado" x="444" y="120">precio de mercado</text>
+
+                <!-- lo que puede pagar un hogar joven medio · 2 líneas -->
+                <line class="cap01-coste-cap cap01-coste-cap--joven" x1="36" y1="208" x2="444" y2="208" stroke-dasharray="4 3"/>
+                <text class="cap01-coste-cap-label cap01-coste-cap-label--joven" x="444" y="194" text-anchor="end">
+                  <tspan x="444" dy="0">capacidad de pago</tspan>
+                  <tspan x="444" dy="13">hogar joven medio</tspan>
+                </text>
+
+                <!-- lo que puede pagar una familia trabajadora · 2 líneas -->
+                <line class="cap01-coste-cap cap01-coste-cap--trabajadora" x1="36" y1="266" x2="444" y2="266" stroke-dasharray="4 3"/>
+                <text class="cap01-coste-cap-label cap01-coste-cap-label--trabajadora" x="444" y="252" text-anchor="end">
+                  <tspan x="444" dy="0">capacidad de pago</tspan>
+                  <tspan x="444" dy="13">familia trabajadora</tspan>
+                </text>
+              </g>
+
+              <text class="cap01-coste-tower-foot" x="240" y="345">precio de la vivienda nueva</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cap01-coste__steps" data-cap01-coste-steps>
+          <article class="cap01-coste-step" data-step="0">
+            <p class="cap01-step__tag">// 13 · tiempo + regulación</p>
+            <p>Cada año añadido al proceso es <strong>coste financiero, riesgo de que el proyecto no salga y oportunidad de que cambien las reglas</strong>. Sumadas, <strong>el tiempo y la regulación son la mayor parte del coste</strong> de levantar una vivienda nueva en España: pesan tanto como el resto de factores juntos.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="A">
+            <p class="cap01-step__tag">// 14 · crédito</p>
+            <p>El stock de crédito a construcción y promoción cayó de <strong>452.000 millones en 2008 a 100.000 en 2019</strong>. Las cajas de ahorro, donde se cocía buena parte de la financiación inmobiliaria, desaparecieron. La regulación bancaria internacional encareció el riesgo inmobiliario en los balances.</p>
+            <p>Apoyar la nueva construcción <strong>no resulta apetecible</strong> para la banca <em>(Banco de España; libro, pp. 80–83)</em>.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="B">
+            <p class="cap01-step__tag">// 15 · mano de obra</p>
+            <p>La patronal de la construcción estima que <strong>faltan 700.000 trabajadores</strong> para cubrir las necesidades del sector en España, obra pública y privada <em>(Cinco Días, 4 nov 2024)</em>.</p>
+            <p>La edad media ha pasado de <strong>37 años en 2007 a 45 en 2022</strong>; entre los albañiles, 48. Solo el <strong>10 % tiene menos de 30</strong> —era el 25 % en 2008— y <strong>el 75 % de los directivos</strong> señala la escasez de mano de obra cualificada como principal obstáculo de sus proyectos <em>(BBVA Research; libro, p. 95)</em>.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="C">
+            <p class="cap01-step__tag">// 16 · materiales</p>
+            <p>Entre 2018 y marzo de 2024, el INE registró subidas de <strong>50 % en cemento y cerámica, 50–60 % en bituminosos, casi 50 % en energía y más del 30 % en cobre</strong> <em>(INE, índices de precios de materiales; libro, pp. 96–97)</em>.</p>
+            <p>España apenas tiene vivienda industrializada que amortigüe estos saltos: el peso es marginal frente a Suecia o Japón.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="D">
+            <p class="cap01-step__tag">// 17 · productividad</p>
+            <p>Desde 2013, la productividad laboral en construcción —VAB por hora trabajada— ha caído <strong>más del 20 %</strong>; en el conjunto de la economía ha crecido un 5 % <em>(BBVA Research; libro, p. 96)</em>.</p>
+            <p>El sector está atomizado en microempresas. Las constructoras españolas grandes operan ya un <strong>80 % de su actividad fuera de España</strong> <em>(libro, p. 96)</em>.</p>
+          </article>
+
+          <article class="cap01-coste-step cap01-coste-step--cierre" data-step="cierre">
+            <p class="cap01-step__tag">// la brecha</p>
+            <p>Suma todo y los costes superan el precio al que se puede vender. <strong>Construir vivienda nueva en España no sale rentable.</strong></p>
+            <p>Y por las mismas razones —costes, mano de obra, crédito, regulación, fricción—, <strong>tampoco sale rentable construir vivienda pública</strong>, que vende por debajo de mercado. Sea quien sea quien construya.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · LAS CONSECUENCIAS (antes "la crisis") -->
+    <section id="crisis" class="chapter chapter--red reveal">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">02</span>
+        <p class="chapter__head"><span class="ch-num">02</span> las consecuencias</p>
+        <h2 class="chapter__title">Como faltan pisos, los precios suben.</h2>
+
+        <div class="chapter__body">
+          <p><strong>Lo que pasa es que no se construye</strong>. Para verlo de manera estandarizada, calculemos cuántas viviendas se terminan por cada nuevo hogar creado. Si esa ratio se queda en torno a 1, la oferta cubre la demanda. Si es menor, vamos por detrás.</p>
+        </div>
+
+        <figure class="chart" data-chart="ratio" aria-labelledby="chart-ratio-title">
+          <p class="chart__head">// gráfico 01</p>
+          <h3 class="chart__title" id="chart-ratio-title">ratio de viviendas terminadas por hogar creado, por periodo</h3>
+          <p class="chart__sub">españa · agregada por periodo intercensal · una ratio de 1 sería el equilibrio</p>
+          <div class="chart__legend">
+            <span><span class="chart__legend-swatch" style="background: var(--green)"></span>periodos anteriores</span>
+            <span><span class="chart__legend-swatch" style="background: var(--red)"></span>periodo actual</span>
+          </div>
+          <div class="chart__plot" data-plot="ratio"></div>
+          <p class="chart__source">fuente: ine (censos y estadística continua de hogares) y ministerio de vivienda · elaboración esadeecpol.</p>
+        </figure>
+
+        <div class="chapter__body">
+          <p>Durante las cuatro décadas que cubren los censos del INE, la ratio rara vez bajó de ese listón de 1. El boom de los 2000 nos dejó mal acostumbrados a ratios por encima de 1,5. Pero desde 2021 estamos en <strong>0,38</strong>: por cada nuevo hogar, terminamos algo menos de cuatro viviendas de cada diez.</p>
+
+          <p><strong>Cuando la oferta no cubre la demanda, los precios reaccionan.</strong> Entre 2015 y 2023 el precio medio del metro cuadrado en venta en España subió un <strong>47 %</strong>. Los salarios solo crecieron un <strong>17 %</strong>. Para los de 25 a 34 años — la edad a la que se forma la inmensa mayoría de hogares — los salarios aumentaron apenas un poquito más: un <strong>23 %</strong>. La brecha es mayor en Madrid, Cataluña o Baleares, allí donde hay ciudades en las que la vivienda es un activo más apetecido.</p>
+
+          <p><strong>Los nuevos hogares no acceden a la propiedad.</strong> Entre los menores de 35, el porcentaje de propietarios ha caído del <strong>67 %</strong> en 2002 al <strong>32 %</strong> hoy. Los de 65 a 74, mientras tanto, siguen donde estaban: en torno al 84 %.</p>
+        </div>
+
+        <figure class="chart" data-chart="tenencia" aria-labelledby="chart-tenencia-title">
+          <p class="chart__head">// gráfico 02</p>
+          <h3 class="chart__title" id="chart-tenencia-title">% de hogares propietarios de su vivienda principal, por edad</h3>
+          <p class="chart__sub">edad de la persona de referencia · encuesta financiera de las familias (banco de españa)</p>
+          <div class="chart__plot" data-plot="tenencia"></div>
+          <p class="chart__source">fuente: barceló y crespo, «la tenencia de vivienda y deuda hipotecaria de las familias españolas en los últimos veinte años», esadeecpol, 2025 · a partir de la eff, banco de españa. valores aproximados a partir del gráfico publicado.</p>
+        </figure>
+
+        <div class="chapter__body">
+          <p><strong>Quienes no compran, alquilan.</strong> Según el Banco de España, en 2007 el <strong>32,2 %</strong> de los hogares jóvenes (con persona de referencia menor de 30) vivía en alquiler. En 2023 era el <strong>56,6 %</strong>: más de 20 puntos en dieciséis años. Y no es algo exclusivo de los jóvenes: según la ECV del INE, en 2008 vivían de alquiler unos 1,6 millones de hogares en España; en 2023 son cerca de tres.</p>
+
+          <p><strong>Pero el alquiler tampoco da abrigo.</strong> La brecha entre salarios y coste es igual o mayor que en la compraventa. La Comunidad Valenciana se une a las islas a la cabeza del ranking de incrementos del precio del alquiler entre 2015 y 2022, con subidas en torno al <strong>85 %</strong>. Incluso las menos pronunciadas son superiores al <strong>30 %</strong>. Como referencia, ya hemos visto que los salarios subieron un 17 % (un 23 % entre los más jóvenes).</p>
+
+          <p><strong>Si no se puede comprar y el alquiler ahoga, no se sale de casa.</strong> La tasa de emancipación de los 25 a 34 años — el grupo en el que se forma la mayor parte de los hogares — refleja exactamente eso: bajando, sin apenas pausa, durante quince años.</p>
+        </div>
+
+        <figure class="chart" data-chart="emancipacion" aria-labelledby="chart-eman-title">
+          <p class="chart__head">// gráfico 03</p>
+          <h3 class="chart__title" id="chart-eman-title">tasa de emancipación · 25–34 años</h3>
+          <p class="chart__sub">% de personas de 25–34 años que <em>no</em> viven con sus padres · españa · ecv (ine)</p>
+          <div class="chart__plot" data-plot="emancipacion"></div>
+          <p class="chart__source">fuente: elaboración propia a partir de la encuesta de condiciones de vida del ine. el dato del % de jóvenes de 25–34 que viven con sus padres pasó del 40,6 % en 2011 al 54,4 % en 2025.</p>
+        </figure>
+
+        <div class="chapter__body">
+          <p>En 2011, casi seis de cada diez personas de 25 a 34 años vivían fuera de casa de sus padres. En 2025, no llegan a cinco. Trece puntos en catorce años. Esto no es solo retraso de proyectos vitales — formar una familia, por ejemplo, en un país con una de las natalidades más bajas de Europa. Es una limitación de oportunidades profesionales: en 2022, solo un <strong>2,4 %</strong> de los trabajadores españoles cambió de municipio por motivos laborales. Las ciudades que concentran las mejores oportunidades son justo aquellas en las que resulta más difícil establecerse.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule rule--brick is-red" aria-hidden="true"><span></span></div>
+
+    <!-- 03 · CONSTRUIR -->
+    <section id="construir" class="chapter reveal">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">03</span>
+        <p class="chapter__head"><span class="ch-num">03</span> construir</p>
+        <h2 class="chapter__title">Lo que sí mueve la aguja.</h2>
+        <p class="chapter__lede">
+          Si no construimos, nada cambia. Estas son las palancas <em>que sí funcionan</em>.
+        </p>
+        <div class="chapter__body">
+          <p class="chapter__placeholder">// pendiente · simulador estático de escenarios de construcción anual y cuándo cerraríamos el déficit.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule rule--brick is-green" aria-hidden="true"><span></span></div>
+
+    <!-- 04 · ¿REGULAR? -->
+    <section id="regular" class="chapter reveal">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">04</span>
+        <p class="chapter__head"><span class="ch-num">04</span> ¿regular?</p>
+        <h2 class="chapter__title">Topes, controles y la trampa de la demanda.</h2>
+        <p class="chapter__lede">
+          Regular el precio sin regular la oferta es atajo y trampa. Pero regular <em>bien</em> sí ayuda.
+        </p>
+        <div class="chapter__body">
+          <p class="chapter__placeholder">// pendiente · efectos comparados de topes al alquiler en ciudades europeas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO -->
+    <section id="libro" class="book-close reveal">
+      <div class="container container--wide book-close__inner">
+        <div class="book-close__cover">
+          <img src="assets/libro.png" alt="Tres millones de viviendas" class="book-close__cover-img" loading="lazy" />
+        </div>
+        <div class="book-close__copy">
+          <p class="book-close__head">// el libro</p>
+          <h2 class="book-close__title">Tres millones de viviendas</h2>
+          <p class="book-close__sub">Cómo pasar de la escasez a la abundancia.</p>
+          <p>Si todo lo anterior te interesa, el libro lo cuenta entero, con todas las fuentes y los matices que aquí no caben. Debate, 2025.</p>
+          <div class="book-close__buy">
+            <a href="https://www.amazon.es/Tres-millones-viviendas-abundancia-Pensamiento/dp/B0F9271X9J" class="btn btn--primary" rel="noopener">Amazon</a>
+            <a href="https://www.casadellibro.com/libro-tres-millones-de-viviendas/9791387600211/17082649" class="btn btn--outline" rel="noopener">Casa del Libro</a>
+            <a href="https://www.penguinlibros.com" class="btn btn--outline" rel="noopener">Penguin · Debate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container container--wide footer__inner">
+      <div class="footer__write">
+        <p class="footer__label">// el autor</p>
+        <a class="footer__author" href="https://jorgegalindo.eu" rel="noopener">jorge galindo</a>
+      </div>
+      <ul class="footer__links">
+        <li><a href="https://jorgegalindo.eu" rel="noopener">jorgegalindo.eu</a></li>
+        <li><a href="https://www.esade.edu/ecpol" rel="noopener">esadeecpol</a></li>
+        <li><a href="https://jorgegalindo.substack.com" rel="noopener">substack</a></li>
+        <li><a href="https://x.com/jorgegalindo" rel="noopener">x</a></li>
+      </ul>
+    </div>
+    <div class="container container--wide footer__bottom">
+      <p>// <span data-year></span> &nbsp; tres millones de viviendas &nbsp; · &nbsp; debate &nbsp; · &nbsp; EOF</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="app.js?v=20260503AE"></script>
+  <script type="module" src="cap01-mapa.js?v=20260503AE"></script>
+  <script type="module" src="cap01-edificio.js?v=20260503AE"></script>
+  <script type="module" src="cap01-tiempo.js?v=20260503AE"></script>
+  <script type="module" src="cap01-coste.js?v=20260503AE"></script>
+</body>
+</html>
