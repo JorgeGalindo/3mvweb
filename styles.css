@@ -798,29 +798,24 @@ strong { font-weight: 600; }
   max-width: 64ch;
 }
 
-/* Archivador con pestañas: las 7 fichas-palanca como tabs.
-   La pestaña activa tiene fondo paper-soft (el mismo del panel)
-   y se "fusiona" visualmente con la ficha que está debajo. */
+/* Archivador físico: 7 pestañas escalonadas en diagonal, una asomando
+   detrás de la siguiente. Click → trae la ficha al frente. */
 .cap03-tabs { max-width: var(--max-wide); margin-bottom: 2rem; }
 
 .cap03-tabs__nav {
-  display: flex;
-  gap: 4px;
-  margin-bottom: -1px;
   position: relative;
-  z-index: 2;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x proximity;
+  height: 5.4rem;
+  margin-bottom: -1px;
 }
 .cap03-tab {
-  flex: 0 0 auto;
-  min-width: 7.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9.2rem;
   background: var(--paper-deep);
   border: 1px solid var(--rule);
   border-bottom: none;
-  border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
   padding: 0.55rem 0.85rem 0.7rem;
   cursor: pointer;
   font-family: inherit;
@@ -830,8 +825,16 @@ strong { font-weight: 600; }
   gap: 0.18rem;
   color: var(--ink-soft);
   transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
-  scroll-snap-align: start;
 }
+/* offsets escalonados: cada pestaña asoma 5.4rem a la derecha
+   y 0.5rem hacia abajo respecto a la anterior */
+.cap03-tab:nth-child(1) { transform: translate(0,        0);       z-index: 7; }
+.cap03-tab:nth-child(2) { transform: translate(5.4rem,   0.5rem);  z-index: 6; }
+.cap03-tab:nth-child(3) { transform: translate(10.8rem,  1rem);    z-index: 5; }
+.cap03-tab:nth-child(4) { transform: translate(16.2rem,  1.5rem);  z-index: 4; }
+.cap03-tab:nth-child(5) { transform: translate(21.6rem,  2rem);    z-index: 3; }
+.cap03-tab:nth-child(6) { transform: translate(27rem,    2.5rem);  z-index: 2; }
+.cap03-tab:nth-child(7) { transform: translate(32.4rem,  3rem);    z-index: 1; }
 .cap03-tab:hover {
   background: var(--paper);
   color: var(--ink);
@@ -842,8 +845,7 @@ strong { font-weight: 600; }
   border-color: var(--rule-strong);
   border-top: 3px solid var(--red);
   padding-top: calc(0.55rem - 2px);
-  transform: translateY(0);
-  z-index: 3;
+  z-index: 99;
 }
 .cap03-tab__num {
   font-family: var(--mono);
@@ -937,14 +939,36 @@ strong { font-weight: 600; }
   border-top: 1px dashed var(--rule);
 }
 
+/* Móvil: la diagonal no entra. Vuelve a layout en fila con scroll horizontal,
+   sin solapamiento. */
 @media (max-width: 900px) {
   .cap03-tabs__nav {
-    gap: 3px;
-    padding-bottom: 2px;
+    position: relative;
+    height: auto;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0;
+    margin-bottom: -1px;
   }
-  .cap03-tab {
+  .cap03-tab,
+  .cap03-tab:nth-child(1),
+  .cap03-tab:nth-child(2),
+  .cap03-tab:nth-child(3),
+  .cap03-tab:nth-child(4),
+  .cap03-tab:nth-child(5),
+  .cap03-tab:nth-child(6),
+  .cap03-tab:nth-child(7) {
+    position: relative;
+    transform: none;
+    z-index: auto;
+    flex: 0 0 auto;
+    width: auto;
     min-width: 6.4rem;
     padding: 0.5rem 0.7rem 0.6rem;
+    scroll-snap-align: start;
   }
   .cap03-tab__title { font-size: 0.72rem; }
   .cap03-ficha { padding: 1.15rem 1.2rem 1rem; }
