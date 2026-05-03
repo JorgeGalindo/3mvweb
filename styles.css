@@ -798,96 +798,86 @@ strong { font-weight: 600; }
   max-width: 64ch;
 }
 
-/* Abanico de cartas: 7 fichas apiladas con rotación simétrica
-   pequeña, ancladas a la base del container. La activa pivota a
-   vertical, sube al frente con sombra y expande su body. */
+/* Archivador clásico: 7 pestañas escalonadas en diagonal arriba-derecha,
+   cada una con un tono de verde. La activa se pega al panel principal,
+   donde se renderiza la ficha completa. */
 .cap03-tabs {
   position: relative;
   max-width: var(--max-wide);
-  min-height: 36rem;
-  margin: 2rem 0 2rem;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+  margin: 1rem 0 2rem;
 }
-.cap03-ficha {
+
+.cap03-tabs__nav {
+  position: relative;
+  height: 7.5rem;
+  margin-bottom: -1px;
+}
+.cap03-tab {
   position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  width: 20rem;
-  margin-left: -10rem;
+  width: 7.8rem;
+  background: var(--tone, var(--green));
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  padding: 0.55rem 0.75rem 0.7rem;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.16rem;
+  color: var(--paper-soft);
+  transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+}
+/* Diagonal arriba-derecha: tab 1 abajo-izquierda, tab 7 arriba-derecha */
+.cap03-tab:nth-child(1) { left: 0;       bottom: 0;      z-index: 1; }
+.cap03-tab:nth-child(2) { left: 3.4rem;  bottom: 0.6rem; z-index: 2; }
+.cap03-tab:nth-child(3) { left: 6.8rem;  bottom: 1.2rem; z-index: 3; }
+.cap03-tab:nth-child(4) { left: 10.2rem; bottom: 1.8rem; z-index: 4; }
+.cap03-tab:nth-child(5) { left: 13.6rem; bottom: 2.4rem; z-index: 5; }
+.cap03-tab:nth-child(6) { left: 17rem;   bottom: 3rem;   z-index: 6; }
+.cap03-tab:nth-child(7) { left: 20.4rem; bottom: 3.6rem; z-index: 7; }
+
+.cap03-tab:hover { filter: brightness(1.1); }
+.cap03-tab.is-active {
+  z-index: 99;
+  box-shadow: 0 -3px 12px rgba(26, 28, 36, 0.15);
+  transform: translateY(-2px);
+}
+.cap03-tab__num {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  opacity: 0.85;
+}
+.cap03-tab__title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  line-height: 1.25;
+}
+
+/* Panel principal: la ficha activa se renderiza aquí */
+.cap03-tabs__panel {
+  position: relative;
   background: var(--paper-soft);
   border: 1px solid var(--rule-strong);
-  border-radius: 4px;
-  padding: 0.85rem 1.1rem;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  transform-origin: bottom center;
-  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease), background 0.3s var(--ease);
-  box-shadow: 0 2px 6px rgba(26, 28, 36, 0.06);
-  outline: none;
+  border-radius: 0 5px 5px 5px;
+  padding: 1.6rem 1.8rem 1.5rem;
+  z-index: 50;
+  min-height: 16rem;
 }
-.cap03-ficha:hover { background: var(--paper); }
-.cap03-ficha:focus-visible { box-shadow: 0 0 0 2px var(--red), 0 2px 6px rgba(26, 28, 36, 0.06); }
-
-/* Abanico simétrico, rotación más cerrada para que las cartas
-   no se salgan ni el cuerpo activo se cruce con las inactivas. */
-.cap03-ficha:nth-child(1) { transform: rotate(-9deg); z-index: 1; }
-.cap03-ficha:nth-child(2) { transform: rotate(-6deg); z-index: 2; }
-.cap03-ficha:nth-child(3) { transform: rotate(-3deg); z-index: 3; }
-.cap03-ficha:nth-child(4) { transform: rotate(0deg);  z-index: 4; }
-.cap03-ficha:nth-child(5) { transform: rotate(3deg);  z-index: 3; }
-.cap03-ficha:nth-child(6) { transform: rotate(6deg);  z-index: 2; }
-.cap03-ficha:nth-child(7) { transform: rotate(9deg);  z-index: 1; }
-
-.cap03-ficha.is-active {
-  transform: rotate(0deg) translateY(-1.5rem);
-  z-index: 99;
-  background: var(--paper);
-  border-top: 3px solid var(--red);
-  padding-top: calc(0.85rem - 2px);
-  box-shadow: 0 8px 28px rgba(26, 28, 36, 0.15);
-}
-
-.cap03-ficha__head {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  pointer-events: none;
-}
-.cap03-ficha__num {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--red);
-  text-transform: lowercase;
-  font-weight: 500;
-}
+.cap03-ficha { display: none; }
+.cap03-ficha.is-active { display: block; }
 .cap03-ficha__titulo {
   font-family: var(--display);
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.65rem;
   line-height: 1.15;
   letter-spacing: -0.012em;
-  margin: 0;
+  margin: 0 0 0.85rem;
   color: var(--ink);
-}
-.cap03-ficha.is-active .cap03-ficha__titulo { font-size: 1.55rem; }
-
-.cap03-ficha__body {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s var(--ease), opacity 0.3s var(--ease), margin-top 0.4s var(--ease);
-  pointer-events: none;
-  margin-top: 0;
-}
-.cap03-ficha.is-active .cap03-ficha__body {
-  max-height: 28rem;
-  opacity: 1;
-  pointer-events: auto;
-  margin-top: 0.85rem;
 }
 .cap03-ficha__def {
   font-family: var(--serif);
@@ -938,45 +928,38 @@ strong { font-weight: 600; }
   border-top: 1px dashed var(--rule);
 }
 
-/* Móvil: el abanico no funciona en pantalla estrecha; las fichas
-   pasan a un acordeón vertical limpio. Click → expande body. */
 @media (max-width: 900px) {
-  .cap03-tabs {
+  .cap03-tabs__nav {
+    position: relative;
     height: auto;
     display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0;
+    margin-bottom: -1px;
   }
-  .cap03-ficha,
-  .cap03-ficha:nth-child(1),
-  .cap03-ficha:nth-child(2),
-  .cap03-ficha:nth-child(3),
-  .cap03-ficha:nth-child(4),
-  .cap03-ficha:nth-child(5),
-  .cap03-ficha:nth-child(6),
-  .cap03-ficha:nth-child(7) {
+  .cap03-tab,
+  .cap03-tab:nth-child(1),
+  .cap03-tab:nth-child(2),
+  .cap03-tab:nth-child(3),
+  .cap03-tab:nth-child(4),
+  .cap03-tab:nth-child(5),
+  .cap03-tab:nth-child(6),
+  .cap03-tab:nth-child(7) {
     position: relative;
-    bottom: auto;
     left: auto;
-    margin-left: 0;
-    width: 100%;
-    transform: none;
-    z-index: auto;
-    border-radius: 4px;
-    border: 1px solid var(--rule);
-    box-shadow: none;
-    padding: 0.9rem 1.1rem;
+    bottom: auto;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 6.4rem;
+    padding: 0.5rem 0.7rem 0.6rem;
+    scroll-snap-align: start;
   }
-  .cap03-ficha.is-active {
-    transform: none;
-    border-left: 3px solid var(--red);
-    border-top: 1px solid var(--rule);
-    padding-top: 0.9rem;
-    background: var(--paper);
-    box-shadow: 0 1px 4px rgba(26, 28, 36, 0.06);
-  }
-  .cap03-ficha__titulo { font-size: 1.15rem; }
-  .cap03-ficha.is-active .cap03-ficha__titulo { font-size: 1.3rem; }
+  .cap03-tab.is-active { transform: none; }
+  .cap03-tabs__panel { padding: 1.15rem 1.2rem 1rem; }
+  .cap03-ficha__titulo { font-size: 1.3rem; }
   .cap03-ficha__def { font-size: 0.95rem; }
 }
 

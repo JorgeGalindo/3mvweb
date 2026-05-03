@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="styles.css?v=20260503AN" />
+  <link rel="stylesheet" href="styles.css?v=20260503AO" />
 </head>
 <body>
   <a href="#main" class="skip">Saltar al contenido</a>
@@ -526,13 +526,34 @@
 
         <h3 class="cap03__sub">03.b · cómo</h3>
 
-        <div class="cap03-tabs" data-cap03-tabs role="tablist" aria-label="Siete palancas para desbloquear la construcción">
-          <article class="cap03-ficha" data-panel="1" role="tab" aria-selected="false" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 01</span>
+        <div class="cap03-tabs" data-cap03-tabs>
+          <div class="cap03-tabs__nav" role="tablist" aria-label="Siete palancas para desbloquear la construcción">
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-1" data-tab="1" style="--tone:#1B4D3E">
+              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">no por defecto</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-2" data-tab="2" style="--tone:#226053">
+              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">plazos y duplicidades</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-3" data-tab="3" style="--tone:#297367">
+              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">veto autonómico</span>
+            </button>
+            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="palanca-4" data-tab="4" style="--tone:#2F8A6B">
+              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">zonas francas</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-5" data-tab="5" style="--tone:#3D9D7A">
+              <span class="cap03-tab__num">05</span><span class="cap03-tab__title">upzoning</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-6" data-tab="6" style="--tone:#4DB089">
+              <span class="cap03-tab__num">06</span><span class="cap03-tab__title">densidad vivible</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-7" data-tab="7" style="--tone:#5DC399">
+              <span class="cap03-tab__num">07</span><span class="cap03-tab__title">industrializar</span>
+            </button>
+          </div>
+
+          <div class="cap03-tabs__panel">
+            <article class="cap03-ficha" id="palanca-1" role="tabpanel" data-panel="1">
               <h4 class="cap03-ficha__titulo">Huir del "no por defecto"</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Que el silencio administrativo en urbanismo deje de ser negativo en suelo urbano consolidado. Que un defecto formal menor no anule un proyecto entero. Racionalizar el derecho a impugnar.</p>
               <blockquote class="cap03-ficha__cita">"Una aproximación <em>yimby</em> en contraste con el equilibrio <em>nimby</em> actual."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -541,15 +562,10 @@
                 <li>Vincular impugnaciones a intereses generales verificables</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 145–146</p>
-            </div>
-          </article>
+            </article>
 
-          <article class="cap03-ficha" data-panel="2" role="tab" aria-selected="false" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 02</span>
+            <article class="cap03-ficha" id="palanca-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Plazos y duplicidades</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Auditoría independiente que detecte informes sectoriales duplicados, los suprima y obligue a cumplir los plazos legales con capacidad de sanción.</p>
               <blockquote class="cap03-ficha__cita">"El Ayuntamiento de Pamplona se plantó en febrero de 2024 con 687 expedientes urbanísticos pendientes."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -558,15 +574,10 @@
                 <li>Plantillas estandarizadas de tramitación</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 147</p>
-            </div>
-          </article>
+            </article>
 
-          <article class="cap03-ficha" data-panel="3" role="tab" aria-selected="false" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 03</span>
+            <article class="cap03-ficha" id="palanca-3" role="tabpanel" data-panel="3">
               <h4 class="cap03-ficha__titulo">Veto autonómico al bloqueo local</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Cuando un municipio bloquea desarrollos de interés general, la comunidad autónoma debería tener capacidad de veto y de iniciativa subsidiaria. Hacer cumplir las caducidades de planes obsoletos.</p>
               <blockquote class="cap03-ficha__cita">"Tras pasar a elecciones por distrito, los municipios redujeron en promedio un 21 % el número de permisos de vivienda emitidos."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -575,15 +586,10 @@
                 <li>Iniciativa subsidiaria de la autonomía si el municipio no actúa</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 148–149 (Mast, 2020)</p>
-            </div>
-          </article>
+            </article>
 
-          <article class="cap03-ficha is-active" data-panel="4" role="tab" aria-selected="true" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 04</span>
+            <article class="cap03-ficha is-active" id="palanca-4" role="tabpanel" data-panel="4">
               <h4 class="cap03-ficha__titulo">Zonas francas de vivienda</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Instrumentos urbanísticos impulsados desde la autonomía que aceleran desarrollos residenciales en zonas estratégicas, con gestión compartida y reserva relevante de protegida.</p>
               <blockquote class="cap03-ficha__cita">"Crecimiento urbano ágil, ofreciendo suelo urbanizable con condiciones favorables para la promoción de vivienda protegida."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -592,15 +598,10 @@
                 <li>Reactivación del Govern en el AMB</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 150</p>
-            </div>
-          </article>
+            </article>
 
-          <article class="cap03-ficha" data-panel="5" role="tab" aria-selected="false" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 05</span>
+            <article class="cap03-ficha" id="palanca-5" role="tabpanel" data-panel="5">
               <h4 class="cap03-ficha__titulo">Upzoning · más alturas por derecho</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Permitir más plantas donde hay demanda y servicios, automáticamente, sin condiciones especiales. Densificar la ciudad consolidada en vez de expandir su mancha.</p>
               <blockquote class="cap03-ficha__cita">"Permitir mayor altura aumenta la oferta de vivienda en torno al 9 % a largo plazo, sin subir los precios de alquiler de forma significativa."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -609,15 +610,10 @@
                 <li>Elche, +2 plantas en sectores de 4–6</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 154 (Lutz &amp; Büchler, J. Urban Economics)</p>
-            </div>
-          </article>
+            </article>
 
-          <article class="cap03-ficha" data-panel="6" role="tab" aria-selected="false" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 06</span>
+            <article class="cap03-ficha" id="palanca-6" role="tabpanel" data-panel="6">
               <h4 class="cap03-ficha__titulo">Densidad vivible</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Abandonar la dicotomía entre PAU disperso y preservación. Combinar densidad alta con transporte público potente y usos mixtos. Mezclar bicicletas, tranvías y bloques residenciales.</p>
               <blockquote class="cap03-ficha__cita">"Volver, pues, a abrazar la densidad, como ya hizo Ildefons Cerdà, el fabuloso urbanista que ideó el Eixample barcelonés."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -626,15 +622,10 @@
                 <li>Eixample de Cerdà</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 141</p>
-            </div>
-          </article>
+            </article>
 
-          <article class="cap03-ficha" data-panel="7" role="tab" aria-selected="false" tabindex="0">
-            <header class="cap03-ficha__head">
-              <span class="cap03-ficha__num">// 07</span>
+            <article class="cap03-ficha" id="palanca-7" role="tabpanel" data-panel="7">
               <h4 class="cap03-ficha__titulo">Industrializar el sector</h4>
-            </header>
-            <div class="cap03-ficha__body">
               <p class="cap03-ficha__def">Productividad real mediante industrialización: estandarizar componentes, fabricar en planta y montar en obra. Atraer talento joven con FP dual específica del sector.</p>
               <blockquote class="cap03-ficha__cita">"La construcción moderna debería parecerse más a una cadena de montaje que a un oficio artesanal."</blockquote>
               <ul class="cap03-ficha__casos">
@@ -643,8 +634,8 @@
                 <li>Plan español de industrialización con fondos NextGenEU</li>
               </ul>
               <p class="cap03-ficha__cite">libro, p. 160–161</p>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -705,11 +696,11 @@
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="app.js?v=20260503AN"></script>
-  <script type="module" src="cap01-mapa.js?v=20260503AN"></script>
-  <script type="module" src="cap01-edificio.js?v=20260503AN"></script>
-  <script type="module" src="cap01-tiempo.js?v=20260503AN"></script>
-  <script type="module" src="cap01-coste.js?v=20260503AN"></script>
-  <script type="module" src="cap03-tabs.js?v=20260503AN"></script>
+  <script type="module" src="app.js?v=20260503AO"></script>
+  <script type="module" src="cap01-mapa.js?v=20260503AO"></script>
+  <script type="module" src="cap01-edificio.js?v=20260503AO"></script>
+  <script type="module" src="cap01-tiempo.js?v=20260503AO"></script>
+  <script type="module" src="cap01-coste.js?v=20260503AO"></script>
+  <script type="module" src="cap03-tabs.js?v=20260503AO"></script>
 </body>
 </html>
