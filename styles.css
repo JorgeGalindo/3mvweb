@@ -965,16 +965,35 @@ strong { font-weight: 600; }
   }
   .cap01-mapa__sticky {
     top: 56px;
-    height: 60vh;
-    min-height: 380px;
+    height: 48vh;
+    min-height: 320px;
     border-left: none;
     border-right: none;
   }
   .cap01-mapa__steps {
-    padding: 4vh var(--gutter) 30vh;
-    gap: 22vh;
+    padding: 3vh var(--gutter) 24vh;
+    gap: 0;
   }
-  .cap01-mapa__legend { max-width: 200px; bottom: 0.75rem; }
+  /* En móvil cada step se desvanece cuando inactivo (igual patrón que los otros bloques),
+     para que no quede tapado a medias por el bg paper del sticky. */
+  .cap01-step {
+    min-height: 60vh;
+    margin-bottom: 0;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+    pointer-events: none;
+  }
+  .cap01-step.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    border-left-color: var(--red);
+    background: transparent;
+  }
+  .cap01-mapa__legend { max-width: 180px; bottom: 0.6rem; font-size: 10px; }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1116,14 +1135,24 @@ strong { font-weight: 600; }
   }
   .cap01-edif__sticky {
     top: 56px;
-    height: 64vh;
-    min-height: 380px;
+    height: 50vh;
+    min-height: 320px;
     background: var(--paper);
     z-index: 2;
   }
-  .cap01-edif__steps { padding: 4vh var(--gutter) 30vh; }
-  .cap01-edif-step { min-height: 70vh; padding: 1rem 1.2rem; }
-  .cap01-edif__intro { padding: 0 var(--gutter); }
+  /* En móvil el SVG ocupa más del ancho del sticky para que el edificio se lea bien */
+  .cap01-edif__svg { width: 90%; max-height: 100%; }
+  .cap01-edif__steps { padding: 3vh var(--gutter) 24vh; }
+  .cap01-edif-step {
+    min-height: 60vh;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.95rem;
+  }
+  .cap01-edif__intro {
+    padding: 0 var(--gutter);
+    margin-top: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1334,15 +1363,24 @@ strong { font-weight: 600; }
   }
   .cap01-tiempo__sticky {
     top: 56px;
-    height: 50vh;
-    min-height: 320px;
+    height: 44vh;
+    min-height: 280px;
     background: var(--paper);
     z-index: 2;
   }
-  .cap01-tiempo__steps { padding: 4vh var(--gutter) 30vh; }
-  .cap01-tiempo-step { min-height: 70vh; padding: 1rem 1.2rem; }
-  .cap01-tiempo__intro { padding: 0 var(--gutter); }
-  .cap01-tiempo-total { font-size: 36px; }
+  .cap01-tiempo__svg { width: 96%; max-height: 100%; }
+  .cap01-tiempo__steps { padding: 3vh var(--gutter) 24vh; }
+  .cap01-tiempo-step {
+    min-height: 60vh;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.95rem;
+  }
+  .cap01-tiempo__intro {
+    padding: 0 var(--gutter);
+    margin-top: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+  .cap01-tiempo-total { font-size: 30px; }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1549,12 +1587,22 @@ strong { font-weight: 600; }
   }
   .cap01-coste__sticky {
     top: 56px;
-    height: 60vh;
-    min-height: 380px;
+    height: 48vh;
+    min-height: 320px;
     background: var(--paper);
     z-index: 2;
   }
-  .cap01-coste__steps { padding: 4vh var(--gutter) 30vh; }
-  .cap01-coste-step { min-height: 70vh; padding: 1rem 1.2rem; }
-  .cap01-coste__intro { padding: 0 var(--gutter); }
+  .cap01-coste__svg { width: 92%; max-height: 100%; }
+  .cap01-coste__steps { padding: 3vh var(--gutter) 24vh; }
+  .cap01-coste-step {
+    min-height: 60vh;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.95rem;
+  }
+  .cap01-coste__intro {
+    padding: 0 var(--gutter);
+    margin-top: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+  .cap01-coste-total { font-size: 18px; }
 }
