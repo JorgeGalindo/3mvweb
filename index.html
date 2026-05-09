@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="styles.css?v=20260509B" />
+  <link rel="stylesheet" href="styles.css?v=20260509C" />
 </head>
 <body>
   <a href="#main" class="skip">Saltar al contenido</a>
@@ -603,6 +603,13 @@
 
         <h3 class="cap03__sub">03.b · cómo</h3>
 
+        <aside class="chapter__minread chapter__minread--top">
+          <p class="chapter__minread-head">// principio</p>
+          <p class="chapter__minread-body">Ninguna palanca alcanza por sí sola — y todas son acumulativas. Suelo, plan, edificio y sector tienen que moverse en paralelo, no en cola.</p>
+        </aside>
+
+        <p class="cap03__intro">Las siete palancas se agrupan en cuatro familias: <strong>cuatro</strong> que reducen la prima regulatoria (silencio, plazos, veto, zonas), <strong>una</strong> que densifica la ciudad consolidada (altura), <strong>una</strong> de nuevo parque público de alquiler social (parque) y <strong>una</strong> sobre productividad del sector (industria). Recórrelas en orden o por familia.</p>
+
         <div class="cap03-tabs" data-cap03-tabs>
           <div class="cap03-tabs__nav" role="tablist" aria-label="Siete palancas para desbloquear la construcción">
             <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-1" data-tab="1" style="--tone:#1B4D3E">
@@ -735,11 +742,35 @@
         </aside>
 
         <div class="chapter__body">
-          <p>El instinto es directo: si el precio sube y el salario no, topa el precio. Pero la evidencia internacional es bastante clara. Una <strong>revisión reciente de Konstantin Kholodilin</strong> sobre todas las generaciones de control de alquiler concluye que sí limitan los precios — pero a cambio de efectos adversos considerables. <strong>Dos terceras partes</strong> de los estudios encuentran efectos negativos sobre la construcción nueva; el deterioro de calidad es <em>«casi unánime»</em>; y son frecuentes las subidas en zonas no controladas.</p>
+          <p>El instinto es directo: si el precio sube y el salario no, topa el precio. Pero la evidencia internacional es bastante clara. Una <strong>revisión reciente de Konstantin Kholodilin</strong> sobre todas las generaciones de control de alquiler concluye que sí limitan los precios — pero a cambio de tres efectos adversos:</p>
 
-          <p>En España la experiencia más reciente es la <strong>Ley 11/2020 de Cataluña</strong>, anulada después por el Constitucional. Dos investigaciones la analizan, y son complementarias en lo fundamental.</p>
+          <div class="cap01-procedure cap01-procedure--3cols">
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// a</p>
+              <p class="cap01-procedure__body">2 de cada 3 estudios encuentran efectos negativos sobre la construcción de vivienda nueva.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// b</p>
+              <p class="cap01-procedure__body">El deterioro de calidad de la oferta es «casi unánime» entre los estudios revisados.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// c</p>
+              <p class="cap01-procedure__body">Subidas frecuentes en zonas no controladas; las bajadas no llegan a los pisos más necesarios.</p>
+            </article>
+          </div>
 
-          <p><strong>Monràs y García Montalvo</strong>, con el registro completo de contratos, encuentran un efecto <em>regresivo</em>: bajan los precios en las viviendas más caras y suben en las más baratas, con caída del número de contratos en el segmento alto. <strong>Jofre-Monseny, Martínez-Mazza y Segú</strong>, con datos de fianzas a escala municipal, miden <strong>−6,2 %</strong> en el precio medio de los municipios regulados, sin caída de volumen, pero detectan comportamiento estratégico de la oferta justo antes de la entrada en vigor.</p>
+          <p>En España la experiencia más reciente es la <strong>Ley 11/2020 de Cataluña</strong>, anulada después por el Constitucional. Dos investigaciones la analizan, complementarias en lo fundamental:</p>
+
+          <div class="cap01-pair">
+            <article class="cap01-pair__card">
+              <p class="cap01-pair__tag">// monràs · garcía montalvo</p>
+              <p class="cap01-pair__body">Registro completo de contratos. Efecto regresivo: bajan precios en las viviendas más caras, suben en las más baratas. Cae el nº de contratos en el segmento alto.</p>
+            </article>
+            <article class="cap01-pair__card">
+              <p class="cap01-pair__tag">// jofre-monseny et al.</p>
+              <p class="cap01-pair__body">Fianzas a escala municipal. −6,2 % en precio medio de los municipios regulados, sin caída de volumen, pero comportamiento estratégico de la oferta antes de la entrada en vigor.</p>
+            </article>
+          </div>
 
           <p>El libro lo resume con una metáfora útil: regular precios sin atacar la escasez es <em>«como tratar la fiebre que provoca una infección sin antibiótico — y, en el peor caso, con medicamentos que pueden empeorar la infección»</em>. De ahí la regla de oro de arriba.</p>
 
@@ -856,12 +887,12 @@
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="app.js?v=20260509B"></script>
-  <script type="module" src="cap01-mapa.js?v=20260509B"></script>
-  <script type="module" src="cap01-edificio.js?v=20260509B"></script>
-  <script type="module" src="cap01-tiempo.js?v=20260509B"></script>
-  <script type="module" src="cap01-coste.js?v=20260509B"></script>
-  <script type="module" src="cap03-tabs.js?v=20260509B"></script>
-  <script type="module" src="cap03-sim.js?v=20260509B"></script>
+  <script type="module" src="app.js?v=20260509C"></script>
+  <script type="module" src="cap01-mapa.js?v=20260509C"></script>
+  <script type="module" src="cap01-edificio.js?v=20260509C"></script>
+  <script type="module" src="cap01-tiempo.js?v=20260509C"></script>
+  <script type="module" src="cap01-coste.js?v=20260509C"></script>
+  <script type="module" src="cap03-tabs.js?v=20260509C"></script>
+  <script type="module" src="cap03-sim.js?v=20260509C"></script>
 </body>
 </html>

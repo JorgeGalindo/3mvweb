@@ -583,6 +583,10 @@ strong { font-weight: 600; }
 .chapter__body .cap01-procedure__step:nth-child(2) { background: rgba(245, 198, 191, 0.34); }
 .chapter__body .cap01-procedure__step:nth-child(3) { background: rgba(245, 198, 191, 0.50); }
 .chapter__body .cap01-procedure__step:nth-child(4) { background: rgba(245, 198, 191, 0.66); }
+.chapter__body .cap01-procedure--3cols { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 600px) {
+  .chapter__body .cap01-procedure--3cols { grid-template-columns: 1fr; }
+}
 .chapter__body .cap01-procedure__num {
   font-family: var(--mono);
   font-size: .7rem;
