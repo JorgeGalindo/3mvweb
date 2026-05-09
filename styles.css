@@ -465,16 +465,7 @@ strong { font-weight: 600; }
   letter-spacing: -0.05em;
   font-variant-numeric: tabular-nums;
 }
-.chapter__bignum::after {
-  content: "";
-  position: absolute;
-  left: .12em;
-  bottom: .08em;
-  width: .62em;
-  height: 4px;
-  background: var(--green);
-}
-.chapter--red .chapter__bignum::after { background: var(--red); }
+.chapter__bignum::after { content: none; }
 
 .chapter__head,
 .chapter__title,
@@ -539,28 +530,33 @@ strong { font-weight: 600; }
 
 /* ─── cajitas del cuerpo del cap 01 (3 dispositivos, misma familia) ─── */
 
-/* a · pair: contraste horizontal (antes / después) */
+/* a · pair: contraste horizontal (antes / después) — el "after" se tiñe */
 .cap01-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--rule-strong);
-  background: var(--paper-soft);
   margin: 1.1rem 0 1.25rem;
   max-width: 56ch;
+  overflow: hidden;
 }
 .cap01-pair__card {
   padding: .85rem 1rem .95rem;
   border-right: 1px dashed var(--rule-strong);
+  background: var(--paper-soft);
 }
-.cap01-pair__card:last-child { border-right: none; }
+.cap01-pair__card:last-child {
+  border-right: none;
+  background: var(--red-haze);
+}
 .cap01-pair__tag {
   font-family: var(--mono);
   font-size: .7rem;
   letter-spacing: .05em;
   text-transform: lowercase;
-  color: var(--red-deep);
+  color: var(--ink-soft);
   margin: 0 0 .4rem;
 }
+.cap01-pair__card:last-child .cap01-pair__tag { color: var(--red-deep); }
 .cap01-pair__body {
   font-family: var(--mono);
   font-size: .85rem;
@@ -570,7 +566,7 @@ strong { font-weight: 600; }
   letter-spacing: .005em;
 }
 
-/* b · procedure: rejilla de tiles numerados */
+/* b · procedure: rejilla de tiles con num-chip rojo invertido */
 .cap01-procedure {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -581,15 +577,19 @@ strong { font-weight: 600; }
 .cap01-procedure__step {
   border: 1px solid var(--rule-strong);
   background: var(--paper-soft);
-  padding: .65rem .85rem .75rem;
+  padding: .8rem .85rem .8rem;
   position: relative;
 }
 .cap01-procedure__num {
+  display: inline-block;
   font-family: var(--mono);
-  font-size: .7rem;
-  letter-spacing: .05em;
-  color: var(--red-deep);
-  margin: 0 0 .3rem;
+  font-size: .65rem;
+  letter-spacing: .06em;
+  text-transform: lowercase;
+  color: var(--paper);
+  background: var(--red);
+  padding: .15rem .5rem .2rem;
+  margin: 0 0 .55rem;
 }
 .cap01-procedure__body {
   font-family: var(--mono);
@@ -600,7 +600,7 @@ strong { font-weight: 600; }
   letter-spacing: .005em;
 }
 
-/* c · mech: cajas apiladas con borde rojo a la izquierda */
+/* c · mech: cajas apiladas, fondo red-haze + borde rojo a la izquierda */
 .cap01-mech {
   display: flex;
   flex-direction: column;
@@ -610,8 +610,8 @@ strong { font-weight: 600; }
 }
 .cap01-mech__card {
   border-left: 2px solid var(--red);
-  background: var(--paper-soft);
-  padding: .7rem .95rem .8rem;
+  background: var(--red-haze);
+  padding: .75rem 1rem .85rem;
 }
 .cap01-mech__head {
   font-family: var(--mono);
@@ -620,6 +620,7 @@ strong { font-weight: 600; }
   text-transform: lowercase;
   color: var(--red-deep);
   margin: 0 0 .35rem;
+  font-weight: 500;
 }
 .cap01-mech__body {
   font-family: var(--mono);
