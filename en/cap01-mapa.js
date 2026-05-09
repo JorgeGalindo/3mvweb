@@ -69,13 +69,7 @@
     cooperativeGestures: true,
   });
 
-  map.addControl(
-    new maplibregl.AttributionControl({
-      compact: true,
-      customAttribution: "© OpenFreeMap · OpenMapTiles · OpenStreetMap",
-    }),
-    "bottom-right"
-  );
+  // Attribution moved to the global footer; required by the ODbL licence.
 
   map.on("load", async () => {
     try {

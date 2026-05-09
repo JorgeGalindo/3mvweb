@@ -256,16 +256,18 @@ strong { font-weight: 600; }
 .nav.is-cream .nav__lang-off { color: var(--ink-soft); }
 .nav.is-cream .nav__lang-off:hover { color: var(--ink); }
 
-@media (max-width: 720px) {
-  .nav__lang { margin-left: .4rem; font-size: .7rem; }
-}
-
 @media (max-width: 980px) {
-  .nav__list { gap: .5rem; font-size: .72rem; }
+  .nav__list { gap: clamp(.5rem, 1.2vw, .9rem); font-size: .72rem; }
   .nav__num  { display: none; }
 }
 @media (max-width: 720px) {
-  .nav__list { font-size: .68rem; flex-wrap: wrap; justify-content: flex-end; gap: .45rem .8rem; }
+  .nav__inner { gap: .5rem; }
+  .nav__list { gap: .55rem; flex-wrap: nowrap; font-size: .72rem; }
+  .nav__list a { padding: .15rem .35rem; }
+  .nav__num    { display: inline-block; margin-right: 0; opacity: .9; font-size: .72rem; }
+  .nav__label  { display: none; }
+  .nav__lang   { margin-left: .25rem; font-size: .7rem; }
+  .nav__brand  { font-size: .76rem; }
 }
 
 /* ─────────────────────────  hero (oscuro)  ───────────────────────── */
@@ -929,7 +931,11 @@ strong { font-weight: 600; }
   color: rgba(244, 239, 226, 0.55);
   letter-spacing: .02em;
 }
-.footer__bottom p { margin: 0; }
+.footer__bottom p { margin: 0 0 .35rem; }
+.footer__bottom p:last-child { margin-bottom: 0; }
+.footer__attrib { font-size: .68rem; color: rgba(244, 239, 226, 0.45); }
+.footer__attrib a { color: rgba(244, 239, 226, 0.62); text-decoration: none; }
+.footer__attrib a:hover { color: var(--green-pastel); }
 
 /* ─────────────────────────  reveal  ───────────────────────── */
 

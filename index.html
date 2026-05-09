@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="styles.css?v=20260509G" />
+  <link rel="stylesheet" href="styles.css?v=20260509H" />
 </head>
 <body>
   <a href="#main" class="skip">Saltar al contenido</a>
@@ -28,10 +28,10 @@
       </a>
       <nav aria-label="Capítulos">
         <ul class="nav__list">
-          <li><a href="#porque-no"><span class="nav__num">01</span>por qué no construimos</a></li>
-          <li><a href="#crisis"><span class="nav__num">02</span>las consecuencias</a></li>
-          <li><a href="#construir"><span class="nav__num">03</span>construir</a></li>
-          <li><a href="#regular"><span class="nav__num">04</span>¿regular?</a></li>
+          <li><a href="#porque-no"><span class="nav__num">01</span><span class="nav__label">por qué no construimos</span></a></li>
+          <li><a href="#crisis"><span class="nav__num">02</span><span class="nav__label">las consecuencias</span></a></li>
+          <li><a href="#construir"><span class="nav__num">03</span><span class="nav__label">construir</span></a></li>
+          <li><a href="#regular"><span class="nav__num">04</span><span class="nav__label">¿regular?</span></a></li>
         </ul>
       </nav>
       <span class="nav__lang"><span class="nav__lang-on">ES</span><span class="nav__lang-sep">·</span><a href="en/" class="nav__lang-off">EN</a></span>
@@ -130,10 +130,6 @@
       <div class="cap01-mapa" data-cap01-mapa>
         <div class="cap01-mapa__sticky">
           <div class="cap01-mapa__map" id="cap01-map" aria-label="Mapa de Madrid con sectores del PGOU 1997, Operación Campamento y Cocheras de Cuatro Caminos"></div>
-          <div class="cap01-mapa__legend" data-cap01-legend>
-            <p class="cap01-mapa__legend-title" data-legend-title>// Madrid · PGOU 1997</p>
-            <p class="cap01-mapa__legend-body" data-legend-body>Aproximación visual.</p>
-          </div>
         </div>
 
         <div class="cap01-mapa__steps" data-cap01-steps>
@@ -526,7 +522,6 @@
         </div>
 
         <figure class="chart" data-chart="ratio" aria-labelledby="chart-ratio-title">
-          <p class="chart__head">// gráfico 01</p>
           <h3 class="chart__title" id="chart-ratio-title">ratio de viviendas terminadas por hogar creado, por periodo</h3>
           <p class="chart__sub">españa · agregada por periodo intercensal · una ratio de 1 sería el equilibrio</p>
           <div class="chart__legend">
@@ -546,7 +541,6 @@
         </div>
 
         <figure class="chart" data-chart="tenencia" aria-labelledby="chart-tenencia-title">
-          <p class="chart__head">// gráfico 02</p>
           <h3 class="chart__title" id="chart-tenencia-title">% de hogares propietarios de su vivienda principal, por edad</h3>
           <p class="chart__sub">edad de la persona de referencia · encuesta financiera de las familias (banco de españa)</p>
           <div class="chart__plot" data-plot="tenencia"></div>
@@ -562,7 +556,6 @@
         </div>
 
         <figure class="chart" data-chart="emancipacion" aria-labelledby="chart-eman-title">
-          <p class="chart__head">// gráfico 03</p>
           <h3 class="chart__title" id="chart-eman-title">tasa de emancipación · 25–34 años</h3>
           <p class="chart__sub">% de personas de 25–34 años que <em>no</em> viven con sus padres · españa · ecv (ine)</p>
           <div class="chart__plot" data-plot="emancipacion"></div>
@@ -931,16 +924,17 @@
     </div>
     <div class="container container--wide footer__bottom">
       <p>// <span data-year></span> &nbsp; tres millones de viviendas &nbsp; · &nbsp; debate &nbsp; · &nbsp; EOF</p>
+      <p class="footer__attrib">tiles del mapa · <a href="https://openfreemap.org" rel="noopener">OpenFreeMap</a> · <a href="https://openmaptiles.org" rel="noopener">OpenMapTiles</a> · © contribuidores de <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a></p>
     </div>
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="app.js?v=20260509G"></script>
-  <script type="module" src="cap01-mapa.js?v=20260509G"></script>
-  <script type="module" src="cap01-edificio.js?v=20260509G"></script>
-  <script type="module" src="cap01-tiempo.js?v=20260509G"></script>
-  <script type="module" src="cap01-coste.js?v=20260509G"></script>
-  <script type="module" src="cap03-tabs.js?v=20260509G"></script>
-  <script type="module" src="cap03-sim.js?v=20260509G"></script>
+  <script type="module" src="app.js?v=20260509H"></script>
+  <script type="module" src="cap01-mapa.js?v=20260509H"></script>
+  <script type="module" src="cap01-edificio.js?v=20260509H"></script>
+  <script type="module" src="cap01-tiempo.js?v=20260509H"></script>
+  <script type="module" src="cap01-coste.js?v=20260509H"></script>
+  <script type="module" src="cap03-tabs.js?v=20260509H"></script>
+  <script type="module" src="cap03-sim.js?v=20260509H"></script>
 </body>
 </html>

@@ -152,13 +152,7 @@
     cooperativeGestures: true,
   });
 
-  map.addControl(
-    new maplibregl.AttributionControl({
-      compact: true,
-      customAttribution: '© OpenFreeMap · OpenMapTiles · OpenStreetMap',
-    }),
-    "bottom-right"
-  );
+  // Atribución movida al footer global; la requiere la licencia ODbL.
 
   map.on("load", async () => {
     /* 22 sectores anulados PGOU-97 */

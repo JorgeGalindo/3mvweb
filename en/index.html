@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="../styles.css?v=20260509G" />
+  <link rel="stylesheet" href="../styles.css?v=20260509H" />
 </head>
 <body>
   <a href="#main" class="skip">Skip to content</a>
@@ -28,10 +28,10 @@
       </a>
       <nav aria-label="Chapters">
         <ul class="nav__list">
-          <li><a href="#porque-no"><span class="nav__num">01</span>why we don't build</a></li>
-          <li><a href="#crisis"><span class="nav__num">02</span>the consequences</a></li>
-          <li><a href="#construir"><span class="nav__num">03</span>build</a></li>
-          <li><a href="#regular"><span class="nav__num">04</span>regulate?</a></li>
+          <li><a href="#porque-no"><span class="nav__num">01</span><span class="nav__label">why we don't build</span></a></li>
+          <li><a href="#crisis"><span class="nav__num">02</span><span class="nav__label">the consequences</span></a></li>
+          <li><a href="#construir"><span class="nav__num">03</span><span class="nav__label">build</span></a></li>
+          <li><a href="#regular"><span class="nav__num">04</span><span class="nav__label">regulate?</span></a></li>
         </ul>
       </nav>
       <span class="nav__lang"><a href="../" class="nav__lang-off">ES</a><span class="nav__lang-sep">·</span><span class="nav__lang-on">EN</span></span>
@@ -130,10 +130,6 @@
       <div class="cap01-mapa" data-cap01-mapa>
         <div class="cap01-mapa__sticky">
           <div class="cap01-mapa__map" id="cap01-map" aria-label="Map of Madrid with annulled PGOU 1997 sectors, Operación Campamento and Cuatro Caminos depots"></div>
-          <div class="cap01-mapa__legend" data-cap01-legend>
-            <p class="cap01-mapa__legend-title" data-legend-title>// Madrid · 1997 General Plan</p>
-            <p class="cap01-mapa__legend-body" data-legend-body>Visual approximation.</p>
-          </div>
         </div>
 
         <div class="cap01-mapa__steps" data-cap01-steps>
@@ -505,7 +501,6 @@
         </div>
 
         <figure class="chart" data-chart="ratio" aria-labelledby="chart-ratio-title">
-          <p class="chart__head">// chart 01</p>
           <h3 class="chart__title" id="chart-ratio-title">ratio of completed homes per new household, by period</h3>
           <p class="chart__sub">spain · aggregated by intercensal period · a ratio of 1 would be balance</p>
           <div class="chart__legend">
@@ -525,7 +520,6 @@
         </div>
 
         <figure class="chart" data-chart="tenencia" aria-labelledby="chart-tenencia-title">
-          <p class="chart__head">// chart 02</p>
           <h3 class="chart__title" id="chart-tenencia-title">% of households owning their main residence, by age</h3>
           <p class="chart__sub">age of the reference person · banco de españa household financial survey</p>
           <div class="chart__plot" data-plot="tenencia"></div>
@@ -541,7 +535,6 @@
         </div>
 
         <figure class="chart" data-chart="emancipacion" aria-labelledby="chart-eman-title">
-          <p class="chart__head">// chart 03</p>
           <h3 class="chart__title" id="chart-eman-title">emancipation rate · 25–34 years</h3>
           <p class="chart__sub">% of people aged 25–34 <em>not</em> living with their parents · spain · ecv (ine)</p>
           <div class="chart__plot" data-plot="emancipacion"></div>
@@ -905,16 +898,17 @@
     </div>
     <div class="container container--wide footer__bottom">
       <p>// <span data-year></span> &nbsp; three million homes &nbsp; · &nbsp; debate &nbsp; · &nbsp; EOF</p>
+      <p class="footer__attrib">map tiles · <a href="https://openfreemap.org" rel="noopener">OpenFreeMap</a> · <a href="https://openmaptiles.org" rel="noopener">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors</p>
     </div>
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="../app.js?v=20260509G"></script>
-  <script type="module" src="cap01-mapa.js?v=20260509G"></script>
-  <script type="module" src="../cap01-edificio.js?v=20260509G"></script>
-  <script type="module" src="../cap01-tiempo.js?v=20260509G"></script>
-  <script type="module" src="../cap01-coste.js?v=20260509G"></script>
-  <script type="module" src="../cap03-tabs.js?v=20260509G"></script>
-  <script type="module" src="cap03-sim.js?v=20260509G"></script>
+  <script type="module" src="../app.js?v=20260509H"></script>
+  <script type="module" src="cap01-mapa.js?v=20260509H"></script>
+  <script type="module" src="../cap01-edificio.js?v=20260509H"></script>
+  <script type="module" src="../cap01-tiempo.js?v=20260509H"></script>
+  <script type="module" src="../cap01-coste.js?v=20260509H"></script>
+  <script type="module" src="../cap03-tabs.js?v=20260509H"></script>
+  <script type="module" src="cap03-sim.js?v=20260509H"></script>
 </body>
 </html>
