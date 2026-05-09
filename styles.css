@@ -618,6 +618,26 @@ strong { font-weight: 600; }
   .chapter__inner > .cap04-paper { padding: .95rem 1.05rem 1rem; }
   .cap04-paper__body { font-size: .95rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   Cap. 02 (#crisis) y Cap. 04 (#regular) · anchos homogéneos
+   Todo a la misma columna (max-chart, 920px) · sin splits 2/3 cols
+   ───────────────────────────────────────────────────────────── */
+#crisis .chapter__body,
+#regular .chapter__body,
+#regular .chapter__inner > .cap04-paper,
+#regular .chapter__inner > .cap03-tabs,
+#crisis .chapter__minread,
+#regular .chapter__minread {
+  max-width: var(--max-chart);
+}
+#regular .chapter__inner > .cap03-tabs { margin-left: 0; margin-right: 0; }
+
+#regular .chapter__body .cap01-procedure,
+#regular .chapter__body .cap01-procedure--3cols {
+  grid-template-columns: 1fr;
+  max-width: var(--max-chart);
+}
 .chapter__body .cap01-pair__card {
   padding: .85rem 1rem .95rem;
   border-right: 1px dashed var(--rule-strong);
