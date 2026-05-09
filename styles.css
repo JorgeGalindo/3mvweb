@@ -69,6 +69,7 @@ body {
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 img, svg { max-width: 100%; display: block; }
@@ -567,6 +568,55 @@ strong { font-weight: 600; }
   margin: 1.1rem 0 1.25rem;
   max-width: 56ch;
   overflow: hidden;
+}
+.chapter__body .cap01-pair--single {
+  grid-template-columns: 1fr;
+  max-width: none;
+}
+
+/* Cap. 04 · paper card a todo el ancho del chapter__inner */
+.chapter__inner > .cap04-paper {
+  position: relative;
+  z-index: 1;
+  margin: 1.5rem 0 1.7rem;
+  border: 1px solid var(--rule-strong);
+  background: var(--red-haze);
+  border-left: 3px solid var(--red);
+  padding: 1.1rem 1.4rem 1.25rem;
+}
+.cap04-paper__tag {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .04em;
+  text-transform: lowercase;
+  color: var(--red-deep);
+  margin: 0 0 .55rem;
+  font-weight: 500;
+}
+.cap04-paper__body {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 .7rem;
+  max-width: 78ch;
+}
+.cap04-paper__body strong { color: var(--ink); font-weight: 600; }
+.cap04-paper__body em { font-style: italic; color: var(--red-deep); }
+.cap04-paper__src {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .03em;
+  color: var(--ink-mute);
+  margin: 0;
+  padding-top: .5rem;
+  border-top: 1px dashed var(--rule);
+}
+.cap04-paper__src a { color: var(--ink-soft); text-decoration: none; }
+.cap04-paper__src a:hover { color: var(--red-deep); }
+@media (max-width: 720px) {
+  .chapter__inner > .cap04-paper { padding: .95rem 1.05rem 1rem; }
+  .cap04-paper__body { font-size: .95rem; }
 }
 .chapter__body .cap01-pair__card {
   padding: .85rem 1rem .95rem;
