@@ -562,11 +562,12 @@ strong { font-weight: 600; }
   margin: 0 0 .4rem;
 }
 .cap01-pair__body {
-  font-family: var(--serif);
-  font-size: .98rem;
+  font-family: var(--mono);
+  font-size: .85rem;
   line-height: 1.5;
   color: var(--ink);
   margin: 0;
+  letter-spacing: .005em;
 }
 
 /* b · procedure: rejilla de tiles numerados */
@@ -621,11 +622,12 @@ strong { font-weight: 600; }
   margin: 0 0 .35rem;
 }
 .cap01-mech__body {
-  font-family: var(--serif);
-  font-size: .98rem;
-  line-height: 1.5;
+  font-family: var(--mono);
+  font-size: .85rem;
+  line-height: 1.55;
   color: var(--ink);
   margin: 0;
+  letter-spacing: .005em;
 }
 
 @media (max-width: 600px) {
