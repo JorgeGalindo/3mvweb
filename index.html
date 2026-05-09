@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="styles.css?v=20260509C" />
+  <link rel="stylesheet" href="styles.css?v=20260509F" />
 </head>
 <body>
   <a href="#main" class="skip">Saltar al contenido</a>
@@ -64,7 +64,66 @@
         <h2 class="chapter__title">Las viviendas que no llegan.</h2>
         <p class="chapter__lede">Bloqueos de suelo a techo.</p>
         <div class="chapter__body">
-          <p>En la última década y media España ha dejado de construir. En la burbuja de los 2000 construíamos demasiado (casi <strong>2 viviendas por cada hogar creado</strong>), pero antes construíamos lo normal: una vivienda y pico por hogar. ¿Qué pasó? <strong>En 2007 cambiamos la Ley de Suelo</strong>: movilizarlo para vivienda exigía un paso inicial ex profeso. Eso no fue mala idea en sí, pero a ese cambio central le añadimos otra miríada de pequeños cambios durante la década siguiente. A nivel local, autonómico y europeo: exigencias, informes, regulaciones que hicieron que ese primer paso se volviese más complicado. Y también todos los siguientes.</p>
+          <p>En la última década y media España ha dejado de construir. <strong>¿Por qué?</strong></p>
+
+          <p>En España, el uso de cada parcela lo fija el municipio mediante un documento maestro: el <strong>Plan General</strong> (<em>PGOU</em>), donde el ayuntamiento clasifica cada solar como urbanizable o no. En 2007, el default cambió.</p>
+
+          <div class="cap01-pair">
+            <article class="cap01-pair__card">
+              <p class="cap01-pair__tag">// antes de 2007</p>
+              <p class="cap01-pair__body">Bajo la Ley del Suelo de 1998, todo lo que no estuviese expresamente protegido como rústico o agrícola podía declararse urbanizable.</p>
+            </article>
+            <article class="cap01-pair__card">
+              <p class="cap01-pair__tag">// después de 2007</p>
+              <p class="cap01-pair__body">El suelo tiene que justificarse expresamente como necesario para que pueda reclasificarse como urbanizable.</p>
+            </article>
+          </div>
+
+          <p>La intuición era razonable —enfriar el sprawl especulativo que había alimentado la burbuja de principios de los 2000—, pero en el momento en que combinas una puerta de entrada más estricta con un montón de papeleo que cruzar para atravesarla, conviertes un filtro sensato en un cuello de botella. Sacar al mercado un solo solar se vuelve un ejercicio de varios años.</p>
+
+          <p class="cap01-section-tag">// y luego se apilaron las capas</p>
+
+          <p>Entre 2010 y 2019, capa tras capa se apilaron encima. El ejemplo más claro es la <strong>Ley de Evaluación Ambiental de 2013</strong>, que extendió los casos sometidos a "evaluación ambiental estratégica". Casi cualquier modificación no trivial de un Plan General requiere ahora cuatro procedimientos en paralelo:</p>
+
+          <div class="cap01-procedure">
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// a</p>
+              <p class="cap01-procedure__body">Procedimiento ambiental paralelo, con su propia consulta pública.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// b</p>
+              <p class="cap01-procedure__body">Estudio ambiental detallado de la zona.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// c</p>
+              <p class="cap01-procedure__body">Declaración ambiental final, emitida por una administración distinta.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// d</p>
+              <p class="cap01-procedure__body">Seguimiento posterior tras la aprobación.</p>
+            </article>
+          </div>
+
+          <p>Cada paso tiene su propio cronómetro; cualquiera de ellos puede parar el reloj. Encima, las comunidades autónomas apilaron las suyas: <strong>estudios de integración paisajística en Valencia</strong>, <strong>evaluaciones de impacto en la salud en Andalucía</strong>, <strong>informes de sostenibilidad económica casi en todas partes</strong>. El propio Director General de Urbanismo de Andalucía estima que se necesitan en torno a <strong>100 informes sectoriales</strong> para tramitar un nuevo Plan General.</p>
+
+          <p>Y estas capas no afectan sólo a la fase uno —reclasificar el suelo—. También golpean a la fase dos: el <strong>Plan Parcial</strong>, el documento de proyecto que, una vez el suelo es urbanizable, define exactamente dónde irán calles, parcelas, densidades y dotaciones.</p>
+
+          <p class="cap01-section-tag">// y dos amplificadores legales</p>
+
+          <p>Dos mecanismos jurídicos multiplican la fricción:</p>
+
+          <div class="cap01-mech">
+            <article class="cap01-mech__card">
+              <p class="cap01-mech__head">// silencio administrativo negativo</p>
+              <p class="cap01-mech__body">En urbanismo, si la Administración no responde dentro del plazo legal, la solicitud se da por denegada. La inacción burocrática equivale a un "no".</p>
+            </article>
+            <article class="cap01-mech__card">
+              <p class="cap01-mech__head">// proliferación de puntos de veto</p>
+              <p class="cap01-mech__body">Cualquier vecino, asociación o administración superior implicada en alguno de esos informes puede recurrir, y una impugnación con éxito suele anular el procedimiento entero, no sólo el punto cuestionado. Los actores NIMBY no necesitan ganar en el fondo, sólo retrasar.</p>
+            </article>
+          </div>
+
+          <p>Vámoslo a ver al pie del terreno.</p>
         </div>
       </div>
 
@@ -254,13 +313,13 @@
           <article class="cap01-edif-step" data-step="A">
             <p class="cap01-step__tag">// 05 · altura</p>
             <p>Al oeste de Barajas la servidumbre aeronáutica de <strong>AESA (Agencia Estatal de Seguridad Aérea)</strong> permite hasta <strong>45 metros</strong> sin autorización previa.</p>
-            <p>Sin embargo, los desarrollos recientes del entorno —Sanchinarro, Las Tablas, Valdebebas— se han quedado en torno a <strong>seis plantas, unos 19 metros</strong>. ¿Por qué? Porque las normas zonales del PGOU y los planes parciales de cada PAU lo fijaron así. Donde había margen aéreo y de suelo, se pactó construir por debajo.</p>
+            <p>Sin embargo, los desarrollos recientes del entorno —Sanchinarro, Las Tablas, Valdebebas— se han quedado en torno a <strong>seis plantas, unos 19 metros</strong>. ¿Por qué? Porque las normas zonales del PGOU y los planes parciales de cada <strong>PAU</strong> (los grandes desarrollos planificados del PGOU del 97, equiparables a un Plan Parcial) lo fijaron así. Donde había margen aéreo y de suelo, se pactó construir por debajo.</p>
           </article>
 
           <article class="cap01-edif-step" data-step="B">
             <p class="cap01-step__tag">// 06 · envolvente y CTE</p>
             <p>El Código Técnico de la Edificación vigente — última gran revisión en el <strong>Real Decreto 732/2019</strong>, en vigor desde septiembre de 2020 — exige envolventes más espesas, aerotermia o equivalentes para el agua caliente, fotovoltaica obligatoria en cubierta y demanda casi nula. Todo ello a la vez.</p>
-            <p>Hay un nuevo proyecto de Real Decreto en tramitación para transponer la directiva europea de eficiencia energética. El <strong>Colegio de Aparejadores de Madrid lo cifra en 18.000 euros más por vivienda</strong>. El Ministerio de Vivienda lo niega. La cifra — y su disputa pública — es uno de los frentes activos de 2026.</p>
+            <p>Hay un nuevo proyecto de Real Decreto en tramitación para transponer la directiva europea de eficiencia energética. El <strong>Colegio de Aparejadores de Madrid lo cifra en 18.000 euros más por vivienda</strong>. El Ministerio de Vivienda lo niega.</p>
           </article>
 
           <article class="cap01-edif-step" data-step="C">
@@ -522,12 +581,9 @@
         <span class="chapter__bignum" aria-hidden="true">03</span>
         <p class="chapter__head"><span class="ch-num">03</span> construir</p>
         <h2 class="chapter__title">Cuánto, y cómo desbloquear.</h2>
-        <p class="chapter__lede">
-          Dos preguntas inseparables: <em>cuántas</em> viviendas hay que levantar para cerrar el déficit, y <em>cómo</em> retirar las trabas que hoy lo impiden.
-        </p>
 
         <h3 class="cap03__sub">03.a · cuánto</h3>
-        <p class="cap03-sim__intro">Mueve el ritmo de construcción y mira cuánto tarda España en cerrar la brecha. Punto de partida: <strong>739 k</strong> de déficit acumulado básico al cierre de 2025 (<em>brief EsadeEcPol, abr 2026</em>); demanda esperada de <strong>250 k hogares/año</strong> hasta 2039 (proyección INE: 3,7 M de hogares 2024-2039); cero a partir de ahí.</p>
+        <p class="cap03-sim__intro">Mueve el ritmo de construcción y mira cuánto tarda España en cerrar la brecha. Punto de partida: <strong>739 k</strong> de déficit acumulado básico al cierre de 2025 (<em>brief EsadeEcPol, abr 2026</em>); demanda nueva que arranca en torno a <strong>250 k hogares/año</strong> y se va reduciendo en las décadas siguientes (proyección INE: 3,7 M de hogares 2024-2039). Por simplicidad modelamos esa demanda como un descenso suave hacia cero, no como un corte abrupto en 2039 — la demanda acumulada total sigue siendo ~3,25 M.</p>
 
         <div class="cap03-sim" data-cap03-sim>
           <div class="cap03-sim__chart">
@@ -608,8 +664,6 @@
           <p class="chapter__minread-body">Ninguna palanca alcanza por sí sola — y todas son acumulativas. Suelo, plan, edificio y sector tienen que moverse en paralelo, no en cola.</p>
         </aside>
 
-        <p class="cap03__intro">Las siete palancas se agrupan en cuatro familias: <strong>cuatro</strong> que reducen la prima regulatoria (silencio, plazos, veto, zonas), <strong>una</strong> que densifica la ciudad consolidada (altura), <strong>una</strong> de nuevo parque público de alquiler social (parque) y <strong>una</strong> sobre productividad del sector (industria). Recórrelas en orden o por familia.</p>
-
         <div class="cap03-tabs" data-cap03-tabs>
           <div class="cap03-tabs__nav" role="tablist" aria-label="Siete palancas para desbloquear la construcción">
             <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-1" data-tab="1" style="--tone:#1B4D3E">
@@ -639,7 +693,7 @@
             <article class="cap03-ficha" id="palanca-1" role="tabpanel" data-panel="1">
               <h4 class="cap03-ficha__titulo">Huir del "no por defecto"</h4>
               <p class="cap03-ficha__def">Que el silencio administrativo en urbanismo deje de ser negativo en suelo urbano consolidado. Que un defecto formal menor no anule un proyecto entero. Racionalizar el derecho a impugnar.</p>
-              <blockquote class="cap03-ficha__cita">"Una aproximación <em>yimby</em> en contraste con el equilibrio <em>nimby</em> actual."</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Silencio positivo automático en suelo urbano consolidado</li>
                 <li>Subsanación de errores menores sin paralizar</li>
@@ -651,7 +705,7 @@
             <article class="cap03-ficha" id="palanca-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Plazos y duplicidades</h4>
               <p class="cap03-ficha__def">Auditoría independiente que detecte informes sectoriales duplicados, los suprima y obligue a cumplir los plazos legales con capacidad de sanción.</p>
-              <blockquote class="cap03-ficha__cita">"El Ayuntamiento de Pamplona se plantó en febrero de 2024 con 687 expedientes urbanísticos pendientes."</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Pamplona, plan jun 2024 contra el atasco</li>
                 <li>Cataluña 2025: licencia sin proyecto ejecutivo previo</li>
@@ -663,7 +717,7 @@
             <article class="cap03-ficha" id="palanca-3" role="tabpanel" data-panel="3">
               <h4 class="cap03-ficha__titulo">Veto autonómico al bloqueo local</h4>
               <p class="cap03-ficha__def">Cuando un municipio bloquea desarrollos de interés general, la comunidad autónoma debería tener capacidad de veto y de iniciativa subsidiaria. Hacer cumplir las caducidades de planes obsoletos.</p>
-              <blockquote class="cap03-ficha__cita">"Tras pasar a elecciones por distrito, los municipios redujeron en promedio un 21 % el número de permisos de vivienda emitidos."</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Massachusetts, Ley 40B (≥20 % asequible → bypass al estado)</li>
                 <li>Caducidades automáticas de planes obsoletos</li>
@@ -675,7 +729,7 @@
             <article class="cap03-ficha is-active" id="palanca-4" role="tabpanel" data-panel="4">
               <h4 class="cap03-ficha__titulo">Zonas francas de vivienda</h4>
               <p class="cap03-ficha__def">Instrumentos urbanísticos impulsados desde la autonomía que aceleran desarrollos residenciales en zonas estratégicas, con gestión compartida y reserva relevante de protegida.</p>
-              <blockquote class="cap03-ficha__cita">"Crecimiento urbano ágil, ofreciendo suelo urbanizable con condiciones favorables para la promoción de vivienda protegida."</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Áreas Residenciales Estratégicas catalanas (2000s)</li>
                 <li>Can Filuà, Sabadell</li>
@@ -687,7 +741,7 @@
             <article class="cap03-ficha" id="palanca-5" role="tabpanel" data-panel="5">
               <h4 class="cap03-ficha__titulo">Altura y densidad vivible</h4>
               <p class="cap03-ficha__def">Permitir más plantas donde hay demanda y servicios —automáticamente, sin condiciones especiales— y combinar esa densidad con transporte público potente y usos mixtos. Densificar la ciudad consolidada en vez de seguir expandiendo su mancha hacia PAUs dispersos.</p>
-              <blockquote class="cap03-ficha__cita">"Permitir mayor altura aumenta la oferta de vivienda en torno al 9 % a largo plazo, sin subir los precios de alquiler de forma significativa."</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Minneapolis, Seattle: bajadas del 20 % en precios tras upzoning</li>
                 <li>Cantón de Zúrich, 25 años de upzoning gradual</li>
@@ -699,13 +753,13 @@
 
             <article class="cap03-ficha" id="palanca-6" role="tabpanel" data-panel="6">
               <h4 class="cap03-ficha__titulo">Un gran parque de alquiler social</h4>
-              <p class="cap03-ficha__def">España tiene unas <strong>300.000</strong> viviendas de alquiler social en titularidad pública: alrededor del <strong>3 %</strong> del parque, frente al <strong>7 %</strong> de la media OCDE y al <strong>9 %</strong> de la UE. Si 1 de cada 10 nuevos techos del objetivo (3 millones en una década) se mantiene en alquiler público, doblamos el parque actual y pasamos de menos de 10.000 a más de 30.000 entregas/año.</p>
-              <blockquote class="cap03-ficha__cita">"Esta es la clase de impulso que cambia el aspecto de un país."</blockquote>
+              <p class="cap03-ficha__def">España tiene unas <strong>300.000</strong> viviendas de alquiler social en titularidad pública: alrededor del <strong>3 %</strong> del parque, frente al <strong>7 %</strong> de la OCDE y al <strong>9 %</strong> de la UE. Llegar al benchmark europeo implicaría ~1,5 millones de viviendas extra — demasiado ambicioso para una sola década. Un objetivo realista a diez años: mantener <strong>1 de cada 10</strong> de los 3 M en alquiler público. Solo eso ya dobla el parque actual y eleva las entregas anuales de menos de <strong>10.000</strong> a más de <strong>30.000</strong>.</p>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
-                <li>Objetivo a largo plazo: 7-9 % del parque (OCDE / UE) vs ~3 % actual</li>
-                <li>320.000 viviendas en una década ≈ 4.500 M€/año (≈120-150 k€/vivienda, Culmia y CCOO)</li>
-                <li>Diseño calibrado: Sinai &amp; Waldfogel · por cada 3 sociales nuevas se pierden 2 privadas en áreas metropolitanas</li>
-                <li>Provivienda y grupo ViSO: hasta 1,5 millones extra a muy largo plazo</li>
+                <li>Objetivo de la década: ~300.000 viviendas nuevas en alquiler público (1/10 del objetivo de 3 M)</li>
+                <li>Orden de magnitud del coste: ~140 k€/vivienda × 320 k ≈ 45.000 M€ en una década — ~4.500 M€/año, ligeramente por encima de los ~3.800 M€/año actuales (Culmia, CCOO)</li>
+                <li>Benchmark a largo plazo: 1,5 M extra para igualar a la UE (Provivienda; grupo ViSO: 814 k + 1 M)</li>
+                <li>Cautela del Banco de España (Sinai &amp; Waldfogel): por cada 3 sociales nuevas se desplazan ~2 privadas — concentrar donde la oferta es más estrecha</li>
               </ul>
               <p class="cap03-ficha__cite">libro, pp. 163-167</p>
             </article>
@@ -713,7 +767,7 @@
             <article class="cap03-ficha" id="palanca-7" role="tabpanel" data-panel="7">
               <h4 class="cap03-ficha__titulo">Industrializar el sector</h4>
               <p class="cap03-ficha__def">Productividad real mediante industrialización: estandarizar componentes, fabricar en planta y montar en obra. Atraer talento joven con FP dual específica del sector.</p>
-              <blockquote class="cap03-ficha__cita">"La construcción moderna debería parecerse más a una cadena de montaje que a un oficio artesanal."</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Suecia: 84 % de unifamiliares con prefabricación</li>
                 <li>Japón: decenas de miles de viviendas modulares/año</li>
@@ -732,9 +786,6 @@
         <span class="chapter__bignum" aria-hidden="true">04</span>
         <p class="chapter__head"><span class="ch-num">04</span> ¿regular?</p>
         <h2 class="chapter__title">Topes, controles y la trampa de la demanda.</h2>
-        <p class="chapter__lede">
-          Regular el precio sin regular la oferta es atajo y trampa. Pero regular <em>bien</em> sí ayuda.
-        </p>
 
         <aside class="chapter__minread chapter__minread--top">
           <p class="chapter__minread-head">// regla de oro</p>
@@ -763,65 +814,49 @@
 
           <div class="cap01-pair">
             <article class="cap01-pair__card">
-              <p class="cap01-pair__tag">// monràs · garcía montalvo</p>
-              <p class="cap01-pair__body">Registro completo de contratos. Efecto regresivo: bajan precios en las viviendas más caras, suben en las más baratas. Cae el nº de contratos en el segmento alto.</p>
-            </article>
-            <article class="cap01-pair__card">
-              <p class="cap01-pair__tag">// jofre-monseny et al.</p>
-              <p class="cap01-pair__body">Fianzas a escala municipal. −6,2 % en precio medio de los municipios regulados, sin caída de volumen, pero comportamiento estratégico de la oferta antes de la entrada en vigor.</p>
+              <p class="cap01-pair__tag">// monràs · garcía montalvo (registro completo de contratos)</p>
+              <p class="cap01-pair__body">Efecto regresivo sobre los precios: las rentas bajaron en las viviendas más caras y <em>subieron</em> en las más baratas. Caída significativa del número de contratos firmados, especialmente en el segmento alto del mercado — la oferta retirándose del tramo regulado.</p>
             </article>
           </div>
-
-          <p>El libro lo resume con una metáfora útil: regular precios sin atacar la escasez es <em>«como tratar la fiebre que provoca una infección sin antibiótico — y, en el peor caso, con medicamentos que pueden empeorar la infección»</em>. De ahí la regla de oro de arriba.</p>
 
           <p>Pero hay regulaciones que <em>sí</em> ayudan, especialmente en centros urbanos consolidados donde la oferta nueva no va a aliviar la presión. Cuatro palancas que pasan el filtro.</p>
         </div>
 
         <div class="cap03-tabs" data-cap03-tabs>
           <div class="cap03-tabs__nav" role="tablist" aria-label="Cuatro palancas de regulación">
-            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="reg-1" data-tab="1" style="--tone:#C13027">
-              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">topes</span>
+            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="reg-1" data-tab="1" style="--tone:#1B6B50">
+              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">turístico</span>
             </button>
-            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-2" data-tab="2" style="--tone:#1B6B50">
-              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">turístico</span>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-2" data-tab="2" style="--tone:#2F8A6B">
+              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">seguro</span>
             </button>
-            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-3" data-tab="3" style="--tone:#2F8A6B">
-              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">seguro</span>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-3" data-tab="3" style="--tone:#3D9D7A">
+              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">plazos</span>
             </button>
-            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-4" data-tab="4" style="--tone:#3D9D7A">
-              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">plazos</span>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-4" data-tab="4" style="--tone:#4DB089">
+              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">leasing</span>
             </button>
           </div>
 
           <div class="cap03-tabs__panel">
             <article class="cap03-ficha is-active" id="reg-1" role="tabpanel" data-panel="1">
-              <h4 class="cap03-ficha__titulo">Topes al precio: lo que cuesta</h4>
-              <p class="cap03-ficha__def">Las tres generaciones de control —precio máximo absoluto, topes a aumentos en nuevos y vigentes, topes solo a aumentos en vigentes— sí reducen precios. Pero contraen la oferta, degradan calidad y empujan precios al alza en zonas no reguladas. Falla la regla de oro.</p>
-              <blockquote class="cap03-ficha__cita">«Cualquier medida que muestre indicios de poder reducir la oferta disponible debería considerarse con extrema cautela.»</blockquote>
-              <ul class="cap03-ficha__casos">
-                <li>Kholodilin (review): 2/3 de estudios → efecto negativo sobre construcción nueva</li>
-                <li>Cataluña 2020 (Monràs/García Montalvo): efecto regresivo, ↓ contratos en segmento alto</li>
-                <li>Cataluña 2020 (Jofre-Monseny et al.): −6,2 % precio medio, pero comportamiento estratégico de la oferta</li>
-              </ul>
-              <p class="cap03-ficha__cite">libro, pp. 196-198</p>
-            </article>
-
-            <article class="cap03-ficha" id="reg-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Turística y temporada con precisión</h4>
-              <p class="cap03-ficha__def">Regular el corto plazo no como prohibición global, sino con datos: registros completos, impuestos que recojan la externalidad y límites variables por zona. Diferenciar uso profesional continuado del ocasional, apoyándose en el cruce con plataformas. Pasa la regla de oro porque <em>devuelve</em> oferta al largo plazo.</p>
-              <blockquote class="cap03-ficha__cita">«Precisión, mesura y apoyo en plataformas, entendido como oportunidad para introducir desincentivos donde sea necesario.»</blockquote>
+              <p class="cap03-ficha__def">Empieza por separar el <strong>alquiler turístico profesional</strong> (uso continuado, todo el año) de las <strong>segundas residencias ocasionales</strong> que sólo se alquilan fuera de temporada — su efecto sobre el mercado de largo plazo no tiene nada que ver. A partir de ahí, regular no como prohibición global, sino con datos: registros completos, impuestos que recojan la externalidad y límites variables por zona. El cruce con plataformas hace la distinción aplicable. Pasa la regla de oro porque <em>devuelve</em> al largo plazo la oferta turística profesional sin esterilizar usos ocasionales que no compiten con ella.</p>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
-                <li>Berlín · <em>Zweckentfremdungsverbot</em> 2016: cada 10 pisos retirados del uso turístico contuvieron rentas locales</li>
-                <li>+0,07 €/m² por cada apartamento Airbnb cercano antes de la prohibición</li>
-                <li>Diferenciar STR profesional vs. segunda residencia ocasional</li>
+                <li>Berlín · <em>Zweckentfremdungsverbot</em> 2016: retirar 10 anuncios de Airbnb cercanos suponía ~0,7 €/m² menos de renta mensual (~7 % sobre una base de 10 €/m²)</li>
+                <li>Barcelona: la presencia media de Airbnb en el barrio empujó las rentas +1,9 % y los precios de venta +4,6 %</li>
+                <li>EE. UU. (Barron, Kung &amp; Proserpio, 2017): +1 % de anuncios Airbnb → +0,018 % en rentas y +0,26 % en precios de venta dentro del mismo código postal</li>
+                <li>Cara positiva: 10 anuncios Airbnb adicionales en un barrio se asocian a ~1 restaurante nuevo y ~8 empleos turísticos en esa sección censal — actividad local, no sólo costes</li>
+                <li>El propio estudio de Berlín: el efecto sobre el precio se concentra en los anuncios "siempre activos" — la política muerde al STR profesional y apenas roza el ocasional</li>
               </ul>
               <p class="cap03-ficha__cite">libro, pp. 199-204</p>
             </article>
 
-            <article class="cap03-ficha" id="reg-3" role="tabpanel" data-panel="3">
+            <article class="cap03-ficha" id="reg-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Seguro de impagos a la francesa</h4>
               <p class="cap03-ficha__def">Mutualizar el riesgo del impago en lugar de empujar al arrendador a hacer <em>casting</em>, exigir fianzas altas o refugiarse en contratos de temporada «por si acaso». El propietario pide menos garantías; más hogares acceden al alquiler privado. Pasa la regla porque <em>añade</em> oferta efectiva.</p>
-              <blockquote class="cap03-ficha__cita">«El seguro mejora el bienestar global al compartir el riesgo: los propietarios exigen menos garantías y eso permite acceder al alquiler a más familias.»</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Francia · <strong>Visale</strong>: garantía pública de impagos</li>
                 <li>Abramson y van Nieuwerburgh: modelo → ↓ desalojos, ↓ sinhogarismo</li>
@@ -830,16 +865,29 @@
               <p class="cap03-ficha__cite">libro, pp. 204-207</p>
             </article>
 
-            <article class="cap03-ficha" id="reg-4" role="tabpanel" data-panel="4">
+            <article class="cap03-ficha" id="reg-3" role="tabpanel" data-panel="3">
               <h4 class="cap03-ficha__titulo">Plazos judiciales y salida digna</h4>
               <p class="cap03-ficha__def">El desalojo medio en España tarda <strong>2 años</strong>: ni protege al inquilino —que pasa ese tiempo bajo incertidumbre— ni al arrendador —que tiene la vivienda paralizada—. Bajarlo a 3-6 meses, combinado con un parque social que ofrezca salida real al inquilino. Pasa la regla porque desbloquea inmuebles hoy paralizados.</p>
-              <blockquote class="cap03-ficha__cita">«Este equilibrio no es óptimo para nadie: ni para el arrendador, que tiene su vivienda paralizada, ni para el inquilino, que pasa ese tiempo bajo la incertidumbre.»</blockquote>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
               <ul class="cap03-ficha__casos">
                 <li>Plazos actuales 2 años → 3-6 meses con causales abiertas y agilización</li>
                 <li>Salida digna mediante parque público gestionado</li>
                 <li>Bono Joven: subsidio que captura el propietario → reorientar al alquiler social</li>
               </ul>
               <p class="cap03-ficha__cite">libro, pp. 205-209</p>
+            </article>
+
+            <article class="cap03-ficha" id="reg-4" role="tabpanel" data-panel="4">
+              <h4 class="cap03-ficha__titulo">Leasing cooperativo con grandes propietarios</h4>
+              <p class="cap03-ficha__def">Acuerdos público-privados a largo plazo con propietarios grandes, con precios y plazos pactados de antemano. El Estado asegura oferta estable a un precio conocido; el propietario, ingresos predecibles sin coste de rotación. Pasa la regla porque <em>moviliza</em> unidades existentes hacia el mercado de largo plazo sin obra nueva ni topes al precio.</p>
+              <p class="cap03-ficha__supp">// evidencia que la respalda</p>
+              <ul class="cap03-ficha__casos">
+                <li>Esquema irlandés de leasing a largo plazo: contratos a 25 años entre operadores públicos y propietarios privados</li>
+                <li>Sugerido por José García Montalvo como modelo aplicable a España</li>
+                <li>Bolsas de alquiler asequible de Provivienda: misma lógica a menor escala, con la simplificación administrativa como ingrediente clave</li>
+                <li>Capacidad de movilizar miles de unidades ya en manos privadas sin destruir oferta</li>
+              </ul>
+              <p class="cap03-ficha__cite">libro, pp. 207-208</p>
             </article>
           </div>
         </div>
@@ -887,12 +935,12 @@
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="app.js?v=20260509C"></script>
-  <script type="module" src="cap01-mapa.js?v=20260509C"></script>
-  <script type="module" src="cap01-edificio.js?v=20260509C"></script>
-  <script type="module" src="cap01-tiempo.js?v=20260509C"></script>
-  <script type="module" src="cap01-coste.js?v=20260509C"></script>
-  <script type="module" src="cap03-tabs.js?v=20260509C"></script>
-  <script type="module" src="cap03-sim.js?v=20260509C"></script>
+  <script type="module" src="app.js?v=20260509F"></script>
+  <script type="module" src="cap01-mapa.js?v=20260509F"></script>
+  <script type="module" src="cap01-edificio.js?v=20260509F"></script>
+  <script type="module" src="cap01-tiempo.js?v=20260509F"></script>
+  <script type="module" src="cap01-coste.js?v=20260509F"></script>
+  <script type="module" src="cap03-tabs.js?v=20260509F"></script>
+  <script type="module" src="cap03-sim.js?v=20260509F"></script>
 </body>
 </html>

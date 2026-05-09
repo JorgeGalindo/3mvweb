@@ -1,11 +1,14 @@
 /* Cap. 03.a · simulador del cuánto.
-   Modelo lineal:
+   Modelo:
      - año 0 = 2026 (punto de partida del simulador)
      - déficit pasado básico = 739.000 (brief EsadeEcPol, abr 2026)
-     - demanda nueva = 250.000/año hasta 2039 (proyección INE), 0 después
+     - demanda nueva D(t) decae linealmente desde 250.000/año en t=0 hasta
+       0 en t = 26 años. Por simplicidad: en vez del corte abrupto en 2039
+       (cliff), modelamos un descenso suave hasta plana. La demanda
+       acumulada total sigue siendo ~3,25M (= 250.000 · 26 / 2).
      - oferta = X viv/año (slider, X ∈ [60.000, 450.000])
-     - necesidad acumulada en t años: 739.000 + 250.000·min(t,13)
-     - construido en t años: X·t
+     - necesidad acumulada N(t) = 739 + 250·t − (250/52)·t² para t ≤ 26;
+       N(t) = 739 + 3.250 = 3.989 para t ≥ 26.
      - "brecha cerrada" cuando construido ≥ necesidad
      - objetivo simbólico del libro: 3 M de viviendas terminadas. */
 
@@ -14,8 +17,10 @@
   if (!root) return;
 
   const DEFICIT0 = 739000;
-  const DEMANDA = 250000;
-  const ANYOS_DEMANDA = 13;          // 2026-2039
+  const DEMANDA0 = 250000;            // demanda inicial (año 0)
+  const T_DECAY = 26;                 // años hasta que la demanda llega a 0
+  const TOTAL_DEM = DEMANDA0 * T_DECAY / 2; // 3.250.000
+  const NEED_MAX = DEFICIT0 + TOTAL_DEM;    // 3.989.000
   const RITMO_ACTUAL = 95000;
   const OBJETIVO_LIBRO = 3_000_000;
   const ANYO0 = 2026;
@@ -29,25 +34,25 @@
 
   /* — funciones del modelo — */
   function necesidadEn(t) {
-    return DEFICIT0 + DEMANDA * Math.min(t, ANYOS_DEMANDA);
-  }
-  function construidoEn(t, X) {
-    return X * t;
+    if (t <= 0) return DEFICIT0;
+    if (t >= T_DECAY) return NEED_MAX;
+    const beta = DEMANDA0 / (2 * T_DECAY);
+    return DEFICIT0 + DEMANDA0 * t - beta * t * t;
   }
   /* año t* en el que construido(t,X) = necesidad(t).
-     Caso 1: corte ocurre antes de t=13 →
-       X·t = 739 + 250·t  →  t = 739/(X-250)  (válido sólo si X > 250 y t ≤ 13)
-     Caso 2: corte ocurre tras t=13 →
-       X·t = 739 + 250·13 = 3989  →  t = 3989/X
-     Si X ≤ 250 y la fórmula del caso 1 da t > 13, vamos al caso 2 con la
-     necesidad ya estancada en 3989 desde 2039. */
+     Tramo curvo (t ≤ T_DECAY):
+       X·t = 739 + 250·t − (250/52)·t²
+       (250/52)·t² + (X-250)·t − 739 = 0
+       Quadratic positive root.
+     Tramo plano (t > T_DECAY):
+       X·t = 3.989  →  t = 3.989/X */
   function aniosCierre(X) {
     if (X <= 0) return Infinity;
-    if (X > DEMANDA) {
-      const t1 = DEFICIT0 / (X - DEMANDA);
-      if (t1 <= ANYOS_DEMANDA) return t1;
-    }
-    return (DEFICIT0 + DEMANDA * ANYOS_DEMANDA) / X;
+    const beta = DEMANDA0 / (2 * T_DECAY);
+    const disc = (DEMANDA0 - X) ** 2 + 4 * beta * DEFICIT0;
+    const tQuad = (DEMANDA0 - X + Math.sqrt(disc)) / (2 * beta);
+    if (tQuad > 0 && tQuad <= T_DECAY) return tQuad;
+    return NEED_MAX / X;
   }
   function aniosTres(X) {
     return X > 0 ? OBJETIVO_LIBRO / X : Infinity;
@@ -55,11 +60,13 @@
 
   /* — paths SVG — */
   function pathNecesidad() {
-    // Polilínea: (0, 739k) → (13, 3989k) → (T_MAX, 3989k)
+    // Bezier cuadrática equivalente a la parábola N(t) = D + 250·t − (250/52)·t²
+    // Anchor inicial (0, 739), control (13, 3989), anchor final (26, 3989) → flat hasta T_MAX.
     const p0 = `M ${xScale(0)} ${yScale(DEFICIT0)}`;
-    const p1 = `L ${xScale(ANYOS_DEMANDA)} ${yScale(DEFICIT0 + DEMANDA * ANYOS_DEMANDA)}`;
-    const p2 = `L ${xScale(T_MAX)} ${yScale(DEFICIT0 + DEMANDA * ANYOS_DEMANDA)}`;
-    return `${p0} ${p1} ${p2}`;
+    const ctrl = `${xScale(T_DECAY/2)} ${yScale(NEED_MAX)}`;
+    const end  = `${xScale(T_DECAY)} ${yScale(NEED_MAX)}`;
+    const flat = `L ${xScale(T_MAX)} ${yScale(NEED_MAX)}`;
+    return `${p0} Q ${ctrl} ${end} ${flat}`;
   }
   function pathConstruido(X) {
     // Línea recta: (0,0) → (T_MAX, X·T_MAX). Recortamos a Y_TOP si supera 5M.

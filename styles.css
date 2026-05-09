@@ -525,6 +525,33 @@ strong { font-weight: 600; }
   line-height: 1.6;
   margin: 0 0 1rem;
 }
+
+.chapter__body .cap01-section-tag {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 2.2rem 0 1.4rem;
+  font-family: var(--mono);
+  font-size: .72rem;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+  color: var(--red-deep);
+}
+.chapter__body .cap01-section-tag::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--red);
+}
+.chapter__body .cap01-section-tag::after {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: var(--rule-strong);
+}
 .chapter__body strong { color: var(--ink); font-weight: 600; }
 .chapter--red .chapter__body strong { color: var(--ink); }
 
@@ -1205,6 +1232,14 @@ strong { font-weight: 600; }
   color: var(--ink-soft);
 }
 .cap03-ficha__cita em { font-style: normal; font-weight: 500; color: var(--ink); }
+.cap03-ficha__supp {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--ink-mute);
+  margin: 0 0 0.55rem;
+}
 .cap03-ficha__casos {
   list-style: none;
   padding: 0;

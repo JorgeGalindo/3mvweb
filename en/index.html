@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="../styles.css?v=20260509C" />
+  <link rel="stylesheet" href="../styles.css?v=20260509F" />
 </head>
 <body>
   <a href="#main" class="skip">Skip to content</a>
@@ -64,7 +64,7 @@
         <h2 class="chapter__title">The homes that don't arrive.</h2>
         <p class="chapter__lede">Land-to-roof bottlenecks.</p>
         <div class="chapter__body">
-          <p>Over the past decade and a half Spain has stopped building. During the 2000s bubble we built too much — almost <strong>2 homes per new household</strong>. Before that, we built what was normal: a home and a bit per household. The collapse since then is deep enough that it's worth understanding the mechanics one layer at a time.</p>
+          <p>Over the past decade and a half Spain has stopped building. <strong>Why?</strong></p>
 
           <p>In Spain, every plot's use is set municipally by a master document — the <strong>General Plan</strong> (<em>PGOU</em>): a document where the city council classifies each parcel as buildable or not. Then, in 2007, the default switched.</p>
 
@@ -80,6 +80,8 @@
           </div>
 
           <p>The intuition was reasonable — cool down the speculative sprawl that had fuelled the early-2000s bubble — but the moment you pair a stricter front door with a thicker stack of paperwork to walk through it, you've turned a sensible filter into a chokepoint. Even bringing a single plot to market becomes a multi-year exercise.</p>
+
+          <p class="cap01-section-tag">// then the layers piled on top</p>
 
           <p>Between roughly 2010 and 2019, layer after layer piled on top. The clearest example is the <strong>2013 Environmental Assessment Act</strong>, which extended the cases subject to "strategic environmental assessment". Almost any non-trivial change to a General Plan now requires four parallel procedures:</p>
 
@@ -105,6 +107,8 @@
           <p>Each step has its own timetable; any of them can stop the clock. On top of that, regional governments piled their own — <strong>landscape integration studies in Valencia</strong>, <strong>health-impact assessments in Andalusia</strong>, <strong>economic-sustainability reports almost everywhere</strong>. Andalusia's own planning chief estimates around <strong>100 sectoral reports</strong> are needed for a single new General Plan.</p>
 
           <p>And these layers don't just hit phase one — reclassifying the land. They also hit phase two: the <strong>Partial Plan</strong>, the project-level document that, once a piece of land is buildable, defines exactly where streets, plots, densities and amenities will go on it.</p>
+
+          <p class="cap01-section-tag">// and two legal amplifiers</p>
 
           <p>Two legal mechanisms multiply the friction:</p>
 
@@ -299,13 +303,13 @@
           <article class="cap01-edif-step" data-step="A">
             <p class="cap01-step__tag">// 05 · height</p>
             <p>West of Barajas airport the air easement set by <strong>AESA (Spanish Aviation Safety Agency)</strong> allows up to <strong>45 metres</strong> without prior authorisation.</p>
-            <p>Yet recent developments in the area —Sanchinarro, Las Tablas, Valdebebas— have stopped at around <strong>six storeys, some 19 metres</strong>. Why? Because the zonal rules of the General Plan and the partial plans of each <strong>PAU</strong> (the large planned-expansion districts of the 1997 plan) set it that way. Where there was airspace and land headroom, building below was agreed.</p>
+            <p>Yet recent developments in the area —Sanchinarro, Las Tablas, Valdebebas— have stopped at around <strong>six storeys, some 19 metres</strong>. Why? Because the zonal rules of the General Plan and the partial plans of each <strong>PAU</strong> (the large planned-expansion districts of the 1997 plan, akin to a Partial Plan) set it that way. Where there was airspace and land headroom, building below was agreed.</p>
           </article>
 
           <article class="cap01-edif-step" data-step="B">
             <p class="cap01-step__tag">// 06 · envelope and Building Code</p>
             <p>The current Building Technical Code —last big revision in <strong>Royal Decree 732/2019</strong>, in force since September 2020— requires thicker building envelopes, aerothermal heating or equivalents for hot water, mandatory rooftop photovoltaics and near-zero energy demand. All at once.</p>
-            <p>A new Royal Decree is in the works to transpose the European Energy Performance of Buildings directive. The <strong>Madrid College of Surveyors estimates an additional 18,000 euros per home</strong>. The Ministry of Housing denies it. The figure —and its public dispute— is one of the active fronts of 2026.</p>
+            <p>A new Royal Decree is in the works to transpose the European Energy Performance of Buildings directive. The <strong>Madrid College of Surveyors estimates an additional 18,000 euros per home</strong>. The Ministry of Housing denies it.</p>
           </article>
 
           <article class="cap01-edif-step" data-step="C">
@@ -556,12 +560,9 @@
         <span class="chapter__bignum" aria-hidden="true">03</span>
         <p class="chapter__head"><span class="ch-num">03</span> build</p>
         <h2 class="chapter__title">How much, and how to unblock.</h2>
-        <p class="chapter__lede">
-          Two inseparable questions: <em>how many</em> homes have to be built to close the gap, and <em>how</em> to remove the hurdles that today prevent it.
-        </p>
 
         <h3 class="cap03__sub">03.a · how much</h3>
-        <p class="cap03-sim__intro">Move the construction pace and watch how long Spain takes to close the gap. Starting point: <strong>739 k</strong> accumulated basic deficit at the end of 2025 (<em>EsadeEcPol brief, Apr 2026</em>); expected demand of <strong>250 k households/year</strong> until 2039 (INE projection: 3.7 M households 2024-2039); zero from then on.</p>
+        <p class="cap03-sim__intro">Move the construction pace and watch how long Spain takes to close the gap. Starting point: <strong>739 k</strong> accumulated basic deficit at the end of 2025 (<em>EsadeEcPol brief, Apr 2026</em>); new demand starting near <strong>250 k households/year</strong> and tapering down over the following decades (INE projection: 3.7 M new households 2024-2039). For simplicity, we model demand as a smooth decay toward zero rather than a sharp cliff at 2039 — total cumulative new demand stays at ~3.25 M.</p>
 
         <div class="cap03-sim" data-cap03-sim>
           <div class="cap03-sim__chart">
@@ -637,8 +638,6 @@
           <p class="chapter__minread-body">No single lever is enough — and they're cumulative. Land, plan, building and sector all have to move in parallel, not in sequence.</p>
         </aside>
 
-        <p class="cap03__intro">The seven levers cluster into four families: <strong>four</strong> that cut the regulatory premium (silence, deadlines, veto, zones), <strong>one</strong> that densifies the consolidated city (height), <strong>one</strong> on a new public rental stock (stock) and <strong>one</strong> on sector productivity (industry). Walk them in order or by family.</p>
-
         <div class="cap03-tabs" data-cap03-tabs>
           <div class="cap03-tabs__nav" role="tablist" aria-label="Seven levers to unblock construction">
             <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-1" data-tab="1" style="--tone:#1B4D3E">
@@ -668,7 +667,7 @@
             <article class="cap03-ficha" id="palanca-1" role="tabpanel" data-panel="1">
               <h4 class="cap03-ficha__titulo">Escape the "no by default"</h4>
               <p class="cap03-ficha__def">Negative administrative silence in urban planning has to stop on consolidated urban land. A minor formal defect should not annul a whole project. Rationalise the right to challenge.</p>
-              <blockquote class="cap03-ficha__cita">"A <em>yimby</em> approach as opposed to today's <em>nimby</em> balance."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Automatic positive silence on consolidated urban land</li>
                 <li>Fix minor defects without halting the project</li>
@@ -680,7 +679,7 @@
             <article class="cap03-ficha" id="palanca-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Deadlines and duplications</h4>
               <p class="cap03-ficha__def">Independent audit that finds duplicate sectoral reports, removes them and forces compliance with legal deadlines, with sanctions.</p>
-              <blockquote class="cap03-ficha__cita">"Pamplona's City Council had 687 pending urban-planning files in February 2024."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Pamplona, Jun 2024 plan against the backlog</li>
                 <li>Catalonia 2025: building permit without prior executive project</li>
@@ -692,7 +691,7 @@
             <article class="cap03-ficha" id="palanca-3" role="tabpanel" data-panel="3">
               <h4 class="cap03-ficha__titulo">Regional veto over local blockage</h4>
               <p class="cap03-ficha__def">When a city council blocks developments of general interest, the autonomous community should have veto power and subsidiary initiative. Enforce caducity dates of obsolete plans.</p>
-              <blockquote class="cap03-ficha__cita">"After moving to district elections, municipalities reduced housing permits issued by 21 % on average."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Massachusetts, Law 40B (≥ 20 % affordable → state bypass)</li>
                 <li>Automatic caducity of obsolete plans</li>
@@ -704,7 +703,7 @@
             <article class="cap03-ficha is-active" id="palanca-4" role="tabpanel" data-panel="4">
               <h4 class="cap03-ficha__titulo">Housing free zones</h4>
               <p class="cap03-ficha__def">Urban-planning instruments driven from the regional level that accelerate residential developments in strategic areas, with shared management and significant subsidised reserves.</p>
-              <blockquote class="cap03-ficha__cita">"Agile urban growth, providing buildable land with favourable conditions for subsidised housing."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Catalan Strategic Residential Areas (2000s)</li>
                 <li>Can Filuà, Sabadell</li>
@@ -716,7 +715,7 @@
             <article class="cap03-ficha" id="palanca-5" role="tabpanel" data-panel="5">
               <h4 class="cap03-ficha__titulo">Height and liveable density</h4>
               <p class="cap03-ficha__def">Allow more storeys where there is demand and services — automatically, without special conditions — and combine that density with strong public transport and mixed uses. Densify the consolidated city instead of pushing its footprint outwards into scattered PAUs.</p>
-              <blockquote class="cap03-ficha__cita">"Allowing greater height increases housing supply by around 9 % in the long run, without raising rents significantly."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Minneapolis, Seattle: 20 % drops in prices after upzoning</li>
                 <li>Canton of Zurich, 25 years of gradual upzoning</li>
@@ -728,13 +727,13 @@
 
             <article class="cap03-ficha" id="palanca-6" role="tabpanel" data-panel="6">
               <h4 class="cap03-ficha__titulo">A large social rental stock</h4>
-              <p class="cap03-ficha__def">Spain has roughly <strong>300,000</strong> socially rented homes in public hands: about <strong>3 %</strong> of the stock, against the <strong>7 %</strong> OECD average and the <strong>9 %</strong> EU average. If 1 in 10 of the new homes in the decade target (3 million) is kept in publicly held rental, we double the current stock and go from fewer than 10,000 to more than 30,000 deliveries per year.</p>
-              <blockquote class="cap03-ficha__cita">"This is the kind of push that changes the look of a country."</blockquote>
+              <p class="cap03-ficha__def">Spain has roughly <strong>300,000</strong> socially rented homes in public hands — about <strong>3 %</strong> of the stock, against the <strong>7 %</strong> OECD and <strong>9 %</strong> EU averages. Reaching the EU benchmark would mean ~1.5 million extra homes — too ambitious for a single decade. A realistic ten-year goal: keep <strong>1 in 10</strong> of the 3M target in publicly held rental. That alone doubles the current stock and lifts annual deliveries from fewer than <strong>10,000</strong> to more than <strong>30,000</strong>.</p>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
-                <li>Long-run target: 7-9 % of stock (OECD / EU) vs ~3 % today</li>
-                <li>320,000 homes in a decade ≈ €4.5 bn/year (≈€120-150 k per home, Culmia and CCOO)</li>
-                <li>Calibrated design: Sinai &amp; Waldfogel · for every 3 new social units, 2 private rentals are lost in metropolitan areas</li>
-                <li>Provivienda and the ViSO group: up to 1.5 million extra in the very long run</li>
+                <li>Decade target: ~300,000 new publicly held rental homes (1/10 of the 3M)</li>
+                <li>Cost order of magnitude: ~€140 k per home × 320 k ≈ €45 bn over the decade — ~€4.5 bn/year, only modestly above today's ~€3.8 bn/year (Culmia, CCOO)</li>
+                <li>Long-run benchmark: 1.5 M extra to match EU levels (Provivienda; ViSO group: 814 k + 1 M)</li>
+                <li>Banco de España caveat (Sinai &amp; Waldfogel): for every 3 new social units, ~2 private rentals are displaced — concentrate where supply is tightest</li>
               </ul>
               <p class="cap03-ficha__cite">book, pp. 163-167</p>
             </article>
@@ -742,7 +741,7 @@
             <article class="cap03-ficha" id="palanca-7" role="tabpanel" data-panel="7">
               <h4 class="cap03-ficha__titulo">Industrialise the sector</h4>
               <p class="cap03-ficha__def">Real productivity through industrialisation: standardise components, manufacture in plant and assemble on site. Attract young talent with sector-specific dual vocational training.</p>
-              <blockquote class="cap03-ficha__cita">"Modern construction should look more like an assembly line than an artisanal trade."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Sweden: 84 % of single-family homes with prefabrication</li>
                 <li>Japan: tens of thousands of modular homes / year</li>
@@ -761,9 +760,6 @@
         <span class="chapter__bignum" aria-hidden="true">04</span>
         <p class="chapter__head"><span class="ch-num">04</span> regulate?</p>
         <h2 class="chapter__title">Caps, controls and the demand trap.</h2>
-        <p class="chapter__lede">
-          Regulating prices without regulating supply is a shortcut and a trap. But regulating <em>well</em> does help.
-        </p>
 
         <aside class="chapter__minread chapter__minread--top">
           <p class="chapter__minread-head">// golden rule</p>
@@ -788,69 +784,53 @@
             </article>
           </div>
 
-          <p>In Spain, the most recent experience is <strong>Catalonia's Law 11/2020</strong>, later struck down by the Constitutional Court. Two studies analyse it and are complementary in the essentials:</p>
+          <p>In Spain, the most recent experience is <strong>Catalonia's Law 11/2020</strong>, later struck down by the Constitutional Court. The most robust empirical study, by <strong>Joan Monràs and José García Montalvo</strong>, used the full registry of rental contracts and found:</p>
 
           <div class="cap01-pair">
             <article class="cap01-pair__card">
-              <p class="cap01-pair__tag">// monràs · garcía montalvo</p>
-              <p class="cap01-pair__body">Full registry of contracts. Regressive effect: prices fell in the most expensive homes and rose in the cheapest. Number of contracts in the high segment dropped.</p>
-            </article>
-            <article class="cap01-pair__card">
-              <p class="cap01-pair__tag">// jofre-monseny et al.</p>
-              <p class="cap01-pair__body">Rental deposits at municipal scale. −6.2 % in average rent in regulated municipalities, with no drop in volume — but strategic supply behaviour just before the law took effect.</p>
+              <p class="cap01-pair__tag">// monràs · garcía montalvo (full contract registry)</p>
+              <p class="cap01-pair__body">Regressive effect on prices: rents fell in the most expensive homes and <em>rose</em> in the cheapest ones. A significant drop in the number of contracts signed, especially in the high segment of the market — supply pulling back from the regulated segment.</p>
             </article>
           </div>
-
-          <p>The book sums it up with a useful metaphor: regulating prices without attacking the scarcity is <em>"like treating the fever from an infection without an antibiotic — and, in the worst case, with medicines that can make the infection worse"</em>. Hence the golden rule above.</p>
 
           <p>But there are regulations that <em>do</em> help, especially in consolidated urban centres where new supply isn't going to relieve pressure. Four levers that pass the filter.</p>
         </div>
 
         <div class="cap03-tabs" data-cap03-tabs>
           <div class="cap03-tabs__nav" role="tablist" aria-label="Four regulatory levers">
-            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="reg-1" data-tab="1" style="--tone:#C13027">
-              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">caps</span>
+            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="reg-1" data-tab="1" style="--tone:#1B6B50">
+              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">tourist</span>
             </button>
-            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-2" data-tab="2" style="--tone:#1B6B50">
-              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">tourist</span>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-2" data-tab="2" style="--tone:#2F8A6B">
+              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">insurance</span>
             </button>
-            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-3" data-tab="3" style="--tone:#2F8A6B">
-              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">insurance</span>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-3" data-tab="3" style="--tone:#3D9D7A">
+              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">deadlines</span>
             </button>
-            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-4" data-tab="4" style="--tone:#3D9D7A">
-              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">deadlines</span>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-4" data-tab="4" style="--tone:#4DB089">
+              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">leasing</span>
             </button>
           </div>
 
           <div class="cap03-tabs__panel">
             <article class="cap03-ficha is-active" id="reg-1" role="tabpanel" data-panel="1">
-              <h4 class="cap03-ficha__titulo">Price caps: what they cost</h4>
-              <p class="cap03-ficha__def">The three generations of control — absolute price ceilings, caps on increases for new and existing contracts, caps only on increases for existing contracts — do reduce prices. But they shrink supply, degrade quality and push prices up in unregulated zones. They fail the golden rule.</p>
-              <blockquote class="cap03-ficha__cita">"Any measure that shows signs of reducing available supply should be considered with extreme caution."</blockquote>
-              <ul class="cap03-ficha__casos">
-                <li>Kholodilin (review): 2/3 of studies → negative effect on new construction</li>
-                <li>Catalonia 2020 (Monràs/García Montalvo): regressive effect, ↓ contracts in high segment</li>
-                <li>Catalonia 2020 (Jofre-Monseny et al.): −6.2 % average price, but strategic supply behaviour</li>
-              </ul>
-              <p class="cap03-ficha__cite">book, pp. 196-198</p>
-            </article>
-
-            <article class="cap03-ficha" id="reg-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Tourist and seasonal, with precision</h4>
-              <p class="cap03-ficha__def">Regulate the short-term market not as a global ban, but with data: full registries, taxes that price in the externality, and zone-variable limits. Distinguish continuous professional use from occasional use, leveraging cross-checks with platforms. Passes the golden rule because it <em>returns</em> supply to the long-term market.</p>
-              <blockquote class="cap03-ficha__cita">"Precision, restraint and reliance on platforms — understood as an opportunity to introduce disincentives where needed."</blockquote>
+              <p class="cap03-ficha__def">Start by separating <strong>professional short-term rentals</strong> (continuous, year-round use) from <strong>occasional second residences</strong> let only off-season — they have very different effects on the long-term market. From there, regulate not as a global ban but with data: full registries, taxes that price in the externality, and zone-variable limits. Cross-checks with platforms make the distinction enforceable. Passes the golden rule because it <em>returns</em> professional STR supply to the long-term market without sterilising the occasional uses that don't compete with it.</p>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
-                <li>Berlin · <em>Zweckentfremdungsverbot</em> 2016: every 10 homes withdrawn from tourist use contained local rents</li>
-                <li>+€0.07/m² for each nearby Airbnb listing before the ban</li>
-                <li>Differentiate professional STR from occasional second residences</li>
+                <li>Berlin · <em>Zweckentfremdungsverbot</em> 2016: removing 10 nearby Airbnb listings was worth ~€0.7/m² less in monthly rent (~7 % at €10/m² baseline)</li>
+                <li>Barcelona: average neighbourhood Airbnb presence pushed rents +1.9 % and sale prices +4.6 %</li>
+                <li>US (Barron, Kung &amp; Proserpio, 2017): +1 % Airbnb listings → +0.018 % rents and +0.26 % sale prices in the same ZIP</li>
+                <li>Positive side: 10 extra Airbnb listings in a neighbourhood are associated with ~1 new restaurant and ~8 tourism jobs in that census tract — local activity gains, not just losses</li>
+                <li>The Berlin study itself: price effect concentrated in the most "always-on" listings — the policy bites professional STR and barely touches occasional uses</li>
               </ul>
               <p class="cap03-ficha__cite">book, pp. 199-204</p>
             </article>
 
-            <article class="cap03-ficha" id="reg-3" role="tabpanel" data-panel="3">
+            <article class="cap03-ficha" id="reg-2" role="tabpanel" data-panel="2">
               <h4 class="cap03-ficha__titulo">Non-payment insurance, French-style</h4>
               <p class="cap03-ficha__def">Mutualise the non-payment risk instead of pushing landlords into <em>casting</em> tenants, demanding high deposits or retreating into seasonal contracts "just in case". The owner asks for fewer guarantees; more households can access private rental. Passes the rule because it <em>adds</em> effective supply.</p>
-              <blockquote class="cap03-ficha__cita">"The insurance improves overall welfare by sharing the risk: landlords demand fewer guarantees and that lets more families reach the rental market."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>France · <strong>Visale</strong>: public guarantee on missed payments</li>
                 <li>Abramson and van Nieuwerburgh: model → ↓ evictions, ↓ homelessness</li>
@@ -859,16 +839,29 @@
               <p class="cap03-ficha__cite">book, pp. 204-207</p>
             </article>
 
-            <article class="cap03-ficha" id="reg-4" role="tabpanel" data-panel="4">
+            <article class="cap03-ficha" id="reg-3" role="tabpanel" data-panel="3">
               <h4 class="cap03-ficha__titulo">Court deadlines and dignified exit</h4>
               <p class="cap03-ficha__def">The average eviction in Spain takes <strong>2 years</strong>: it protects neither the tenant — who spends that time in uncertainty — nor the landlord — whose property sits frozen. Bring it down to 3-6 months, combined with a social housing stock that offers a real exit for the tenant. Passes the rule because it unblocks units that are paralysed today.</p>
-              <blockquote class="cap03-ficha__cita">"This balance isn't optimal for anyone: not for the landlord, whose property is frozen, nor for the tenant, who spends that time under uncertainty."</blockquote>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
               <ul class="cap03-ficha__casos">
                 <li>Current 2-year delays → 3-6 months with broader cause grounds and faster process</li>
                 <li>Dignified exit through a publicly managed housing stock</li>
                 <li>Spain's Bono Joven: subsidy captured by landlords → reorient towards social rental</li>
               </ul>
               <p class="cap03-ficha__cite">book, pp. 205-209</p>
+            </article>
+
+            <article class="cap03-ficha" id="reg-4" role="tabpanel" data-panel="4">
+              <h4 class="cap03-ficha__titulo">Cooperative leasing with large landlords</h4>
+              <p class="cap03-ficha__def">Long-term public-private agreements with large owners, with prices and durations set up front. The state secures stable supply at a known price; the landlord secures predictable cash flow with no rotation cost. Passes the rule because it <em>mobilises</em> existing units into the long-term market without new construction or price ceilings.</p>
+              <p class="cap03-ficha__supp">// supporting evidence</p>
+              <ul class="cap03-ficha__casos">
+                <li>Ireland's long-term leasing scheme: 25-year contracts between public bodies and private owners</li>
+                <li>Suggested by José García Montalvo as a model for Spain</li>
+                <li>Provivienda's affordable-rental pools: similar logic, smaller scale, with administrative simplification as a key ingredient</li>
+                <li>Could mobilise thousands of units already in private hands without supply destruction</li>
+              </ul>
+              <p class="cap03-ficha__cite">book, pp. 207-208</p>
             </article>
           </div>
         </div>
@@ -916,12 +909,12 @@
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script type="module" src="../app.js?v=20260509C"></script>
-  <script type="module" src="cap01-mapa.js?v=20260509C"></script>
-  <script type="module" src="../cap01-edificio.js?v=20260509C"></script>
-  <script type="module" src="../cap01-tiempo.js?v=20260509C"></script>
-  <script type="module" src="../cap01-coste.js?v=20260509C"></script>
-  <script type="module" src="../cap03-tabs.js?v=20260509C"></script>
-  <script type="module" src="cap03-sim.js?v=20260509C"></script>
+  <script type="module" src="../app.js?v=20260509F"></script>
+  <script type="module" src="cap01-mapa.js?v=20260509F"></script>
+  <script type="module" src="../cap01-edificio.js?v=20260509F"></script>
+  <script type="module" src="../cap01-tiempo.js?v=20260509F"></script>
+  <script type="module" src="../cap01-coste.js?v=20260509F"></script>
+  <script type="module" src="../cap03-tabs.js?v=20260509F"></script>
+  <script type="module" src="cap03-sim.js?v=20260509F"></script>
 </body>
 </html>

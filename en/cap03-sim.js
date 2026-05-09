@@ -5,8 +5,10 @@
   if (!root) return;
 
   const DEFICIT0 = 739000;
-  const DEMANDA = 250000;
-  const ANYOS_DEMANDA = 13;
+  const DEMANDA0 = 250000;
+  const T_DECAY = 26;
+  const TOTAL_DEM = DEMANDA0 * T_DECAY / 2;
+  const NEED_MAX = DEFICIT0 + TOTAL_DEM;
   const RITMO_ACTUAL = 95000;
   const OBJETIVO_LIBRO = 3_000_000;
   const ANYO0 = 2026;
@@ -18,15 +20,18 @@
   const yScale = (v) => Y_BOT - (v / VIV_MAX) * (Y_BOT - Y_TOP);
 
   function necesidadEn(t) {
-    return DEFICIT0 + DEMANDA * Math.min(t, ANYOS_DEMANDA);
+    if (t <= 0) return DEFICIT0;
+    if (t >= T_DECAY) return NEED_MAX;
+    const beta = DEMANDA0 / (2 * T_DECAY);
+    return DEFICIT0 + DEMANDA0 * t - beta * t * t;
   }
   function aniosCierre(X) {
     if (X <= 0) return Infinity;
-    if (X > DEMANDA) {
-      const t1 = DEFICIT0 / (X - DEMANDA);
-      if (t1 <= ANYOS_DEMANDA) return t1;
-    }
-    return (DEFICIT0 + DEMANDA * ANYOS_DEMANDA) / X;
+    const beta = DEMANDA0 / (2 * T_DECAY);
+    const disc = (DEMANDA0 - X) ** 2 + 4 * beta * DEFICIT0;
+    const tQuad = (DEMANDA0 - X + Math.sqrt(disc)) / (2 * beta);
+    if (tQuad > 0 && tQuad <= T_DECAY) return tQuad;
+    return NEED_MAX / X;
   }
   function aniosTres(X) {
     return X > 0 ? OBJETIVO_LIBRO / X : Infinity;
@@ -34,9 +39,10 @@
 
   function pathNecesidad() {
     const p0 = `M ${xScale(0)} ${yScale(DEFICIT0)}`;
-    const p1 = `L ${xScale(ANYOS_DEMANDA)} ${yScale(DEFICIT0 + DEMANDA * ANYOS_DEMANDA)}`;
-    const p2 = `L ${xScale(T_MAX)} ${yScale(DEFICIT0 + DEMANDA * ANYOS_DEMANDA)}`;
-    return `${p0} ${p1} ${p2}`;
+    const ctrl = `${xScale(T_DECAY/2)} ${yScale(NEED_MAX)}`;
+    const end  = `${xScale(T_DECAY)} ${yScale(NEED_MAX)}`;
+    const flat = `L ${xScale(T_MAX)} ${yScale(NEED_MAX)}`;
+    return `${p0} Q ${ctrl} ${end} ${flat}`;
   }
   function pathConstruido(X) {
     const tCap = X > 0 ? VIV_MAX / X : T_MAX;
