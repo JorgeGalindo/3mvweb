@@ -536,6 +536,15 @@ strong { font-weight: 600; }
 }
 .chapter__body strong { color: var(--ink); font-weight: 600; }
 .chapter--red .chapter__body strong { color: var(--ink); }
+.chapter__body ul {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+.chapter__body ul li { margin: 0 0 .4rem; }
+.chapter__body ul li strong { color: var(--ink); font-weight: 600; }
 
 .chapter__minread {
   border-left: 2px solid var(--green);
