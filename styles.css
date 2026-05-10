@@ -646,6 +646,367 @@ strong { font-weight: 600; }
   grid-template-columns: 1fr;
   max-width: var(--max-chart);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   /evaluacionambiental · caso extremo
+   Reusa la paleta y la tipografía del sitio principal y añade
+   bloques específicos: hero, cards de marco normativo, timeline
+   horizontal de 6 casos, casos detallados, cierre.
+   ───────────────────────────────────────────────────────────── */
+
+.ev-hero {
+  position: relative;
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.ev-hero__inner {
+  max-width: var(--max-chart);
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+}
+.ev-hero__kicker {
+  font-family: var(--mono);
+  font-size: .76rem;
+  letter-spacing: .06em;
+  color: var(--red-deep);
+  margin: 0 0 1rem;
+  text-transform: lowercase;
+}
+.ev-hero__title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  line-height: 1.18;
+  color: var(--ink);
+  margin: 0 0 1.4rem;
+  max-width: 32ch;
+  text-wrap: balance;
+}
+.ev-hero__line { display: block; }
+.ev-hero__line + .ev-hero__line { margin-top: .35em; }
+.ev-hero__sub {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 64ch;
+}
+
+.ev-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.ev-section .chapter__inner {
+  max-width: var(--max-chart);
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+}
+.ev-section .chapter__body {
+  max-width: var(--max-chart);
+}
+
+/* Tres tarjetas (marco / nulidad) — same family as cap01-mech */
+.ev-tres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .65rem;
+  margin: 1.5rem 0 1.75rem;
+  max-width: var(--max-chart);
+}
+.ev-tres--two { grid-template-columns: repeat(2, 1fr); }
+.ev-tres__card {
+  border: 1px solid var(--rule-strong);
+  background: var(--paper-soft);
+  padding: 1rem 1.05rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.chapter--red .ev-tres__card { background: var(--red-haze); border-left: 2px solid var(--red); }
+.ev-tres__tag {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .05em;
+  text-transform: lowercase;
+  color: var(--red-deep);
+  margin: 0 0 .35rem;
+  font-weight: 500;
+}
+.ev-tres__head {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 .45rem;
+}
+.ev-tres__body {
+  font-family: var(--serif);
+  font-size: .95rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.ev-tres__body strong { color: var(--ink); font-weight: 600; }
+.ev-tres__body em { color: var(--red-deep); font-style: italic; }
+@media (max-width: 720px) {
+  .ev-tres { grid-template-columns: 1fr; }
+}
+
+/* Timeline horizontal · 6 casos · 30 años */
+.ev-timeline-fig {
+  margin: 2rem 0 1.25rem;
+}
+.ev-timeline-fig__plot {
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 1rem .5rem .25rem;
+}
+.ev-timeline-fig__plot svg {
+  width: 100%;
+  height: auto;
+  font-family: var(--mono);
+}
+.ev-timeline-fig__caption {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .02em;
+  color: var(--ink-mute);
+  margin: .6rem 0 0;
+  max-width: 78ch;
+  line-height: 1.45;
+}
+.ev-tl-axis line { stroke: #0F1118; stroke-width: 1; }
+.ev-tl-axis text {
+  font-size: 10px;
+  fill: var(--ink-soft);
+}
+.ev-tl-axis-title {
+  font-size: 11px;
+  fill: var(--ink-mute);
+  text-anchor: middle;
+}
+.ev-tl-row-name {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  fill: var(--ink);
+  font-weight: 500;
+}
+.ev-tl-mark {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  fill: var(--ink-soft);
+}
+.ev-tl-row-end {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--red-deep);
+  font-weight: 500;
+}
+.ev-tl-legal-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--green-deep);
+  font-weight: 500;
+}
+
+/* Casos detallados · 6 tarjetas grandes */
+.ev-casos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 1.5rem 0 1rem;
+  max-width: var(--max-chart);
+}
+.ev-caso {
+  border: 1px solid var(--rule-strong);
+  background: var(--paper-soft);
+  padding: 1.4rem 1.5rem 1.5rem;
+  position: relative;
+}
+.chapter--red .ev-caso { background: rgba(245, 198, 191, 0.18); border-left: 3px solid var(--red); }
+.ev-caso__tag {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .05em;
+  text-transform: lowercase;
+  color: var(--red-deep);
+  margin: 0 0 .4rem;
+  font-weight: 500;
+}
+.ev-caso__titulo {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.18;
+  color: var(--ink);
+  margin: 0 0 .55rem;
+}
+.ev-caso__lede {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 .9rem;
+}
+.ev-caso__hechos {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .9rem;
+  font-family: var(--serif);
+  font-size: .95rem;
+  color: var(--ink-soft);
+}
+.ev-caso__hechos li {
+  padding-left: 1.1rem;
+  position: relative;
+  margin-bottom: .35rem;
+  line-height: 1.45;
+}
+.ev-caso__hechos li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-family: var(--mono);
+  top: .05em;
+}
+.ev-caso__hechos strong { color: var(--ink); font-weight: 600; }
+.ev-caso__por-que {
+  font-family: var(--mono);
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+  padding-top: .8rem;
+  border-top: 1px dashed var(--rule);
+  letter-spacing: .005em;
+}
+.ev-caso__por-que em { color: var(--red-deep); font-style: italic; }
+
+/* Quote · doctrina */
+.ev-quote {
+  border-left: 3px solid var(--red);
+  background: var(--red-haze);
+  padding: 1rem 1.4rem 1.05rem;
+  margin: 1.4rem 0 1.2rem;
+  max-width: var(--max-chart);
+}
+.ev-quote p {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Lista CCAA */
+.ev-ccaa-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.4rem 0 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+  max-width: var(--max-chart);
+}
+.ev-ccaa-list li {
+  border: 1px solid var(--rule-strong);
+  background: var(--red-haze);
+  padding: .85rem 1.05rem 1rem;
+}
+.ev-ccaa-list__head {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .05em;
+  text-transform: lowercase;
+  color: var(--red-deep);
+  margin: 0 0 .35rem;
+  font-weight: 500;
+}
+.ev-ccaa-list__body {
+  font-family: var(--serif);
+  font-size: .95rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.ev-ccaa-list__body strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 720px) {
+  .ev-ccaa-list { grid-template-columns: 1fr; }
+}
+
+/* Lista de fixes */
+.ev-fixes {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  color: var(--ink);
+  max-width: var(--max-chart);
+}
+.ev-fixes li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: .55rem;
+  line-height: 1.5;
+}
+.ev-fixes li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+}
+.ev-fixes li strong { font-weight: 600; }
+
+/* Cierre con CTA */
+.ev-cierre {
+  background: var(--paper-soft);
+  border-top: 1px solid var(--rule);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.ev-cierre__inner {
+  max-width: var(--max-chart);
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+  text-align: left;
+}
+.ev-cierre__head {
+  font-family: var(--mono);
+  font-size: .76rem;
+  letter-spacing: .06em;
+  text-transform: lowercase;
+  color: var(--green-deep);
+  margin: 0 0 .8rem;
+}
+.ev-cierre__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 .9rem;
+  max-width: 22ch;
+}
+.ev-cierre__body {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 1.4rem;
+  max-width: 60ch;
+}
+.ev-cierre__buttons {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
 .chapter__body .cap01-pair__card {
   padding: .85rem 1rem .95rem;
   border-right: 1px dashed var(--rule-strong);
