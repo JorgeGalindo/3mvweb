@@ -1422,7 +1422,41 @@ strong { font-weight: 600; }
   color: var(--ink);
   margin: 0 0 1rem;
 }
-.book-close__buy { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-top: .25rem; }
+.book-close__buy-label {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .05em;
+  text-transform: lowercase;
+  color: var(--ink-mute);
+  margin: 1rem 0 .6rem;
+}
+.book-close__buy {
+  display: flex;
+  gap: .6rem .9rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+}
+.book-close__link {
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .01em;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.book-close__link:hover {
+  color: var(--green-deep);
+  border-bottom-color: var(--green);
+}
+.book-close__link-sub {
+  font-size: .72rem;
+  color: var(--ink-mute);
+  margin-left: .25em;
+  letter-spacing: .02em;
+}
 
 /* ─────────────────────────  footer  ───────────────────────── */
 
