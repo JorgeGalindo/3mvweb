@@ -397,8 +397,8 @@ strong { font-weight: 600; }
   font-style: normal;
   font-weight: 500;
 }
-.hero__title .num--red   { color: var(--red-pastel); }
-.hero__title .num--green { color: var(--green-pastel); }
+.hero__title .num--red   { color: #F25F50; }   /* vivido sobre ink-deep */
+.hero__title .num--green { color: #5FCF99; }
 
 .hero__title .word { white-space: nowrap; }
 .hero__title .char { display: inline; transition: opacity .04s linear; }
@@ -595,11 +595,10 @@ strong { font-weight: 600; }
 }
 .cap04-paper__body {
   font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 1.05rem;
+  line-height: 1.6;
   color: var(--ink);
   margin: 0 0 .7rem;
-  max-width: 78ch;
 }
 .cap04-paper__body strong { color: var(--ink); font-weight: 600; }
 .cap04-paper__body em { font-style: italic; color: var(--red-deep); }
@@ -623,6 +622,14 @@ strong { font-weight: 600; }
    Anchos homogéneos en todos los capítulos
    Todo a la misma columna (max-chart, 920px) · sin splits 2/3 cols
    ───────────────────────────────────────────────────────────── */
+/* Todo el chapter__inner a la misma columna en cap 01-04: el título, el
+   lede y los bloques de contenido arrancan del mismo borde izquierdo. */
+#porque-no .chapter__inner,
+#crisis    .chapter__inner,
+#construir .chapter__inner,
+#regular   .chapter__inner {
+  max-width: var(--max-chart);
+}
 #porque-no .chapter__body,
 #crisis    .chapter__body,
 #construir .chapter__body,
@@ -636,15 +643,16 @@ strong { font-weight: 600; }
 #construir .chapter__minread,
 #regular   .chapter__minread {
   max-width: var(--max-chart);
+  margin-left: auto;
+  margin-right: auto;
 }
-#construir .chapter__inner > .cap03-tabs,
-#construir .chapter__inner > .cap03-sim,
-#regular   .chapter__inner > .cap03-tabs { margin-left: 0; margin-right: 0; }
 
 #regular .chapter__body .cap01-procedure,
 #regular .chapter__body .cap01-procedure--3cols {
   grid-template-columns: 1fr;
   max-width: var(--max-chart);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1534,13 +1542,14 @@ strong { font-weight: 600; }
    ───────────────────────────────────────────────────────────── */
 .cap03-sim__intro {
   font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.55;
-  color: var(--ink-soft);
-  max-width: 64ch;
-  margin: 0 0 1.4rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: var(--max-chart);
+  margin: 0 auto 1.4rem;
 }
-.cap03-sim__intro em { color: var(--ink-mute); font-style: normal; font-family: var(--mono); font-size: 0.85em; }
+.cap03-sim__intro em { color: var(--ink-soft); font-style: italic; }
+.cap03-sim__intro strong { color: var(--ink); font-weight: 600; }
 
 .cap03-sim {
   display: grid;
