@@ -7,9 +7,9 @@
    ───────────────────────────────────────────────────────────── */
 
 :root {
-  --paper:        #F4EFE2;
-  --paper-soft:   #FAF6ED;
-  --paper-deep:   #ECE5D2;
+  --paper:        #FFF7F4;   /* off-white peachy · estilo Works in Progress */
+  --paper-soft:   #FFFBF9;
+  --paper-deep:   #F5E2DC;
 
   --ink:          #1A1C24;
   --ink-deep:     #0F1118;
@@ -33,7 +33,7 @@
   /* rules */
   --rule:         #D9D2C0;
   --rule-strong:  #BFB6A2;
-  --rule-dark:    rgba(244, 239, 226, 0.22);
+  --rule-dark:    rgba(255, 247, 244, 0.22);
 
   /* layout */
   --max:          760px;
@@ -194,7 +194,7 @@ strong { font-weight: 600; }
 }
 .nav__list a {
   text-decoration: none;
-  color: rgba(244, 239, 226, 0.72);
+  color: rgba(255, 247, 244, 0.72);
   font-weight: 400;
   position: relative;
   padding-bottom: 2px;
@@ -247,7 +247,7 @@ strong { font-weight: 600; }
   opacity: 0.6;
 }
 .nav__lang-off {
-  color: rgba(244, 239, 226, 0.55);
+  color: rgba(255, 247, 244, 0.55);
   text-decoration: none;
   transition: color var(--t-fast) var(--ease);
 }
@@ -1499,20 +1499,20 @@ strong { font-weight: 600; }
   font-size: .85rem;
   flex-wrap: wrap;
 }
-.footer__links a { color: rgba(244, 239, 226, 0.72); text-decoration: none; }
+.footer__links a { color: rgba(255, 247, 244, 0.72); text-decoration: none; }
 .footer__links a:hover { color: var(--green-pastel); }
 .footer__bottom {
   max-width: var(--max-wide);
   padding-top: 1rem;
   font-family: var(--mono);
   font-size: .72rem;
-  color: rgba(244, 239, 226, 0.55);
+  color: rgba(255, 247, 244, 0.55);
   letter-spacing: .02em;
 }
 .footer__bottom p { margin: 0 0 .35rem; }
 .footer__bottom p:last-child { margin-bottom: 0; }
-.footer__attrib { font-size: .68rem; color: rgba(244, 239, 226, 0.45); }
-.footer__attrib a { color: rgba(244, 239, 226, 0.62); text-decoration: none; }
+.footer__attrib { font-size: .68rem; color: rgba(255, 247, 244, 0.45); }
+.footer__attrib a { color: rgba(255, 247, 244, 0.62); text-decoration: none; }
 .footer__attrib a:hover { color: var(--green-pastel); }
 
 /* ─────────────────────────  reveal  ───────────────────────── */
@@ -1920,7 +1920,7 @@ strong { font-weight: 600; }
 .cap01-mapa__map .maplibregl-ctrl-attrib {
   font-family: var(--mono);
   font-size: 10px;
-  background: rgba(244, 239, 226, 0.85);
+  background: rgba(255, 247, 244, 0.85);
   color: var(--ink-soft);
 }
 .cap01-mapa__legend {
@@ -1928,7 +1928,7 @@ strong { font-weight: 600; }
   bottom: 1.25rem;
   left: 1rem;
   max-width: 280px;
-  background: rgba(244, 239, 226, 0.92);
+  background: rgba(255, 247, 244, 0.92);
   border-left: 2px solid var(--red);
   padding: 0.6rem 0.8rem;
   font-family: var(--mono);
@@ -2101,7 +2101,7 @@ strong { font-weight: 600; }
      translúcido en móvil para que se lea por encima del mapa sticky. */
   .cap01-step--cierre,
   .cap01-step--cierre.is-active {
-    background: rgba(244, 239, 226, 0.94);
+    background: rgba(255, 247, 244, 0.94);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     padding: 1.1rem 1.2rem;
