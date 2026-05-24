@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tres milions d'habitatges</title>
+  <meta name="description" content="Sense habitatges no hi ha oportunitats. El llibre de Jorge Galindo, explicat capítol a capítol, amb les dades al davant." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tres milions d'habitatges" />
+  <meta property="og:description" content="Sense habitatges no hi ha oportunitats. El llibre explicat, amb dades." />
+  <meta property="og:locale" content="ca_ES" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="../styles.css?v=20260519C" />
+</head>
+<body>
+  <a href="#main" class="skip">Saltar al contingut</a>
+
+  <header class="nav" data-nav>
+    <div class="container container--wide nav__inner">
+      <a class="nav__brand" href="#top">
+        <span class="nav__brand-bracket">[</span>3.000.000<span class="nav__brand-bracket">]</span><span class="nav__brand-house" aria-hidden="true">⌂</span>
+      </a>
+      <nav aria-label="Capítols">
+        <ul class="nav__list">
+          <li><a href="#porque-no"><span class="nav__num">01</span><span class="nav__label">per què no construïm</span></a></li>
+          <li><a href="#crisis"><span class="nav__num">02</span><span class="nav__label">les conseqüències</span></a></li>
+          <li><a href="#construir"><span class="nav__num">03</span><span class="nav__label">construir</span></a></li>
+          <li><a href="#regular"><span class="nav__num">04</span><span class="nav__label">regular?</span></a></li>
+        </ul>
+      </nav>
+      <span class="nav__lang"><a href="../" class="nav__lang-off">ES</a><span class="nav__lang-sep">·</span><a href="../en/" class="nav__lang-off">EN</a><span class="nav__lang-sep">·</span><span class="nav__lang-on">CAT</span></span>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="container container--wide hero__inner">
+        <div class="hero__cover" data-cover>
+          <img src="../assets/libro.png" alt="Tres milions d'habitatges" class="hero__cover-img" />
+        </div>
+        <div class="hero__copy">
+          <h1 class="hero__title" data-typing-title>
+            <span class="hero__line">Només en els darrers <span class="num num--green">cinc anys</span> hi ha <span class="num num--green">1,2 milions</span> de noves llars a Espanya. I quants habitatges hem construït per a elles? <span class="num num--red">Menys de 500.000</span>.</span>
+            <span class="hero__line">Sense <span class="ul">habitatges</span> no hi ha <span class="ul"><em>oportunitats</em></span>.</span>
+          </h1>
+        </div>
+      </div>
+      <span data-hero-end aria-hidden="true"></span>
+    </section>
+
+    <!-- 01 · PER QUÈ NO CONSTRUÏM -->
+    <section id="porque-no" class="chapter chapter--red reveal is-in">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">01</span>
+        <p class="chapter__head"><span class="ch-num">01</span> per què no construïm</p>
+        <h2 class="chapter__title">Els habitatges que no arriben.</h2>
+        <p class="chapter__lede">Bloquejos de sòl a sostre.</p>
+        <div class="chapter__body">
+          <p>En la darrera dècada i mitja Espanya ha deixat de construir. <strong>Per què?</strong></p>
+
+          <p>A Espanya, l'ús de cada parcel·la el fixa el municipi mitjançant un document mestre: el <strong>Pla General</strong> (<em>PGOU</em>), on l'ajuntament classifica cada solar com a urbanitzable o no. El 2007, el default va canviar.</p>
+
+          <div class="cap01-pair">
+            <article class="cap01-pair__card">
+              <p class="cap01-pair__tag">// abans del 2007</p>
+              <p class="cap01-pair__body">Sota la Llei del Sòl de 1998, tot el que no estigués expressament protegit com a rústic o agrícola podia declarar-se urbanitzable.</p>
+            </article>
+            <article class="cap01-pair__card">
+              <p class="cap01-pair__tag">// després del 2007</p>
+              <p class="cap01-pair__body">El sòl s'ha de justificar expressament com a necessari perquè es pugui reclassificar com a urbanitzable.</p>
+            </article>
+          </div>
+
+          <p>La intuïció era raonable —refredar el <em>sprawl</em> especulatiu que havia alimentat la bombolla de principis dels 2000—, però en el moment en què combines una porta d'entrada més estricta amb un munt de paperassa per travessar-la, converteixes un filtre sensat en un coll d'ampolla. Treure al mercat un sol solar es converteix en un exercici de diversos anys.</p>
+
+          <p class="cap01-section-tag">// i després es van apilar les capes</p>
+
+          <p>Entre 2010 i 2019, capa rere capa es van apilar a sobre. L'exemple més clar és la <strong>Llei d'Avaluació Ambiental de 2013</strong>, que va estendre els casos sotmesos a «avaluació ambiental estratègica». Gairebé qualsevol modificació no trivial d'un Pla General requereix ara quatre procediments en paral·lel:</p>
+
+          <div class="cap01-procedure">
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// a</p>
+              <p class="cap01-procedure__body">Procediment ambiental paral·lel, amb la seva pròpia consulta pública.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// b</p>
+              <p class="cap01-procedure__body">Estudi ambiental detallat de la zona.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// c</p>
+              <p class="cap01-procedure__body">Declaració ambiental final, emesa per una administració diferent.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// d</p>
+              <p class="cap01-procedure__body">Seguiment posterior un cop aprovat.</p>
+            </article>
+          </div>
+
+          <p>Cada pas té el seu propi cronòmetre; qualsevol d'ells pot aturar el rellotge. A sobre, les comunitats autònomes hi van apilar les seves: <strong>estudis d'integració paisatgística a València</strong>, <strong>avaluacions d'impacte en la salut a Andalusia</strong>, <strong>informes de sostenibilitat econòmica gairebé pertot</strong>. El mateix Director General d'Urbanisme d'Andalusia estima que calen al voltant de <strong>100 informes sectorials</strong> per tramitar un nou Pla General.</p>
+
+          <p>I aquestes capes no afecten només la fase u —reclassificar el sòl—. També peguen a la fase dos: el <strong>Pla Parcial</strong>, el document de projecte que, un cop el sòl és urbanitzable, defineix exactament on aniran carrers, parcel·les, densitats i dotacions.</p>
+
+          <p class="cap01-section-tag">// i dos amplificadors legals</p>
+
+          <p>Dos mecanismes jurídics multipliquen la fricció:</p>
+
+          <div class="cap01-mech">
+            <article class="cap01-mech__card">
+              <p class="cap01-mech__head">// silenci administratiu negatiu</p>
+              <p class="cap01-mech__body">En urbanisme, si l'Administració no respon dins del termini legal, la sol·licitud es considera denegada. La inacció burocràtica equival a un «no».</p>
+            </article>
+            <article class="cap01-mech__card">
+              <p class="cap01-mech__head">// proliferació de punts de vet</p>
+              <p class="cap01-mech__body">Qualsevol veí, associació o administració superior implicada en algun d'aquests informes pot recórrer, i una impugnació amb èxit acostuma a anul·lar el procediment sencer, no només el punt qüestionat. Els actors NIMBY no necessiten guanyar en el fons, només endarrerir.</p>
+            </article>
+          </div>
+
+          <p>Anem-ho a veure al peu del terreny.</p>
+        </div>
+      </div>
+
+      <div class="cap01-mapa" data-cap01-mapa>
+        <div class="cap01-mapa__sticky">
+          <div class="cap01-mapa__map" id="cap01-map" aria-label="Mapa de Madrid amb sectors del PGOU 1997, Operació Campament i Cotxeres de Cuatro Caminos"></div>
+        </div>
+
+        <div class="cap01-mapa__steps" data-cap01-steps>
+          <article class="cap01-step" data-step="0">
+            <p class="cap01-step__tag">// marc</p>
+            <p>Un <strong>Pla General</strong> és la norma que determina aquest primer pas: quin sòl és urbanitzable i quin no. Prenguem Madrid, ciutat en expansió. Continua governada pel <strong>Pla General de 1997</strong>.</p>
+            <p>Renovar el de Madrid fa dècades que s'intenta. Mentrestant, tot el nou s'esmuny per modificacions puntuals i plans parcials que triguen anys en cada pas.</p>
+          </article>
+
+          <article class="cap01-step" data-step="A">
+            <p class="cap01-step__tag">// sectors anul·lats</p>
+            <p><strong>El 28 de setembre de 2012, el Tribunal Suprem va anul·lar 22 sectors del Pla</strong>. De cop, fins a <strong>135.000 habitatges</strong> previstos van quedar en l'aire per defectes formals en la tramitació.</p>
+            <p>El 2016 el Suprem va salvar 21 dels 22 després de la revisió de l'Ajuntament. Però entre sentència i rescat van passar <strong>quatre anys</strong> en què aquells sòls no es podien tocar.</p>
+            <p><strong>BBVA Research calcula que dues terceres parts dels Plans vigents a Espanya són anteriors a 2008.</strong> Hi ha embús urbanístic.</p>
+          </article>
+
+          <article class="cap01-step" data-step="B">
+            <p class="cap01-step__tag">// operació campament</p>
+            <p>Però fins i tot quan no cal mobilitzar sòl nou amb el Pla General, la fase següent s'embussa. <strong>211 hectàrees al sud-oest de Madrid. 10.700 habitatges, el 65 % protegits.</strong> El primer conveni entre Defensa, Comunitat i Ajuntament es va signar el <strong>6 de juny de 1989</strong>. És a dir: ja estava incorporat al Pla General de 1997. Però calia adquirir els sòls de Defensa i desenvolupar un <strong>Pla Parcial</strong>: el que determina l'aspecte concret d'aquell nou barri.</p>
+            <p>Defensa va cobrar el primer termini el 2011. El Pla Parcial va caure amb la sentència de 2012. SEPES va comprar formalment el sòl l'octubre de 2023. El projecte d'urbanització es va aprovar inicialment el <strong>27 de febrer de 2025</strong>. Els primers habitatges no hi seran abans de <strong>2027-2028</strong>: <strong>gairebé quatre dècades</strong> des del conveni.</p>
+          </article>
+
+          <article class="cap01-step" data-step="C">
+            <p class="cap01-step__tag">// cotxeres de Cuatro Caminos</p>
+            <p>Un altre exemple més petit i recent. <strong>Antonio Palacios i Miguel Otamendi van projectar el 1917 les cotxeres del Metro de Madrid a Cuatro Caminos.</strong> El primer comboi de la Línia 1 va sortir d'allà el 17 d'octubre de 1919.</p>
+            <p>El 2014, sota Botella, es va aprovar un pla per substituir les cotxeres per <strong>443 habitatges</strong>. La cooperativa adjudicatària va enderrocar l'edifici entre març i juny de 2021, malgrat els recursos pendents. El TSJM va anul·lar el pla el <strong>9 de maig de 2025</strong>. El Suprem ho va confirmar l'<strong>11 de febrer de 2026</strong>. El solar continua buit.</p>
+          </article>
+
+          <article class="cap01-step" data-step="D">
+            <p class="cap01-step__tag">// la corona</p>
+            <p><strong>Sortim de la capital.</strong> La pressió sobre l'habitatge no l'assumeix només Madrid: s'hauria de repartir amb els municipis de la seva corona metropolitana. No ho fa.</p>
+            <p>Onze alcaldes de la corona —entre ells Alcorcón, Fuenlabrada o Getafe— han presentat una iniciativa legislativa municipal per forçar la declaració de zones de mercat tensionat. Mentrestant, diversos desenvolupaments porten dues dècades a la cartera sense moure's.</p>
+            <p>Ningú no vol assumir el nou habitatge: que l'assumeixi el veí. El problema: a Espanya hi ha <strong>més de 8.000 municipis</strong>. Hi ha molts «veïns».</p>
+          </article>
+
+          <article class="cap01-step" data-step="E">
+            <p class="cap01-step__tag">// rivas-vaciamadrid</p>
+            <p><strong>Rivas-Vaciamadrid va presentar el 5 de juny de 2025 l'avenç del seu nou Pla General.</strong> El model declarat: consolidar el teixit urbà existent. L'etiqueta oficial: <em>«Rivas serà la Casa de Campo del Sud-est»</em>.</p>
+            <p>Sobre els plànols: <strong>−46 % d'edificabilitat al barri Cristo de Rivas</strong> i l'eliminació d'uns <strong>3.000 habitatges</strong> previstos a Mirador Sur. Fa anys Rivas ja va paralitzar llicències d'obra per falta de serveis bàsics. La pressió per més habitatge assequible per a joves xoca amb el límit que el mateix municipi s'autoimposa.</p>
+          </article>
+
+          <article class="cap01-step" data-step="F">
+            <p class="cap01-step__tag">// majadahonda</p>
+            <p><strong>Majadahonda, nord-oest metropolità, govern municipal del PP.</strong> El sector Arroyo del Arcipreste —363.000 m², 620 habitatges previstos, 286 protegits— porta demanant la seva urbanització <strong>des de 2004</strong>.</p>
+            <p>Vint anys parat. Sense sentència que el bloquegi, sense col·lector pendent, sense recurs judicial. L'aprovació inicial va arribar finalment el <strong>29 de maig de 2025</strong>. Dos sectors més —Huerto del Parrito i Valles de la Mina, 1.257 habitatges més— es van aprovar poc després. Vint anys no eren entrebancs tècnics, només voluntat política.</p>
+          </article>
+
+          <article class="cap01-step cap01-step--cierre" data-step="cierre">
+            <p class="cap01-step__tag">// cloenda</p>
+            <p><strong>Res d'això no és exclusiu de Madrid.</strong></p>
+            <p>I per descomptat també implica la societat civil… orientada cap al <strong>no</strong>.</p>
+            <p class="cap01-step__sub">Casos en altres ciutats</p>
+            <ul class="cap01-step__bullets">
+              <li><strong>A Corunya · O Castrillón</strong>: rebuig veïnal atura les torres de 17 plantes previstes al Parc d'Oza <em>(El Español, La Voz de Galicia, 2024)</em>.</li>
+              <li><strong>A Corunya · As Percebeiras (Labañou)</strong>: el pla inicial preveia un gratacel de 47 plantes i 180 metres; es va reduir a 16 i, finalment, a 8 plantes després de dialogar amb els veïns <em>(El Ideal Gallego, La Voz de Galicia, 2023)</em>.</li>
+              <li><strong>Saragossa · barri Jesús</strong>: 120 habitatges de lloguer jove frenats per més de 250 al·legacions veïnals <em>(Heraldo de Aragón, 2024)</em>.</li>
+              <li><strong>Sevilla · Cortijo del Cuarto</strong>: els veïns defensen un «pulmó verd» davant dels 5.500 habitatges que projecta la Diputació <em>(elDiario.es, nov 2024)</em>.</li>
+              <li><strong>València · casernes d'Enginyers i Artilleria</strong>: l'enderroc de la caserna del carrer de Sant Vicent es va iniciar el 2019 després de setze anys de negociacions amb el Govern <em>(Las Provincias, oct 2019)</em>.</li>
+              <li><strong>Tiana (Barcelona)</strong> i <strong>Calvià (Mallorca)</strong>: oposició veïnal a noves promocions d'habitatge <em>(Verificat, Última Hora, 2024-25)</em>.</li>
+            </ul>
+            <p class="cap01-step__sub">L'embús urbanístic en xifres</p>
+            <ul class="cap01-step__bullets cap01-step__bullets--dotted">
+              <li><strong>~100 informes sectorials</strong> calen per tramitar un nou pla general, segons el Director General d'Urbanisme de la Junta d'Andalusia. <strong>Alguns són duplicats o quasi duplicats</strong>: una avaluació ambiental general i una altra d'específica de biodiversitat, per exemple <em>(Rebs Executive, 2019; llibre, p. 87)</em>.</li>
+              <li>Als sectorials clàssics —carreteres, patrimoni, comunicacions— s'hi han anat sumant <strong>estudis d'integració paisatgística, avaluacions d'impacte en la salut i informes de sostenibilitat econòmica</strong> de diversos tipus <em>(llibre, p. 86)</em>.</li>
+              <li>En urbanisme, el <strong>silenci administratiu és negatiu</strong>: si l'Administració no respon a temps, el tràmit es considera denegat <em>(llibre, p. 88)</em>.</li>
+              <li><strong>Sandra Bestraten</strong>, presidenta del Col·legi d'Arquitectes de Catalunya a Barcelona: <em>«Les normatives es contradiuen, perquè es fan normes noves i no s'eliminen les antigues»</em> <em>(El País; llibre, p. 89)</em>.</li>
+              <li>Bestraten, sobre els efectes del silenci: <em>«Projectes que han caigut, després d'anys de feina, per la manca d'un informe de gènere o d'un informe ambiental sobre determinats aspectes»</em> <em>(llibre, p. 90)</em>.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- 01.b · projecte-tipus · diagrama isomètric -->
+      <div class="container chapter__inner cap01-edif__intro">
+        <h3 class="cap01-edif__title">Baixem a un projecte-tipus.</h3>
+        <p class="cap01-edif__lede">Fins i tot amb el sòl i el pla en regla, aixecar un edifici d'habitatges.</p>
+      </div>
+
+      <div class="cap01-edif" data-cap01-edif>
+        <div class="cap01-edif__sticky">
+          <div class="cap01-edif__stage" data-edif-stage data-step="0">
+            <svg class="cap01-edif__svg" viewBox="-260 -580 600 800" role="img" aria-label="Diagrama isomètric d'un edifici d'habitatges amb les restriccions d'alçada, CTE i connexió a la xarxa elèctrica">
+
+              <g class="cap01-edif-layer cap01-edif-layer--ground">
+                <polygon points="0,-24 166.3,72 41.5,144 -124.7,48" fill="#E0D7BE" stroke="#BFB6A2" stroke-width="1"/>
+              </g>
+
+              <g class="cap01-edif-layer cap01-edif-layer--A cap01-edif-prohib"></g>
+
+              <g class="cap01-edif-layer cap01-edif-layer--tall">
+                <polygon points="-83.1,48 41.5,120 41.5,-420 -83.1,-492" fill="#7A6B57" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="-83.1" y1="6.5"    x2="41.5" y2="78.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-35"    x2="41.5" y2="37"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-76.6"  x2="41.5" y2="-4.6"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-118.1" x2="41.5" y2="-46.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-159.6" x2="41.5" y2="-87.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-201.1" x2="41.5" y2="-129.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-242.6" x2="41.5" y2="-170.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-284.2" x2="41.5" y2="-212.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-325.7" x2="41.5" y2="-253.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-367.2" x2="41.5" y2="-295.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-408.7" x2="41.5" y2="-336.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-450.2" x2="41.5" y2="-378.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="124.7,72 41.5,120 41.5,-420 124.7,-468" fill="#988572" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="124.7" y1="30.5"   x2="41.5" y2="78.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-11"    x2="41.5" y2="37"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-52.6"  x2="41.5" y2="-4.6"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-94.1"  x2="41.5" y2="-46.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-135.6" x2="41.5" y2="-87.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-177.1" x2="41.5" y2="-129.1" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-218.6" x2="41.5" y2="-170.6" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-260.2" x2="41.5" y2="-212.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-301.7" x2="41.5" y2="-253.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-343.2" x2="41.5" y2="-295.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-384.7" x2="41.5" y2="-336.7" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-426.2" x2="41.5" y2="-378.2" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="0,-540 124.7,-468 41.5,-420 -83.1,-492" fill="#B4A289" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+              </g>
+
+              <g class="cap01-edif-layer cap01-edif-layer--short">
+                <polygon points="-83.1,48 41.5,120 41.5,-105 -83.1,-177" fill="#7A6B57" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="-83.1" y1="10.5"   x2="41.5" y2="82.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-27"    x2="41.5" y2="45"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-64.5"  x2="41.5" y2="7.5"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-102"   x2="41.5" y2="-30"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="-83.1" y1="-139.5" x2="41.5" y2="-67.5" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="124.7,72 41.5,120 41.5,-105 124.7,-153" fill="#988572" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+                <line x1="124.7" y1="34.5"   x2="41.5" y2="82.5"  stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-3"     x2="41.5" y2="45"    stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-40.5"  x2="41.5" y2="7.5"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-78"    x2="41.5" y2="-30"   stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <line x1="124.7" y1="-115.5" x2="41.5" y2="-67.5" stroke="#4A3D2E" stroke-width="0.9" stroke-opacity="0.7"/>
+                <polygon points="0,-225 124.7,-153 41.5,-105 -83.1,-177" fill="#B4A289" fill-opacity="0.92" stroke="#1A1C24" stroke-width="1.1"/>
+              </g>
+
+              <g class="cap01-edif-layer cap01-edif-layer--A cap01-edif-heights">
+                <line x1="-200" y1="-540" x2="180" y2="-540" stroke="#0F1118" stroke-width="1" stroke-dasharray="3 3"/>
+                <text x="-200" y="-546" class="cap01-edif-label cap01-edif-label--ink">sostre AESA Barajas · 45 m</text>
+                <line x1="-200" y1="-225" x2="180" y2="-225" stroke="#C13027" stroke-width="1" stroke-dasharray="3 3"/>
+                <text x="-200" y="-231" class="cap01-edif-label cap01-edif-label--red">PAU oest de Barajas · ~19 m · 6 plantes</text>
+              </g>
+
+              <g class="cap01-edif-layer cap01-edif-layer--B cap01-edif-cte">
+                <polygon points="-83.1,48 41.5,120 41.5,-105 -83.1,-177" fill="none" stroke="#0F1118" stroke-width="4.5" stroke-linejoin="round"/>
+                <polygon points="124.7,72 41.5,120 41.5,-105 124.7,-153" fill="none" stroke="#0F1118" stroke-width="4.5" stroke-linejoin="round"/>
+                <polygon points="0,-225 124.7,-153 41.5,-105 -83.1,-177" fill="none" stroke="#0F1118" stroke-width="4.5" stroke-linejoin="round"/>
+              </g>
+
+              <g class="cap01-edif-layer cap01-edif-layer--C cap01-edif-grid">
+                <g transform="translate(150, 110)">
+                  <circle r="30" fill="#FAF6ED" stroke="#0F1118" stroke-width="1.6"/>
+                  <rect x="-13" y="-4" width="26" height="20" rx="3" fill="none" stroke="#0F1118" stroke-width="2"/>
+                  <line x1="-6" y1="-4" x2="-6" y2="-12" stroke="#0F1118" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="6"  y1="-4" x2="6"  y2="-12" stroke="#0F1118" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="0"  y1="16" x2="0"  y2="22" stroke="#0F1118" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="-24" y1="-24" x2="24" y2="24" stroke="#C13027" stroke-width="3.5" stroke-linecap="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cap01-edif__steps" data-cap01-edif-steps>
+          <article class="cap01-edif-step" data-step="0">
+            <p class="cap01-step__tag">// projecte-tipus</p>
+            <p>L'edifici que es podria aixecar en una zona de franca expansió i sòl disponible: <strong>a l'est de la capital, sota l'aeroport de Barajas</strong>. Allà els límits de servitud aèria existeixen, però són de <strong>45 metres</strong>, suficients per a 13 plantes. Però estem construint per sota. Per què?</p>
+            <p>A partir d'aquí, sobre aquest mateix edifici, s'activen les restriccions.</p>
+          </article>
+
+          <article class="cap01-edif-step" data-step="A">
+            <p class="cap01-step__tag">// alçada</p>
+            <p>A l'oest de Barajas la servitud aeronàutica d'<strong>AESA (Agència Estatal de Seguretat Aèria)</strong> permet fins a <strong>45 metres</strong> sense autorització prèvia.</p>
+            <p>No obstant això, els desenvolupaments recents de l'entorn —Sanchinarro, Las Tablas, Valdebebas— s'han quedat al voltant de <strong>sis plantes, uns 19 metres</strong>. Per què? Perquè les normes zonals del PGOU i els plans parcials de cada <strong>PAU</strong> (els grans desenvolupaments planificats del PGOU del 97, equiparables a un Pla Parcial) ho van fixar així. On hi havia marge aeri i de sòl, es va pactar construir per sota.</p>
+          </article>
+
+          <article class="cap01-edif-step" data-step="B">
+            <p class="cap01-step__tag">// envolupant i CTE</p>
+            <p>El Codi Tècnic de l'Edificació vigent — última gran revisió al <strong>Reial Decret 732/2019</strong>, en vigor des de setembre de 2020 — exigeix envolupants més gruixudes, aerotèrmia o equivalents per a l'aigua calenta, fotovoltaica obligatòria a la coberta i demanda gairebé nul·la. Tot això alhora.</p>
+            <p>Hi ha un nou projecte de Reial Decret en tramitació per transposar la directiva europea d'eficiència energètica. El <strong>Col·legi d'Aparelladors de Madrid el xifra en 18.000 euros més per habitatge</strong>. El Ministeri d'Habitatge ho nega.</p>
+          </article>
+
+          <article class="cap01-edif-step" data-step="C">
+            <p class="cap01-step__tag">// xarxa elèctrica</p>
+            <p>Baixem al carrer. Perquè l'edifici funcioni, cal connectar-lo a la xarxa de baixa tensió. Que un projecte avanci depèn que la distribuïdora confirmi capacitat ferma al seu node.</p>
+            <p>El 2024, segons <strong>BBVA Research, el 88 % dels nodes de distribució estava saturat</strong>. El sector urbanístic va sol·licitar <strong>6,7 GW d'accés a la xarxa</strong> i la majoria no es van poder atendre. La Comunitat de Madrid denuncia que <strong>116.000 habitatges</strong> previstos als desenvolupaments del sud-est han quedat fora del pla elèctric estatal 2025-2030.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 01.c · timeline -->
+      <div class="container chapter__inner cap01-tiempo__intro">
+        <h3 class="cap01-tiempo__title">Tot això es converteix en temps…</h3>
+        <p class="cap01-tiempo__lede">Fins a això pot trigar el camí del sòl urbanitzable al lliurament de claus en un nou barri.</p>
+      </div>
+
+      <div class="cap01-tiempo" data-cap01-tiempo>
+        <div class="cap01-tiempo__sticky">
+          <div class="cap01-tiempo__stage" data-tiempo-stage data-step="0">
+            <svg class="cap01-tiempo__svg" viewBox="0 0 720 320" role="img" aria-label="Timeline horitzontal amb les quatre fases del procés de fer un habitatge nou">
+              <text class="cap01-tiempo-total" x="40" y="58">20 anys</text>
+              <text class="cap01-tiempo-total-sub" x="40" y="84">de mediana en sòl urbanitzable, des de decisió municipal fins al lliurament de claus</text>
+
+              <g class="cap01-tiempo-bar">
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--A" x="40"  y="130" width="384" height="60"/>
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--B" x="424" y="130" width="160" height="60"/>
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--C" x="584" y="130" width="32"  height="60"/>
+                <rect class="cap01-tiempo-seg cap01-tiempo-seg--D" x="616" y="130" width="64"  height="60"/>
+
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--A" x="232" y="118">Pla general</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--A" x="232" y="208">10–12 anys</text>
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--B" x="504" y="118">Pla parcial · urb.</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--B" x="504" y="208">3–7 anys</text>
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--C" x="600" y="118">llicència</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--C" x="600" y="208">12 m</text>
+                <text class="cap01-tiempo-label-out cap01-tiempo-label--D" x="648" y="118">obra</text>
+                <text class="cap01-tiempo-years-out cap01-tiempo-years--D" x="648" y="208">2 a</text>
+              </g>
+
+              <g class="cap01-tiempo-axis">
+                <line x1="40" y1="220" x2="680" y2="220"/>
+                <g><line x1="40"  y1="220" x2="40"  y2="226"/><text x="40"  y="240">0</text></g>
+                <g><line x1="104" y1="220" x2="104" y2="226"/><text x="104" y="240">2</text></g>
+                <g><line x1="168" y1="220" x2="168" y2="226"/><text x="168" y="240">4</text></g>
+                <g><line x1="232" y1="220" x2="232" y2="226"/><text x="232" y="240">6</text></g>
+                <g><line x1="296" y1="220" x2="296" y2="226"/><text x="296" y="240">8</text></g>
+                <g><line x1="360" y1="220" x2="360" y2="226"/><text x="360" y="240">10</text></g>
+                <g><line x1="424" y1="220" x2="424" y2="226"/><text x="424" y="240">12</text></g>
+                <g><line x1="488" y1="220" x2="488" y2="226"/><text x="488" y="240">14</text></g>
+                <g><line x1="552" y1="220" x2="552" y2="226"/><text x="552" y="240">16</text></g>
+                <g><line x1="616" y1="220" x2="616" y2="226"/><text x="616" y="240">18</text></g>
+                <g><line x1="680" y1="220" x2="680" y2="226"/><text x="680" y="240">20</text></g>
+                <text class="cap01-tiempo-axis-title" x="360" y="270">anys</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cap01-tiempo__steps" data-cap01-tiempo-steps>
+          <article class="cap01-tiempo-step" data-step="0">
+            <p class="cap01-step__tag">// tot es converteix en temps</p>
+            <p>Cadascun dels bloquejos anteriors —el sòl, el pla, les restriccions del projecte— té una traducció molt concreta: <strong>temps</strong>. Anem-lo a sumar, fase a fase, amb la seva font al costat.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="A">
+            <p class="cap01-step__tag">// pla general</p>
+            <p>Aprovar un nou Pla General d'Ordenació Urbana porta a Espanya <strong>entre 10 i 12 anys</strong>. Ho reconeix la mateixa Comunitat de Madrid en presentar el seu Pla de Xoc d'Habitatge 2026-2027 <em>(Idealista, set 2025)</em>.</p>
+            <p>La Llei de Mesures Urgents aprovada l'abril de 2026 prometia baixar aquest termini a sis anys. Queda per veure <em>(Comunitat de Madrid, 22 abr 2026)</em>.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="B">
+            <p class="cap01-step__tag">// pla parcial i urbanització</p>
+            <p>Un cop classificat el sòl com a urbanitzable, aprovar el pla parcial juntament amb la reparcel·lació i les obres d'urbanització triga <strong>entre 3 i 7 anys addicionals</strong> <em>(APCE; llibre, p. 89)</em>.</p>
+            <p>Operació Campament es va signar el 1989 i encara no té habitatges lliurats; Los Berrocales acumula vint anys des del seu Pla Parcial original; El Cañaveral va lliurar els primers habitatges el 2016, tretze anys després d'iniciar-se la tramitació. Madrid Nuevo Norte, considerat <em>«termini rècord»</em>, va trigar sis anys i mig entre aprovació inicial i desestimació dels últims recursos <em>(Idealista, mai 2025)</em>.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="C">
+            <p class="cap01-step__tag">// llicència</p>
+            <p>El termini legal per resoldre una llicència d'obra major és de <strong>tres mesos</strong>. Cap gran ajuntament no el compleix <em>(ASPRIMA)</em>. L'estudi EY/ASPRIMA va xifrar el retard mitjà en dotze mesos i el sobrecost per al comprador en <strong>~13.000 € per habitatge</strong> <em>(EY, mai 2020)</em>.</p>
+            <p>El rang va des d'uns sis mesos en municipis petits fins a <strong>vint-i-quatre mesos a Madrid capital</strong> <em>(Idealista, mai 2025)</em>.</p>
+          </article>
+
+          <article class="cap01-tiempo-step" data-step="D">
+            <p class="cap01-step__tag">// construcció i lliurament</p>
+            <p>Construir un edifici residencial típic des de la llicència fins al lliurament de claus: <strong>entre 18 i 30 mesos</strong>. La promoció de Neinor a Esplugues, anunciada el 2025, calcula 29 mesos fins a l'abril de 2028 <em>(Observatorio Inmobiliario, 2025)</em>.</p>
+            <p>Si tot ha anat bé fins aquí.</p>
+          </article>
+
+          <article class="cap01-tiempo-step cap01-tiempo-step--cierre" data-step="cierre">
+            <p class="cap01-step__tag">// cloenda del mòdul temps</p>
+            <p>Des que un ajuntament decideix planejar un sòl fins que <strong>una família entra en un nou barri que no estava planejat</strong>: <strong>fins a 20 anys</strong>.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 01.d · construir no surt rendible -->
+      <div class="container chapter__inner cap01-coste__intro">
+        <h3 class="cap01-coste__title">…i el temps és cost fix més el risc que el projecte no surti.</h3>
+      </div>
+
+      <div class="cap01-coste" data-cap01-coste>
+        <div class="cap01-coste__sticky">
+          <div class="cap01-coste__stage" data-coste-stage data-step="0">
+            <svg class="cap01-coste__svg" viewBox="0 0 480 380" role="img" aria-label="Torre de costos acumulats davant de la capacitat de pagament de les llars">
+              <text class="cap01-coste-total" x="36" y="44">No surten els números.</text>
+
+              <line class="cap01-coste-floor" x1="36" y1="320" x2="444" y2="320"/>
+
+              <g class="cap01-coste-tower-costes">
+                <rect class="cap01-coste-seg cap01-coste-seg--A" x="200" y="224" width="80" height="96"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--B" x="200" y="200" width="80" height="24"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--C" x="200" y="176" width="80" height="24"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--D" x="200" y="152" width="80" height="24"/>
+                <rect class="cap01-coste-seg cap01-coste-seg--E" x="200" y="128" width="80" height="24"/>
+
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--A" x="190" y="276">temps + regulació</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--B" x="190" y="216">crèdit</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--C" x="190" y="192">mà d'obra</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--D" x="190" y="168">materials</text>
+                <text class="cap01-coste-seg-label cap01-coste-seg-label--E" x="190" y="144">productivitat</text>
+              </g>
+
+              <g class="cap01-coste-caps">
+                <line class="cap01-coste-cap cap01-coste-cap--mercado" x1="36" y1="128" x2="444" y2="128" stroke-dasharray="4 3"/>
+                <text class="cap01-coste-cap-label cap01-coste-cap-label--mercado" x="444" y="106">preu de mercat</text>
+
+                <line class="cap01-coste-cap cap01-coste-cap--joven" x1="36" y1="208" x2="444" y2="208" stroke-dasharray="4 3"/>
+                <text class="cap01-coste-cap-label cap01-coste-cap-label--joven" x="444" y="178" text-anchor="end">
+                  <tspan x="444" dy="0">capacitat de pagament</tspan>
+                  <tspan x="444" dy="13">llar jove mitjana</tspan>
+                </text>
+
+                <line class="cap01-coste-cap cap01-coste-cap--trabajadora" x1="36" y1="266" x2="444" y2="266" stroke-dasharray="4 3"/>
+                <text class="cap01-coste-cap-label cap01-coste-cap-label--trabajadora" x="444" y="236" text-anchor="end">
+                  <tspan x="444" dy="0">capacitat de pagament</tspan>
+                  <tspan x="444" dy="13">família treballadora</tspan>
+                </text>
+              </g>
+
+              <text class="cap01-coste-tower-foot" x="240" y="345">preu de l'habitatge nou</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cap01-coste__steps" data-cap01-coste-steps>
+          <article class="cap01-coste-step" data-step="0">
+            <p class="cap01-step__tag">// temps + regulació</p>
+            <p>Cada any afegit al procés és <strong>cost financer, risc que el projecte no surti i oportunitat que canviïn les regles</strong>. Sumats, <strong>el temps i la regulació són la major part del cost</strong> d'aixecar un habitatge nou a Espanya: pesen tant com la resta de factors junts.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="A">
+            <p class="cap01-step__tag">// crèdit</p>
+            <p>L'estoc de crèdit a construcció i promoció va caure de <strong>452.000 milions el 2008 a 100.000 el 2019</strong>. Les caixes d'estalvi, on es coïa bona part del finançament immobiliari, van desaparèixer. La regulació bancària internacional va encarir el risc immobiliari als balanços.</p>
+            <p>Recolzar la nova construcció <strong>no resulta apetitós</strong> per a la banca <em>(Banco de España; llibre, pp. 80–83)</em>.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="B">
+            <p class="cap01-step__tag">// mà d'obra</p>
+            <p>La patronal de la construcció estima que <strong>falten 700.000 treballadors</strong> per cobrir les necessitats del sector a Espanya, obra pública i privada <em>(Cinco Días, 4 nov 2024)</em>.</p>
+            <p>L'edat mitjana ha passat de <strong>37 anys el 2007 a 45 el 2022</strong>; entre els paletes, 48. Només el <strong>10 % té menys de 30</strong> —era el 25 % el 2008— i <strong>el 75 % dels directius</strong> assenyala l'escassetat de mà d'obra qualificada com a principal obstacle dels seus projectes <em>(BBVA Research; llibre, p. 95)</em>.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="C">
+            <p class="cap01-step__tag">// materials</p>
+            <p>Entre 2018 i març de 2024, l'INE va registrar pujades del <strong>50 % en ciment i ceràmica, 50–60 % en bituminosos, gairebé 50 % en energia i més del 30 % en coure</strong> <em>(INE, índexs de preus de materials; llibre, pp. 96–97)</em>.</p>
+            <p>Espanya gairebé no té habitatge industrialitzat que esmorteeixi aquests salts: el pes és marginal davant Suècia o el Japó.</p>
+          </article>
+
+          <article class="cap01-coste-step" data-step="D">
+            <p class="cap01-step__tag">// productivitat</p>
+            <p>Des de 2013, la productivitat laboral en construcció —VAB per hora treballada— ha caigut <strong>més del 20 %</strong>; en el conjunt de l'economia ha crescut un 5 % <em>(BBVA Research; llibre, p. 96)</em>.</p>
+            <p>El sector està atomitzat en microempreses. Les constructores espanyoles grans operen ja un <strong>80 % de la seva activitat fora d'Espanya</strong> <em>(llibre, p. 96)</em>.</p>
+          </article>
+
+          <article class="cap01-coste-step cap01-coste-step--cierre" data-step="cierre">
+            <p class="cap01-step__tag">// l'escletxa</p>
+            <p>Suma-ho tot i els costos superen el preu al qual es pot vendre. <strong>Construir habitatge nou a Espanya no surt rendible.</strong></p>
+            <p>I per les mateixes raons —costos, mà d'obra, crèdit, regulació, fricció—, <strong>tampoc no surt rendible construir habitatge públic</strong>, que ven per sota de mercat. Sigui qui sigui qui construeixi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · LES CONSEQÜÈNCIES -->
+    <section id="crisis" class="chapter chapter--red reveal">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">02</span>
+        <p class="chapter__head"><span class="ch-num">02</span> les conseqüències</p>
+        <h2 class="chapter__title">Com que falten pisos, els preus pugen.</h2>
+
+        <div class="chapter__body">
+          <p>Per veure els efectes d'aquest bloqueig, una mesura estàndard: <strong>quants habitatges s'acaben per cada nova llar creada</strong>. Si la ratio es queda al voltant d'1, l'oferta cobreix la demanda. Si és menor, anem per darrere.</p>
+        </div>
+
+        <figure class="chart" data-chart="ratio" aria-labelledby="chart-ratio-title">
+          <h3 class="chart__title" id="chart-ratio-title">ratio d'habitatges acabats per llar creada, per període</h3>
+          <p class="chart__sub">espanya · agregada per període intercensal · una ratio d'1 seria l'equilibri</p>
+          <div class="chart__legend">
+            <span><span class="chart__legend-swatch" style="background: var(--green)"></span>períodes anteriors</span>
+            <span><span class="chart__legend-swatch" style="background: var(--red)"></span>període actual</span>
+          </div>
+          <div class="chart__plot" data-plot="ratio"></div>
+          <p class="chart__source">font: ine (censos i estadística contínua de llars) i ministeri d'habitatge · elaboració esadeecpol.</p>
+        </figure>
+
+        <div class="chapter__body">
+          <p>Durant les quatre dècades que cobreixen els censos de l'INE, la ratio rarament va baixar d'aquesta línia de l'1. El <em>boom</em> dels 2000 ens va deixar mal acostumats a ratios per sobre d'1,5. Però des de 2021 estem a <strong>0,38</strong>: per cada nova llar, acabem una mica menys de quatre habitatges de cada deu.</p>
+
+          <p><strong>Quan l'oferta no cobreix la demanda, els preus reaccionen.</strong> Entre 2015 i 2023 el preu mitjà del metre quadrat en venda a Espanya va pujar un <strong>47 %</strong>. Els salaris només van créixer un <strong>17 %</strong>. Per als de 25 a 34 anys — l'edat a la qual es forma la immensa majoria de llars — els salaris van augmentar amb prou feines una mica més: un <strong>23 %</strong>. L'escletxa és més gran a Madrid, Catalunya o les Balears, allà on hi ha ciutats on l'habitatge és un actiu més desitjat.</p>
+
+          <p><strong>Les noves llars no accedeixen a la propietat.</strong> Entre els menors de 35, el percentatge de propietaris ha caigut del <strong>67 %</strong> el 2002 al <strong>32 %</strong> avui. Els de 65 a 74, mentrestant, continuen on eren: al voltant del 84 %.</p>
+        </div>
+
+        <figure class="chart" data-chart="tenencia" aria-labelledby="chart-tenencia-title">
+          <h3 class="chart__title" id="chart-tenencia-title">% de llars propietàries del seu habitatge principal, per edat</h3>
+          <p class="chart__sub">edat de la persona de referència · enquesta financera de les famílies (banc d'espanya)</p>
+          <div class="chart__plot" data-plot="tenencia"></div>
+          <p class="chart__source">font: barceló i crespo, «la tinença d'habitatge i deute hipotecari de les famílies espanyoles en els últims vint anys», esadeecpol, 2025 · a partir de l'eff, banc d'espanya. valors aproximats a partir del gràfic publicat.</p>
+        </figure>
+
+        <div class="chapter__body">
+          <p><strong>Els qui no compren, lloguen.</strong> Segons el Banc d'Espanya, el 2007 el <strong>32,2 %</strong> de les llars joves (amb persona de referència menor de 30) vivia de lloguer. El 2023 era el <strong>56,6 %</strong>: més de 20 punts en setze anys. I no és una cosa exclusiva dels joves: segons l'ECV de l'INE, el 2008 vivien de lloguer unes 1,6 milions de llars a Espanya; el 2023 són prop de tres.</p>
+
+          <p><strong>Però el lloguer tampoc no dona aixopluc.</strong> L'escletxa entre salaris i cost és igual o més gran que en la compravenda. La Comunitat Valenciana s'uneix a les illes al capdamunt del rànquing d'increments del preu del lloguer entre 2015 i 2022, amb pujades al voltant del <strong>85 %</strong>. Fins i tot les menys pronunciades són superiors al <strong>30 %</strong>. Com a referència, ja hem vist que els salaris van pujar un 17 % (un 23 % entre els més joves).</p>
+
+          <p><strong>Si no es pot comprar i el lloguer ofega, no es marxa de casa.</strong> La taxa d'emancipació dels 25 als 34 anys — el grup en què es forma la major part de les llars — reflecteix exactament això: baixant, gairebé sense pausa, durant quinze anys.</p>
+        </div>
+
+        <figure class="chart" data-chart="emancipacion" aria-labelledby="chart-eman-title">
+          <h3 class="chart__title" id="chart-eman-title">taxa d'emancipació · 25–34 anys</h3>
+          <p class="chart__sub">% de persones de 25–34 anys que <em>no</em> viuen amb els seus pares · espanya · ecv (ine)</p>
+          <div class="chart__plot" data-plot="emancipacion"></div>
+          <p class="chart__source">font: elaboració pròpia a partir de l'enquesta de condicions de vida de l'ine. la dada del % de joves de 25–34 que viuen amb els seus pares va passar del 40,6 % el 2011 al 54,4 % el 2025.</p>
+        </figure>
+
+        <div class="chapter__body">
+          <p>El 2011, gairebé sis de cada deu persones de 25 a 34 anys vivien fora de casa dels seus pares. El 2025, no arriben a cinc. Tretze punts en catorze anys. Això no és només retard de projectes vitals — formar una família, per exemple, en un país amb una de les natalitats més baixes d'Europa. És una limitació d'oportunitats professionals: el 2022, només un <strong>2,4 %</strong> dels treballadors espanyols va canviar de municipi per motius laborals. Les ciutats que concentren les millors oportunitats són just aquelles en què resulta més difícil establir-s'hi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · CONSTRUIR -->
+    <section id="construir" class="chapter reveal">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">03</span>
+        <p class="chapter__head"><span class="ch-num">03</span> construir</p>
+        <h2 class="chapter__title">Quant, i com desbloquejar.</h2>
+
+        <h3 class="cap03__sub">03.a · quant</h3>
+
+        <aside class="chapter__minread chapter__minread--top">
+          <p class="chapter__minread-body">Mou el ritme de construcció i mira quant triga Espanya a tancar l'escletxa. Punt de partida: <strong>739 k</strong> de dèficit acumulat bàsic al tancament de 2025 (<em>brief EsadeEcPol, abr 2026</em>); demanda nova que arrenca al voltant de <strong>250 k llars/any</strong> i es va reduint en les dècades següents (projecció INE: 3,7 M de llars 2024-2039). Per simplicitat modelem aquesta demanda com un descens suau cap a zero, no com un tall abrupte el 2039 — la demanda acumulada total continua sent ~3,25 M.</p>
+        </aside>
+
+        <div class="cap03-sim" data-cap03-sim>
+          <div class="cap03-sim__chart">
+            <svg viewBox="0 0 720 360" role="img" aria-label="Construcció acumulada vs necessitat d'habitatge en el temps">
+              <g class="cap03-sim__axis">
+                <line x1="60" y1="320" x2="700" y2="320"/>
+                <line x1="60" y1="20"  x2="60"  y2="320"/>
+                <text class="cap03-sim__axis-label" x="60"  y="345">2026</text>
+                <text class="cap03-sim__axis-label" x="380" y="345" text-anchor="middle">any</text>
+                <text class="cap03-sim__axis-label" x="700" y="345" text-anchor="end" data-axis-end>2070</text>
+                <text class="cap03-sim__axis-y" x="55" y="22"  text-anchor="end">5 M</text>
+                <text class="cap03-sim__axis-y" x="55" y="170" text-anchor="end">milions d'habitatges</text>
+                <text class="cap03-sim__axis-y" x="55" y="320" text-anchor="end">0</text>
+              </g>
+
+              <g class="cap03-sim__target">
+                <line x1="60" y1="140" x2="700" y2="140" stroke-dasharray="4 3"/>
+                <text x="700" y="134" text-anchor="end">3 M · «tres milions d'habitatges»</text>
+              </g>
+
+              <path class="cap03-sim__curve cap03-sim__curve--need" data-curve="need" d=""/>
+              <path class="cap03-sim__curve cap03-sim__curve--build" data-curve="build" d=""/>
+
+              <g class="cap03-sim__cross" data-cross>
+                <circle r="5"/>
+                <line class="cap03-sim__cross-line" x1="0" y1="0" x2="0" y2="0"/>
+                <text class="cap03-sim__cross-label" data-cross-label></text>
+              </g>
+
+              <g class="cap03-sim__legend" transform="translate(80,40)">
+                <line x1="0" y1="0" x2="20" y2="0" class="cap03-sim__curve--need"/>
+                <text x="26" y="4">necessitat acumulada (dèficit + demanda)</text>
+                <line x1="0" y1="18" x2="20" y2="18" class="cap03-sim__curve--build"/>
+                <text x="26" y="22">habitatges construïts (al ritme triat)</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="cap03-sim__controls">
+            <label class="cap03-sim__slider-label">
+              <span class="cap03-sim__slider-text">ritme de construcció</span>
+              <span class="cap03-sim__slider-value"><strong data-value>95.000</strong> habitatges/any · <span data-factor>×1,0</span> respecte d'avui</span>
+              <input type="range" class="cap03-sim__slider" data-slider min="60000" max="450000" step="1000" value="95000">
+              <span class="cap03-sim__slider-marks">
+                <span>95 k actual</span>
+                <span>250 k igualar demanda</span>
+                <span>333 k ritme brief</span>
+                <span>450 k</span>
+              </span>
+            </label>
+
+            <div class="cap03-sim__outputs">
+              <div class="cap03-sim__output">
+                <span class="cap03-sim__output-num" data-out-cierre>—</span>
+                <span class="cap03-sim__output-label">anys per tancar l'escletxa</span>
+              </div>
+              <div class="cap03-sim__output">
+                <span class="cap03-sim__output-num" data-out-tres>—</span>
+                <span class="cap03-sim__output-label">anys fins als 3 M d'habitatges</span>
+              </div>
+              <div class="cap03-sim__output">
+                <span class="cap03-sim__output-num" data-out-anyo>—</span>
+                <span class="cap03-sim__output-label">any natural de tancament</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="cap03__sub">03.b · com</h3>
+
+        <aside class="chapter__minread chapter__minread--top">
+          <p class="chapter__minread-head">// principi</p>
+          <p class="chapter__minread-body">Cap palanca no abasta per si sola — i totes són acumulatives. Sòl, pla, edifici i sector s'han de moure en paral·lel, no en cua.</p>
+        </aside>
+
+        <div class="cap03-tabs" data-cap03-tabs>
+          <div class="cap03-tabs__nav" role="tablist" aria-label="Set palanques per desbloquejar la construcció">
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-1" data-tab="1" style="--tone:#1B4D3E">
+              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">silenci</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-2" data-tab="2" style="--tone:#226053">
+              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">terminis</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-3" data-tab="3" style="--tone:#297367">
+              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">vet</span>
+            </button>
+            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="palanca-4" data-tab="4" style="--tone:#2F8A6B">
+              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">zones</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-5" data-tab="5" style="--tone:#3D9D7A">
+              <span class="cap03-tab__num">05</span><span class="cap03-tab__title">alçada</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-6" data-tab="6" style="--tone:#4DB089">
+              <span class="cap03-tab__num">06</span><span class="cap03-tab__title">parc</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="palanca-7" data-tab="7" style="--tone:#5DC399">
+              <span class="cap03-tab__num">07</span><span class="cap03-tab__title">indústria</span>
+            </button>
+          </div>
+
+          <div class="cap03-tabs__panel">
+            <article class="cap03-ficha" id="palanca-1" role="tabpanel" data-panel="1">
+              <h4 class="cap03-ficha__titulo">Fugir del «no per defecte»</h4>
+              <p class="cap03-ficha__def">Que el silenci administratiu en urbanisme deixi de ser negatiu en sòl urbà consolidat. Que un defecte formal menor no anul·li un projecte sencer. Racionalitzar el dret a impugnar.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Convertir el silenci administratiu en positiu en sòl urbà consolidat: si l'Administració no respon dins del termini legal, la llicència s'entén concedida per defecte en lloc de denegada</li>
+                <li>Que els projectes puguin tirar endavant mentre s'esmenen defectes formals menors, en lloc d'anul·lar el procediment sencer per un informe que falta</li>
+                <li>Vincular el dret a impugnar a un interès general verificable, no a tecnicismes procedimentals — les preocupacions legítimes s'escolten, les tàctiques purament dilatòries no</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, p. 145–146</p>
+            </article>
+
+            <article class="cap03-ficha" id="palanca-2" role="tabpanel" data-panel="2">
+              <h4 class="cap03-ficha__titulo">Terminis i duplicitats</h4>
+              <p class="cap03-ficha__def">Auditoria independent que detecti informes sectorials duplicats, els suprimeixi i obligui a complir els terminis legals amb capacitat de sanció.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Pamplona, juny de 2024: pla per desencallar ~687 expedients urbanístics pendents després que l'ajuntament reconegués el bloqueig administratiu</li>
+                <li>Catalunya 2025: la llicència d'obra major es pot atorgar sense exigir el projecte executiu complet per endavant, retallant setmanes en el calendari habitual</li>
+                <li>Plantilles estandarditzades de tramitació entre municipis perquè cada ajuntament no reinventi el procediment des de zero en cada expedient</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, p. 147</p>
+            </article>
+
+            <article class="cap03-ficha" id="palanca-3" role="tabpanel" data-panel="3">
+              <h4 class="cap03-ficha__titulo">Vet autonòmic al bloqueig local</h4>
+              <p class="cap03-ficha__def">Quan un municipi bloqueja desenvolupaments d'interès general, la comunitat autònoma hauria de tenir capacitat de vet i d'iniciativa subsidiària. Fer complir les caducitats de plans obsolets.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Massachusetts, Capítol 40B: els desenvolupaments amb almenys un 20 % d'habitatge assequible es poden saltar les restriccions de zonificació local, amb l'estat resolent els recursos (Mast, 2020)</li>
+                <li>Caducitats automàtiques per a plans que porten aturats més enllà del seu termini legal: caduquen per defecte en lloc de prorrogar-se indefinidament</li>
+                <li>Iniciativa subsidiària autonòmica: quan el municipi rebutja o paralitza un desenvolupament d'interès general reconegut, la comunitat autònoma pot assumir i liderar el procediment</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, p. 148–149 (Mast, 2020)</p>
+            </article>
+
+            <article class="cap03-ficha is-active" id="palanca-4" role="tabpanel" data-panel="4">
+              <h4 class="cap03-ficha__titulo">Zones franques d'habitatge</h4>
+              <p class="cap03-ficha__def">Instruments urbanístics impulsats des de l'autonomia que accelerin desenvolupaments residencials en zones estratègiques, amb gestió compartida i reserva rellevant de protegit.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Àrees Residencials Estratègiques catalanes (ARE) dels 2000: designacions autonòmiques que acceleraven sòl per a habitatge amb reserves rellevants de protegit des del primer dia</li>
+                <li>Can Filuà a Sabadell com un dels projectes ARE originals: impuls autonòmic, gestió mixta, densitat a les portes de la xarxa de rodalies metropolitanes</li>
+                <li>Pla del Govern per reactivar el marc a l'àrea metropolitana de Barcelona com a vehicle de nova oferta de lloguer públic</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, p. 150</p>
+            </article>
+
+            <article class="cap03-ficha" id="palanca-5" role="tabpanel" data-panel="5">
+              <h4 class="cap03-ficha__titulo">Alçada i densitat vivible</h4>
+              <p class="cap03-ficha__def">Permetre més plantes on hi ha demanda i serveis —automàticament, sense condicions especials— i combinar aquesta densitat amb transport públic potent i usos mixtos. Densificar la ciutat consolidada en lloc de continuar expandint la seva taca cap a PAU dispersos.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Minneapolis (va eliminar la zonificació unifamiliar a escala de tota la ciutat el 2018) i Seattle (<em>upzoning</em> empès a nivell estatal) van registrar caigudes del ~15-20 % en lloguers i preus de venda davant ciutats comparables que no van canviar les regles</li>
+                <li>Cantó de Zúric, ~25 anys d'<em>upzoning</em> gradual: l'oferta va créixer notablement sense la pujada de rendes que els crítics predien</li>
+                <li>Seestadt Aspern (Viena, pla mestre 2009: ~25.000 habitants, usos mixtos) i HafenCity (Hamburg, fins a 20 plantes, eix <em>transit-led</em>) com a projectes europeus de referència per a districtes densos nous</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, pp. 141 i 154 (Lutz &amp; Büchler, J. Urban Economics)</p>
+            </article>
+
+            <article class="cap03-ficha" id="palanca-6" role="tabpanel" data-panel="6">
+              <h4 class="cap03-ficha__titulo">Un gran parc de lloguer social</h4>
+              <p class="cap03-ficha__def">Espanya té unes <strong>300.000</strong> habitatges de lloguer social en titularitat pública: al voltant del <strong>3 %</strong> del parc, davant del <strong>7 %</strong> de l'OCDE i del <strong>9 %</strong> de la UE. Arribar al <em>benchmark</em> europeu implicaria ~1,5 milions d'habitatges extra — massa ambiciós per a una sola dècada. Un objectiu realista a deu anys: mantenir <strong>1 de cada 10</strong> dels 3 M en lloguer públic. Només això ja dobla el parc actual i eleva els lliuraments anuals de menys de <strong>10.000</strong> a més de <strong>30.000</strong>.</p>
+              <ul class="cap03-ficha__casos">
+                <li><strong>Casos de referència</strong> · Viena (~25 % del parc en titularitat directa de la ciutat i una altra part important en cooperatives d'utilitat pública) i Països Baixos (~30 % de lloguer social) com a sistemes amb dècades de recorregut; Burón compara: Àustria inverteix &lt;50 €/any per habitant en lloguer social, Regne Unit ~440 €/any en subsidis que no construeixen oferta</li>
+                <li><strong>Cautela del Banc d'Espanya</strong> (Sinai &amp; Waldfogel): per cada 3 socials noves se'n desplacen ~2 de privades — concentrar on l'oferta és més estreta, no pertot</li>
+                <li><strong>Evitar la creació de guetos</strong> — les <em>banlieues</em> franceses construïdes als 60-70 com a blocs socials concentrats van acabar amb taxes d'atur que doblaven la mitjana nacional i segregació crònica. El nou habitatge protegit s'ha de teixir a la ciutat consolidada, no empènyer-se cap a la perifèria com a blocs aïllats</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, pp. 163-168</p>
+            </article>
+
+            <article class="cap03-ficha" id="palanca-7" role="tabpanel" data-panel="7">
+              <h4 class="cap03-ficha__titulo">Industrialitzar el sector</h4>
+              <p class="cap03-ficha__def">Productivitat real mitjançant industrialització: estandarditzar components, fabricar en planta i muntar a l'obra. Atraure talent jove amb FP dual específica del sector.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Suècia: ~84 % dels habitatges unifamiliars nous es construeixen amb prefabricació significativa — components fabricats en planta i muntats a l'obra</li>
+                <li>Japó: desenes de milers d'habitatges modulars lliurats cada any per constructores industrials, amb terminis d'obra mesurats en setmanes, no en mesos</li>
+                <li>Pla espanyol d'industrialització, finançat parcialment amb fons NextGenEU, orientat a sembrar plantes locals i una FP dual específica del sector per atraure talent jove a l'ofici</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, p. 160–161</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · REGULAR? -->
+    <section id="regular" class="chapter reveal">
+      <div class="container chapter__inner">
+        <span class="chapter__bignum" aria-hidden="true">04</span>
+        <p class="chapter__head"><span class="ch-num">04</span> regular?</p>
+        <h2 class="chapter__title">Topalls, controls i la trampa de la demanda.</h2>
+
+        <aside class="chapter__minread chapter__minread--top">
+          <p class="chapter__minread-head">// regla d'or</p>
+          <p class="chapter__minread-body">Només mesures que <strong>no detraguin oferta</strong> del lloguer residencial de llarg termini. Ni desincentivant construcció nova, ni empenyent contractes cap al mercat de temporada o turístic.</p>
+        </aside>
+
+        <div class="chapter__body">
+          <p>L'instint és directe: si el preu puja i el salari no, posa-li topall al preu. Però l'evidència internacional és força clara. Una <strong>revisió recent de Konstantin Kholodilin</strong> sobre totes les generacions de control de lloguer conclou que sí que limiten els preus — però a canvi de tres efectes adversos:</p>
+
+          <div class="cap01-procedure cap01-procedure--3cols">
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// a</p>
+              <p class="cap01-procedure__body">2 de cada 3 estudis troben efectes negatius sobre la construcció d'habitatge nou.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// b</p>
+              <p class="cap01-procedure__body">El deteriorament de la qualitat de l'oferta és «gairebé unànime» entre els estudis revisats.</p>
+            </article>
+            <article class="cap01-procedure__step">
+              <p class="cap01-procedure__num">// c</p>
+              <p class="cap01-procedure__body">Pujades freqüents a zones no controlades; les baixades no arriben als pisos més necessaris.</p>
+            </article>
+          </div>
+
+          <p>A Espanya l'experiència més recent és la <strong>Llei 11/2020 de Catalunya</strong>, anul·lada després pel Constitucional. L'estudi empíric més robust, de <strong>Joan Monràs i José García Montalvo</strong>, va fer servir les microdades completes de fiances de l'INCASOL per a tots els contractes signats durant el període de vigència de la llei (set 2020 – abr 2022).</p>
+        </div>
+
+        <article class="cap04-paper">
+          <p class="cap04-paper__body">En agregat, els lloguers van caure al voltant d'un <strong>5 %</strong> — però només sobre el paper. En separar per trams de preu, la llei es torna <em>regressiva</em>: en municipis regulats les rendes <strong>van pujar +12,7 %</strong> al sextil més barat (vs +6,9 % en municipis de control no regulats) i <strong>van baixar −2,9 %</strong> al més car (vs +0,6 % en control). L'índex de referència va actuar com a terra per als lloguers barats tant com com a sostre per als cars. La proporció d'habitatges amb preu per sobre de l'índex va caure d'aproximadament 50 % abans de la llei a <strong>13–22 punts per sota</strong> després. I el nombre de contractes signats es va reduir al voltant d'un <strong>10 %</strong>, altra vegada concentrat en el segment alt: l'oferta retirant-se del tram regulat.</p>
+          <p class="cap04-paper__src">font · <a href="https://www.esade.edu/ecpol/wp-content/uploads/2023/02/Esade_ControlAlq.pdf" rel="noopener">Monràs i García Montalvo, EsadeEcPol, 2022</a></p>
+        </article>
+
+        <div class="chapter__body">
+          <p>Però hi ha regulacions que <em>sí</em> que ajuden, especialment en centres urbans consolidats on l'oferta nova no alleujarà la pressió. Quatre palanques que passen el filtre.</p>
+        </div>
+
+        <div class="cap03-tabs" data-cap03-tabs>
+          <div class="cap03-tabs__nav" role="tablist" aria-label="Quatre palanques de regulació">
+            <button class="cap03-tab is-active" role="tab" aria-selected="true" aria-controls="reg-1" data-tab="1" style="--tone:#1B6B50">
+              <span class="cap03-tab__num">01</span><span class="cap03-tab__title">turístic</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-2" data-tab="2" style="--tone:#2F8A6B">
+              <span class="cap03-tab__num">02</span><span class="cap03-tab__title">assegurança</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-3" data-tab="3" style="--tone:#3D9D7A">
+              <span class="cap03-tab__num">03</span><span class="cap03-tab__title">terminis</span>
+            </button>
+            <button class="cap03-tab" role="tab" aria-selected="false" aria-controls="reg-4" data-tab="4" style="--tone:#4DB089">
+              <span class="cap03-tab__num">04</span><span class="cap03-tab__title">leasing</span>
+            </button>
+          </div>
+
+          <div class="cap03-tabs__panel">
+            <article class="cap03-ficha is-active" id="reg-1" role="tabpanel" data-panel="1">
+              <h4 class="cap03-ficha__titulo">Turística i temporada amb precisió</h4>
+              <p class="cap03-ficha__def">Comença per separar el <strong>lloguer turístic professional</strong> (ús continuat, tot l'any) de les <strong>segones residències ocasionals</strong> que només es lloguen fora de temporada — el seu efecte sobre el mercat de llarg termini no té res a veure. A partir d'aquí, regular no com a prohibició global, sinó amb dades: registres complets, impostos que recullin l'externalitat i límits variables per zona. L'encreuament amb plataformes fa la distinció aplicable. Passa la regla d'or perquè <em>retorna</em> al llarg termini l'oferta turística professional sense esterilitzar usos ocasionals que no hi competeixen.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Berlín · <em>Zweckentfremdungsverbot</em> 2016: retirar 10 anuncis d'Airbnb propers suposava ~0,7 €/m² menys de renda mensual (~7 % sobre una base de 10 €/m²)</li>
+                <li>Barcelona: la presència mitjana d'Airbnb al barri va empènyer les rendes +1,9 % i els preus de venda +4,6 %</li>
+                <li>EUA (Barron, Kung &amp; Proserpio, 2017): +1 % d'anuncis Airbnb → +0,018 % en rendes i +0,26 % en preus de venda dins del mateix codi postal</li>
+                <li>Cara positiva: 10 anuncis Airbnb addicionals en un barri s'associen a ~1 restaurant nou i ~8 ocupacions turístiques en aquella secció censal — activitat local, no només costos</li>
+                <li>El mateix estudi de Berlín: l'efecte sobre el preu es concentra en els anuncis «sempre actius» — la política mossega l'STR professional i amb prou feines toca l'ocasional</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, pp. 199-204</p>
+            </article>
+
+            <article class="cap03-ficha" id="reg-2" role="tabpanel" data-panel="2">
+              <h4 class="cap03-ficha__titulo">Assegurança d'impagaments a la francesa</h4>
+              <p class="cap03-ficha__def">Mutualitzar el risc de l'impagament en lloc d'empènyer l'arrendador a fer <em>càsting</em>, exigir fiances altes o refugiar-se en contractes de temporada «per si de cas». El propietari demana menys garanties; més llars accedeixen al lloguer privat. Passa la regla perquè <em>afegeix</em> oferta efectiva.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>França · <strong>Visale</strong>: garantia pública d'impagaments</li>
+                <li>Abramson i van Nieuwerburgh: model → ↓ desnonaments, ↓ sensellarisme</li>
+                <li>Bézi, Levy i McQuade: Visale ↑ accés al privat de llars de rendes baixes</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, pp. 204-207</p>
+            </article>
+
+            <article class="cap03-ficha" id="reg-3" role="tabpanel" data-panel="3">
+              <h4 class="cap03-ficha__titulo">Terminis judicials i sortida digna</h4>
+              <p class="cap03-ficha__def">El desnonament mitjà a Espanya triga <strong>2 anys</strong>: ni protegeix l'inquilí —que passa aquest temps sota incertesa— ni l'arrendador —que té l'habitatge paralitzat—. Baixar-lo a 3-6 mesos, combinat amb un parc social que ofereixi sortida real a l'inquilí. Passa la regla perquè desbloqueja immobles avui paralitzats.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li>Terminis actuals 2 anys → 3-6 mesos amb causals obertes i agilització</li>
+                <li>Sortida digna mitjançant parc públic gestionat</li>
+                <li>Bo Jove: subsidi que captura el propietari → reorientar al lloguer social</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, pp. 205-209</p>
+            </article>
+
+            <article class="cap03-ficha" id="reg-4" role="tabpanel" data-panel="4">
+              <h4 class="cap03-ficha__titulo">Leasing cooperatiu amb grans propietaris</h4>
+              <p class="cap03-ficha__def">Acords publicoprivats a llarg termini amb propietaris grans, amb preus i terminis pactats per endavant. L'Estat assegura oferta estable a un preu conegut; el propietari, ingressos predicibles sense cost de rotació. Passa la regla perquè <em>mobilitza</em> unitats existents cap al mercat de llarg termini sense obra nova ni topalls al preu.</p>
+              <p class="cap03-ficha__supp">// evidència i casos</p>
+              <ul class="cap03-ficha__casos">
+                <li><strong>Bizigune (País Basc)</strong>: el Govern basc aglutina habitatges de propietaris privats mitjançant contractes d'usdefruit i els sotsarrenda a preus assequibles a persones amb necessitats habitacionals — <strong>~7.300 habitatges mobilitzats el 2023</strong>, aproximadament 1 de cada 130 llars basques. El cas espanyol més rellevant en termes quantitatius</li>
+                <li>Esquema irlandès de leasing a llarg termini: contractes a 25 anys entre operadors públics i propietaris privats — la versió internacional del mateix mecanisme, amb preus i duracions pactats des del principi</li>
+                <li>Borses de lloguer assequible de Provivienda: la mateixa lògica a menor escala en altres comunitats, amb la simplificació administrativa i l'acompanyament a l'inquilí com a ingredients clau</li>
+              </ul>
+              <p class="cap03-ficha__cite">llibre, pp. 184, 207-208</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LLIBRE -->
+    <section id="libro" class="book-close reveal">
+      <div class="container container--wide book-close__inner">
+        <div class="book-close__cover">
+          <img src="../assets/libro.png" alt="Tres milions d'habitatges" class="book-close__cover-img" loading="lazy" />
+        </div>
+        <div class="book-close__copy">
+          <p class="book-close__head">// el llibre</p>
+          <h2 class="book-close__title">Tres milions d'habitatges</h2>
+          <p class="book-close__sub">Com passar de l'escassetat a l'abundància.</p>
+          <p>Si tot l'anterior t'interessa, el llibre ho explica sencer, amb totes les fonts i els matisos que aquí no hi caben. Debate, 2025.</p>
+          <p class="book-close__buy-label">// on trobar-lo</p>
+          <div class="book-close__buy">
+            <a href="https://www.todostuslibros.com/busquedas?keyword=tres+millones+de+viviendas" class="book-close__link" rel="noopener">a la teva llibreria independent <span class="book-close__link-sub">(todostuslibros.com)</span></a>
+            <a href="https://www.lacentral.com/buscar?b=tres+millones+de+viviendas" class="book-close__link" rel="noopener">La Central <span class="book-close__link-sub">(Madrid · Barcelona)</span></a>
+            <a href="https://www.libreriabartleby.com/es/" class="book-close__link" rel="noopener">Bartleby <span class="book-close__link-sub">(València)</span></a>
+            <a href="https://www.casadellibro.com/libro-tres-millones-de-viviendas/9791387600211/17082649" class="book-close__link" rel="noopener">Casa del Libro</a>
+            <a href="https://www.amazon.es/Tres-millones-viviendas-abundancia-Pensamiento/dp/B0F9271X9J" class="book-close__link" rel="noopener">Amazon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERÈNCIES -->
+    <section id="referencias" class="biblio">
+      <div class="container container--wide biblio__inner">
+        <p class="biblio__head">// referències</p>
+        <p class="biblio__intro">Tot el contingut d'aquest lloc està basat en la recerca de base realitzada per al llibre <em>Tres millones de viviendas</em> (Jorge Galindo, Debate, 2025). Aquesta és la llista filtrada de fonts — les de l'aparat bibliogràfic del llibre que sostenen afirmacions concretes d'aquest lloc, més les posteriors al llibre o externes a ell. Una entrada per font, sense agrupar per capítols.</p>
+        <ol class="biblio__list biblio__list--flat">
+          <li>J. L. Aranda, B. Andrino i L. Paz Villa, «<em>La vivienda, imposible para los jóvenes: los precios suben el doble que sus salarios</em>», El País, 29 de setembre de 2024, &lt;<a href="https://elpais.com/economia/2024-09-29/la-vivienda-imposible-para-losjovenes-los-precios-suben-el-doble-que-sus-salarios.html" rel="noopener">https://elpais.com/economia/2024-09-29/la-vivienda-imposible-para-losjovenes-los-precios-suben-el-doble-que-sus-salarios.html</a>&gt;.</li>
+          <li>Banco de España, El mercado del alquiler de vivienda residencial en España: evolución reciente, determinantes e indicadores de esfuerzo, document ocasional 2432, 2024, &lt;<a href="https://www.bde.es/wbe/es/publicaciones/analisis-economico-investigacion/documentos-ocasionales/el-mercado-del-alquiler-de-viviendaresidencial-en-espana-evolucion-reciente-determinantes-eindicadores-de-esfuerzo.html" rel="noopener">https://www.bde.es/wbe/es/publicaciones/analisis-economico-investigacion/documentos-ocasionales/el-mercado-del-alquiler-de-viviendaresidencial-en-espana-evolucion-reciente-determinantes-eindicadores-de-esfuerzo.html</a>&gt;.</li>
+          <li>L'estimació es fa així: el 2008 hi havia prop de 16,5 milions de llars, i el 2023 ja eren 19,3 milions; tot segons l'Enquesta de població activa. El 2008, un 10 % d'aquelles llars vivien de lloguer segons l'ECV, mentre que el 2023, segons la mateixa font, eren un 15 %.</li>
+          <li>Institut Nacional d'Estadística, Encuesta de condiciones de vida (ECV). Any 2023, &lt;<a href="https://www.ine.es/dyngs/Prensa/ECV2023.htm" rel="noopener">https://www.ine.es/dyngs/Prensa/ECV2023.htm</a>&gt;.</li>
+          <li>Institut Nacional d'Estadística, 2023. Censos de Población y Viviendas 2021: Resultados sobre Hogares y Viviendas, 2023, &lt;https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177108&amp;idp=1254735572981&gt;.</li>
+          <li>Institut Nacional d'Estadística, Estadística de movilidad laboral y geográfica (EMLG), 2022, &lt;<a href="https://www.ine.es/prensa/emlg_2022.pdf" rel="noopener">https://www.ine.es/prensa/emlg_2022.pdf</a>&gt;.</li>
+          <li>Font: elaboració pròpia a partir de l'estadística contínua de la població, comparant el total nacional de llars a 1 de gener de cada any. Institut Nacional d'Estadística, Hogares de personas residentes en viviendas familiares por fecha y tamaño del hogar, 2024, &lt;<a href="https://www.ine.es/jaxiT3/Tabla.htm?t=60131" rel="noopener">https://www.ine.es/jaxiT3/Tabla.htm?t=60131</a>&gt;.</li>
+          <li>Institut Nacional d'Estadística, Proyecciones de hogares. Años 2024-2039, &lt;<a href="https://www.ine.es/dyngs/Prensa/PROH20242039.htm" rel="noopener">https://www.ine.es/dyngs/Prensa/PROH20242039.htm</a>&gt;.</li>
+          <li>Institut Nacional d'Estadística, Censos de Población y Viviendas 2011, &lt;<a href="https://www.ine.es/censos2011/tablas/Inicio.do" rel="noopener">https://www.ine.es/censos2011/tablas/Inicio.do</a>&gt;; Censos de Población y Viviendas 2021, &lt;https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736177108&amp;idp=1254735572981&gt;.</li>
+          <li>Funcas, Banca y financiación de vivienda en España: volumen y características, 2024, &lt;<a href="https://www.funcas.es/odf/banca-y-financiacion-de-vivienda-en-espana-volumen-y-caracteristicas/" rel="noopener">https://www.funcas.es/odf/banca-y-financiacion-de-vivienda-en-espana-volumen-y-caracteristicas/</a>&gt;.</li>
+          <li>M. Cardoso i F. Lores, «<em>Motivos tras la escasa oferta de vivienda en España</em>», BBVA Research, 22 de juliol de 2024, &lt;<a href="https://www.bbvaresearch.com/publicaciones/espana-motivos-tras-la-escasa-oferta-de-vivienda/" rel="noopener">https://www.bbvaresearch.com/publicaciones/espana-motivos-tras-la-escasa-oferta-de-vivienda/</a>&gt;.</li>
+          <li>«<em>Tiempo medio y número de informes sectoriales a incluir en la tramitación de un PGOU</em>», Rebs Executive, s.d., &lt;ht tps://rebs-edu.com/tiempo-medio-y-numero-de-informessectoriales-a-incluir-en-la-tramitacion-de-un-pgou/&gt;.</li>
+          <li>F. Renau, «<em>La aprobación de los planes urbanísticos: unos plazos fuera de tiempo</em>», 28 d'agost de 2017, &lt;<a href="https://www.linkedin.com/pulse/la-aprobación-de-los-planes-urbanísticos-unos-plazos-renau-faubell/" rel="noopener">https://www.linkedin.com/pulse/la-aprobación-de-los-planes-urbanísticos-unos-plazos-renau-faubell/</a>&gt;.</li>
+          <li>BBVA Research, Motivos tras la escasa oferta de vivienda en España, 2024, &lt;<a href="https://www.bbvaresearch.com/wp-content/uploads/2024/07/Escasez-de-oferta-residencial.pdf" rel="noopener">https://www.bbvaresearch.com/wp-content/uploads/2024/07/Escasez-de-oferta-residencial.pdf</a>&gt;.</li>
+          <li>R. Salvador, «<em>Arquitectos y promotores culpan de la carestía de la vivienda a la burocracia</em>», La Vanguardia, 2 de setembre de 2024, &lt;<a href="https://www.lavanguardia.com/economia/20240902/9905386/arquitectos-promotores-culpan-burocracia-carestia-vivienda.html" rel="noopener">https://www.lavanguardia.com/economia/20240902/9905386/arquitectos-promotores-culpan-burocracia-carestia-vivienda.html</a>&gt;.</li>
+          <li>Estudio sobre la eficiencia administrativa en materia urbanística de los ayuntamientos de la CAM, ASPRIMA, s.d., &lt;<a href="https://www.asprima.es/news/ningun-ayuntamiento-de-madridcumple-con-el-plazo-maximo-legal-de-tres-meses-en-laconcesion-de-licencias-segun-asprima/" rel="noopener">https://www.asprima.es/news/ningun-ayuntamiento-de-madridcumple-con-el-plazo-maximo-legal-de-tres-meses-en-laconcesion-de-licencias-segun-asprima/</a>&gt;.</li>
+          <li>Ministerio de Fomento, Código técnico de la edificación, Madrid, Ministerio de Fomento, 2006.</li>
+          <li>«<em>Documento básico HE de ahorro de energía-Sección HE 6: Dotaciones mínimas para la infraestructura de recarga de vehículos eléctricos</em>», MITMA, &lt; https://www.transportes.gob. es/recursos_mfom/audienciainfopublica/recursos/anejo_ de_real_decreto.pdf&gt;.</li>
+          <li>M. Granda, «<em>De salarios prémium a faltar 700.000 trabajadores: los jóvenes huyen de la construcción</em>», Cinco Días, 4 de novembre de 2024, &lt;<a href="https://cincodias.elpais.com/companias/2024-11-04/de-salarios-premium-a-faltar-700000-trabajadores-los-jovenes-huyen-de-la-construccion.html" rel="noopener">https://cincodias.elpais.com/companias/2024-11-04/de-salarios-premium-a-faltar-700000-trabajadores-los-jovenes-huyen-de-la-construccion.html</a>&gt;.</li>
+          <li>A. Arellano, J. R. García, F. Lóres i D. C. Pérez Rojas, «<em>Spain: The labor market in the construction sector</em>», BBVA Research, 31 de gener de 2024, &lt;<a href="https://www.bbvaresearch.com/en/publicaciones/spain-the-labor-market-in-the-construction-sector/" rel="noopener">https://www.bbvaresearch.com/en/publicaciones/spain-the-labor-market-in-the-construction-sector/</a>&gt;.</li>
+          <li>«<em>Bajos niveles de educación y desigualdad educativa entre hombres y mujeres, conclusiones del Mapa educativo en construcción del Observatorio</em>», Fundación Laboral de la Construcción, 25 d'octubre de 2023, &lt;<a href="https://www.fundacionlaboral.org/actualidad/noticias/fundacion/bajos-niveles-de-educacion-y-desigualdad-educativa-entre-hombres-y-mujeresconclusiones-del-mapa-educativo-en-construccion-del-observatorio" rel="noopener">https://www.fundacionlaboral.org/actualidad/noticias/fundacion/bajos-niveles-de-educacion-y-desigualdad-educativa-entre-hombres-y-mujeresconclusiones-del-mapa-educativo-en-construccion-del-observatorio</a>&gt;.</li>
+          <li>M. Cardoso, «<em>Spain: Construction is facing a productivity problem</em>», BBVA Research, 29 de juliol de 2024, &lt;<a href="https://www.bbvaresearch.com/en/publicaciones/spain-construction-is-facing-a-productivity-problem/" rel="noopener">https://www.bbvaresearch.com/en/publicaciones/spain-construction-is-facing-a-productivity-problem/</a>&gt;.</li>
+          <li>I. de las Heras, «<em>La vuelta al mundo de las constructoras</em>», La Vanguardia, 26 de gener de 2025, &lt;<a href="https://www.lavanguardia.com/dinero/20250126/10318131/vuelta-mundo-constructoras.html" rel="noopener">https://www.lavanguardia.com/dinero/20250126/10318131/vuelta-mundo-constructoras.html</a>&gt;.</li>
+          <li>Institut Nacional d'Estadística, Índice de precios de materiales de construcción, s.d., &lt;<a href="https://ine.es/jaxiT3/Tabla.htm?t=8377" rel="noopener">https://ine.es/jaxiT3/Tabla.htm?t=8377</a>&gt;.</li>
+          <li>J. Alonso, «<em>Los vecinos del barrio Jesús se rebelan contra el uso de un solar de equipamiento para vivienda</em>», Heraldo, 16 de juny de 2024, &lt;<a href="https://www.heraldo.es/noticias/aragon/2024/06/10/los-vecinos-del-barrio-jesus-se-rebelan-contrael-uso-de-un-solar-de-equipamiento-para-vivienda-1740573.html" rel="noopener">https://www.heraldo.es/noticias/aragon/2024/06/10/los-vecinos-del-barrio-jesus-se-rebelan-contrael-uso-de-un-solar-de-equipamiento-para-vivienda-1740573.html</a>&gt;.</li>
+          <li>Verificat, «<em>Ningún documento apunta que los pisos que está construyendo el Ayuntamiento de Tiana sean para extranjeros</em>», 22 d'octubre de 2024, &lt;<a href="https://www.verificat.cat/es/ningun-documento-apunta-que-los-pisos-que-esta-construyendo-el-ayuntamiento-de-tiana-sean-para-extranjeros/" rel="noopener">https://www.verificat.cat/es/ningun-documento-apunta-que-los-pisos-que-esta-construyendo-el-ayuntamiento-de-tiana-sean-para-extranjeros/</a>&gt;.</li>
+          <li>F. Marí, «<em>Protesta en Cas Català: los vecinos emprenderán acciones contra la promoción de 60 pisos</em>», Última Hora, 15 de febrer de 2025, &lt;<a href="https://www.ultimahora.es/noticias/part-forana/2025/02/15/2326937/vivienda-vecinos-emprenderan-acciones-contra-promocion-pisos.html?utm_source=chatgpt.com" rel="noopener">https://www.ultimahora.es/noticias/part-forana/2025/02/15/2326937/vivienda-vecinos-emprenderan-acciones-contra-promocion-pisos.html?utm_source=chatgpt.com</a>&gt;.</li>
+          <li>S. Rojas, «<em>"Salvar el Cortijo de Cuarto": vecinos de Sevilla defienden un "pulmón verde" donde la Diputación planea construir vivienda pública</em>», elDiario.es, 14 de novembre de 2024, &lt;<a href="https://www.eldiario.es/sevilla/salvar-cortijo-cuartovecinos-sevilla-defienden-pulmon-verde-diputacion-planeaconstruir-5-500-casas111815107.html" rel="noopener">https://www.eldiario.es/sevilla/salvar-cortijo-cuartovecinos-sevilla-defienden-pulmon-verde-diputacion-planeaconstruir-5-500-casas111815107.html</a>&gt;.</li>
+          <li>A. Peña, «<em>El Ayuntamiento de A Coruña defiende las torres en O Castrillón como la mejor opción</em>», El Ideal Gallego, 12 d'agost de 2024, &lt;<a href="https://www.elidealgallego.com/articulo/a-coruna/ayuntamiento-coruna-defiende-torres-castrillon-como-mejor-opcion-4957914" rel="noopener">https://www.elidealgallego.com/articulo/a-coruna/ayuntamiento-coruna-defiende-torres-castrillon-como-mejor-opcion-4957914</a>&gt;.</li>
+          <li>R. D. Rodríguez, «<em>Os Castros y O Castrillón alegan contra las torres de 17 pisos en el Parque de Oza en A Coruña</em>», El Español, 13 de novembre de 2024, &lt;<a href="https://www.elespanol.com/quincemil/economia/inmobiliario/20241113/castros-castrillon-alegan-torres-pisos-parque-oza-coruna/900910042_0.html" rel="noopener">https://www.elespanol.com/quincemil/economia/inmobiliario/20241113/castros-castrillon-alegan-torres-pisos-parque-oza-coruna/900910042_0.html</a>&gt;.</li>
+          <li>A. G. Chouciño, «<em>Rechazo parcial de los vecinos de O Castrillón al proyecto de las torres de 17 pisos en el parque de Oza</em>», La Voz de Galicia, 9 d'octubre de 2024, &lt;<a href="https://www.lavozdegalicia.es/noticia/coruna/2024/10/08/rechazoparcial-vecinos-castrillon-proyecto-torres-17-pisos-parque-oza/00031728418593028210143.htm" rel="noopener">https://www.lavozdegalicia.es/noticia/coruna/2024/10/08/rechazoparcial-vecinos-castrillon-proyecto-torres-17-pisos-parque-oza/00031728418593028210143.htm</a>&gt;.</li>
+          <li>E. Silveira i D. García, «<em>Los edificios previstos en la zona de As Percebeiras en A Coruña reducen su altura y tendrán solo ocho plantas</em>», La Voz de Galicia, 25 de febrer de 2023, &lt;<a href="https://www.lavozdegalicia.es/noticia/coruna/coruna/2023/02/24/edificios-previstos-zona-percebeiras-tendran-ochoalturas/0003_202302H24C1991.htm" rel="noopener">https://www.lavozdegalicia.es/noticia/coruna/coruna/2023/02/24/edificios-previstos-zona-percebeiras-tendran-ochoalturas/0003_202302H24C1991.htm</a>&gt;.</li>
+          <li>«<em>El proyecto Labañou homogeneiza la altura de sus edificios tras dialogar con los vecinos</em>», El Ideal Gallego, 23 de febrer de 2023, &lt;<a href="https://www.elidealgallego.com/articulo/a-coruna/proyecto-labanou-homogeneiza-altura-edificiosdialogar-vecinos-4188099" rel="noopener">https://www.elidealgallego.com/articulo/a-coruna/proyecto-labanou-homogeneiza-altura-edificiosdialogar-vecinos-4188099</a>&gt;.</li>
+          <li>P. Moreno, «<em>El derribo de un cuartel de la calle San Vicente se inicia tras 16 años de negociaciones con el Gobierno</em>», Las Provincias, 10 d'octubre de 2019, &lt;<a href="https://www.lasprovincias.es/valencia-ciudad/arrancan-derribos-cuarteles-san-vicente-20191010135455-nt.html" rel="noopener">https://www.lasprovincias.es/valencia-ciudad/arrancan-derribos-cuarteles-san-vicente-20191010135455-nt.html</a>&gt;.</li>
+          <li>«<em>El pleno del Ayuntamiento de Madrid desbloquea la Operación Campamento</em>», op. cit.</li>
+          <li>Il·lustrant aquest canvi de preferències, Evan Mast mostra que, quan els legisladors són escollits a un nivell més petit, de districte submunicipal, l'oferta d'habitatge hi disminuïa. Vegeu E. Mast, «<em>Warding off development: Local control, housing supply, and NIMBYs</em>», The Review of Economics and Statistics, vol. 106, n. 3 (2024), pp. 671-680, &lt;<a href="https://doi.org/10.1162/rest_a_01192" rel="noopener">https://doi.org/10.1162/rest_a_01192</a>&gt;.</li>
+          <li>«<em>Pamplona pone en marcha un Plan de Eficiencia Administrativa para reducir los tiempos de tramitación de licencias urbanísticas</em>», Ajuntament de Pamplona, 30 de setembre de 2024.</li>
+          <li>«<em>El Govern agilita la construcció d'habitatge protegit i simplifica els tràmits administratius</em>», 25 de febrer de 2025, &lt;<a href="https://govern.cat/gov/acords-govern/14661/govern-agilitaconstruccio-habitatge-protegit-simplifica-tramits-administratius" rel="noopener">https://govern.cat/gov/acords-govern/14661/govern-agilitaconstruccio-habitatge-protegit-simplifica-tramits-administratius</a>&gt;.</li>
+          <li>Massachusetts Government, Chapter 40B: Planning and Information, 2025, &lt;<a href="https://www.mass.gov/chapter-40b-planning-and-information" rel="noopener">https://www.mass.gov/chapter-40b-planning-and-information</a>&gt;.</li>
+          <li>J. Viguer Pont, «<em>Las áreas residenciales estratégicas en Cataluña</em>», Uría Menéndez, 6 de maig de 2009, &lt;<a href="https://www.uria.com/es/publicaciones/2212-las-areas-residenciales-estrategicas-en-cataluna" rel="noopener">https://www.uria.com/es/publicaciones/2212-las-areas-residenciales-estrategicas-en-cataluna</a>&gt;.</li>
+          <li>C. Blanchar, «<em>Salvador Illa rescata las áreas residenciales estratégicas del 'Govern tripartit' para su plan de 50.000 pisos</em>», El País, 30 de novembre de 2024, &lt;<a href="https://elpais.com/espana/catalunya/2024-11-30/salvador-illa-rescata-las-areasresidenciales-estrategicas-del-govern-tripartit-para-su-plande-50000-pisos.html" rel="noopener">https://elpais.com/espana/catalunya/2024-11-30/salvador-illa-rescata-las-areasresidenciales-estrategicas-del-govern-tripartit-para-su-plande-50000-pisos.html</a>&gt;.</li>
+          <li>S. Büchler i E. Lutz, Making housing affordable? The local effects of relaxing land-use regulation. Journal of Urban Economics, vol. 143 (2024), &lt;<a href="https://doi.org/10.1016/j.jue.2024.103689" rel="noopener">https://doi.org/10.1016/j.jue.2024.103689</a>&gt;.</li>
+          <li>S. Bentolila, A. Cabrales i M. Jansen, The Impact of Dual Vocational Education on the Labor Market Insertion of Youth: Evidence from Madrid. New Skills at Work, Fedea, s.d., &lt;<a href="https://www.fedea.net/nsaw/descargas/NSAW05en_dual_vocational_madrid.pdf" rel="noopener">https://www.fedea.net/nsaw/descargas/NSAW05en_dual_vocational_madrid.pdf</a>&gt;.</li>
+          <li>«<em>Scandinavia Prefabricated Housing Market Size &amp; Share Analysis-Growth Trends &amp; Forecasts (2025-2030)</em>», Mordor Intelligence, 2025, &lt;<a href="https://www.mordorintelligence.com/industry-reports/scandinavia-prefabricated-housing-market" rel="noopener">https://www.mordorintelligence.com/industry-reports/scandinavia-prefabricated-housing-market</a>&gt;.</li>
+          <li>Un exemple és Sekisui House. Vegeu «<em>Japan's Sekisui House to Build Modular Homes in England</em>», Modular Home Coach, 17 de febrer de 2020, &lt;<a href="https://modularhomesource.com/japans-sekisui-house-to-build-modular/" rel="noopener">https://modularhomesource.com/japans-sekisui-house-to-build-modular/</a>&gt;.</li>
+          <li>T. Sinai i J. Waldfogel, «<em>Do low-income housing subsidies increase the occupied housing stock?</em>», Journal of Public Economics, vol. 89, n. 11 (2005), pp. 2137-2164, &lt;<a href="https://doi.org/10.1016/j.jpubeco.2004.06.015" rel="noopener">https://doi.org/10.1016/j.jpubeco.2004.06.015</a>&gt;.</li>
+          <li>VV. AA., Acceso a vivienda en España, Culmia, 2023, &lt;<a href="https://www.culmia.com/press/202310%20Culmia_Informe%20Acceso%20a%20vivienda%20en%20Espa%C3%B1a.pdf" rel="noopener">https://www.culmia.com/press/202310%20Culmia_Informe%20Acceso%20a%20vivienda%20en%20Espa%C3%B1a.pdf</a>&gt;.</li>
+          <li>Val la pena seguir de prop el PERTE d'Industrialització de l'Habitatge, un projecte estratègic del Govern d'Espanya per transformar el sector de la construcció, amb 1.300 milions de dotació inicial quan es va anunciar el 2025.</li>
+          <li>J. Burón, El problema de la vivienda, Barcelona, Arpa, 2025, pp. 174-175.</li>
+          <li>J. García Montalvo, «<em>Aflorar viviendas en alquiler</em>», La Vanguardia, 29 de desembre de 2024, &lt;<a href="https://www.lavanguardia.com/dinero/20241229/10242157/aflorar-viviendas-alquiler.html" rel="noopener">https://www.lavanguardia.com/dinero/20241229/10242157/aflorar-viviendas-alquiler.html</a>&gt;.</li>
+          <li>C. Lospitao, «<em>El modelo irlandés para alquilar viviendas con descuento al Gobierno</em>», Idealista News, 11 de juliol de 2022, &lt;<a href="https://www.idealista.com/news/inmobiliario/vivienda/2022/07/11/797833-como-funciona-el-modelo-irlandespara-alquilar-30-000-pisos-con-descuento-al" rel="noopener">https://www.idealista.com/news/inmobiliario/vivienda/2022/07/11/797833-como-funciona-el-modelo-irlandespara-alquilar-30-000-pisos-con-descuento-al</a>&gt;.</li>
+          <li>Policy Brief, «<em>Bolsas de Vivienda de Alquiler Asequible: una vía para la renovación y el acceso a la vivienda</em>», Provivienda, 2025.</li>
+          <li>K. A. Kholodilin, «<em>Rent control effects through the lens of empirical research: An almost complete review of the literature</em>», Journal of Housing Economics, vol. 63 (2024), &lt;<a href="https://doi.org/10.1016/j.jhe.2024.101983" rel="noopener">https://doi.org/10.1016/j.jhe.2024.101983</a>&gt;.</li>
+          <li>J. Monràs i J. García Montalvo, «<em>The Effect of Second Generation Rent Controls: New Evidence from Catalonia</em>», BSE Working Paper, n. 1345, 2022, &lt;<a href="https://bse.eu/research/working-papers/effect-second-generation-rent-controlsnew-evidence-catalonia" rel="noopener">https://bse.eu/research/working-papers/effect-second-generation-rent-controlsnew-evidence-catalonia</a>&gt;.</li>
+          <li>J. Jofre-Monseny, R. Martínez-Mazza i M. Segú, «<em>Effectiveness and Supply Effects of High-Coverage Rent Control Policies</em>», IEB Working Paper, 2022, &lt;<a href="https://ieb.ub.edu/publication/2022-02-effectiveness-and-supply-effects-ofhigh-coverage-rent-control-policies/" rel="noopener">https://ieb.ub.edu/publication/2022-02-effectiveness-and-supply-effects-ofhigh-coverage-rent-control-policies/</a>&gt;.</li>
+          <li>M. À. García-López, J. Jofre-Monseny, R. Martínez-Mazza i M. Segú, «<em>Do short-term rental platforms affect housing markets? Evidence from Airbnb in Barcelona</em>», Journal of Urban Economics, vol. 119 (2020), 103278, &lt;<a href="https://doi.org/10.1016/j.jue.2020.103278" rel="noopener">https://doi.org/10.1016/j.jue.2020.103278</a>&gt;.</li>
+          <li>K. Barron, E. Kung i D. Proserpio, «<em>The Sharing Economy and Housing Affordability: Evidence from Airbnb</em>», Journal of Economics &amp; Management Strategy, vol. 26, n. 1 (2017), pp. 1-21.</li>
+          <li>A. Hidalgo, M. Riccaboni i F. J. Velázquez, «<em>The effect of short-term rentals on local consumption amenities: Evidence from Madrid</em>», Journal of Regional Science, vol. 64, n. 3 (2024), pp. 621-648, &lt;<a href="https://doi.org/10.1111/jors.12685" rel="noopener">https://doi.org/10.1111/jors.12685</a>&gt;.</li>
+          <li>T. Duso, C. Michelsen, M. Schäfer i K. D. Tran, «<em>Airbnb and Rents: Evidence from Berlin</em>», Discussion Paper n. 1890, Deutsches Institut für Wirtschaftsforschung, 2020, &lt;<a href="https://www.diw.de/documents/publikationen/73/diw_01.c.796620.de/dp1890.pdf" rel="noopener">https://www.diw.de/documents/publikationen/73/diw_01.c.796620.de/dp1890.pdf</a>&gt;.</li>
+          <li>A. P. Alarcos, «<em>El plazo para echar a un okupa bate récord: ya roza los dos años en los tribunales</em>», Idealista, 20 de juny de 2024, &lt;<a href="https://www.idealista.com/news/inmobiliario/vivienda/2024/06/20/817900-el-plazo-para-echar-a-unokupa-bate-record-ya-roza-los-dos-anos-en-los-tribunales" rel="noopener">https://www.idealista.com/news/inmobiliario/vivienda/2024/06/20/817900-el-plazo-para-echar-a-unokupa-bate-record-ya-roza-los-dos-anos-en-los-tribunales</a>&gt;.</li>
+          <li>B. Abramson i S. van Nieuwerburgh, Rent Guarantee Insurance, National Bureau of Economic Research, Working Paper 32582, 2024, &lt;<a href="https://www.nber.org/papers/w32582" rel="noopener">https://www.nber.org/papers/w32582</a>&gt;.</li>
+          <li>T. Bézi, A. Levy i T. McQuade, «<em>Insuring Landlords</em>», Working Paper, «<em>https://thomas-bezy.com/files/Insuring_landlords_BLM.pdf</em>».</li>
+          <li>J. Galindo i J. M. Raya, <em>Por qué no construimos. Un diagnóstico del cuello de botella de la vivienda en España</em>, Policy Insight, EsadeEcPol, abril de 2026 (dèficit acumulat bàsic de 739.000 habitatges a finals de 2025; 1,2 milions de noves llars davant de 465.000 habitatges en cinc anys).</li>
+          <li>Tribunal Suprem, sentència d'11 de febrer de 2026, sobre les Cocheras de Cuatro Caminos (Madrid Metro), confirmant l'anul·lació del pla urbanístic.</li>
+          <li>Tribunal Superior de Justícia de Madrid, sentència de 9 de maig de 2025, anul·lant el pla urbanístic de les Cocheras de Cuatro Caminos.</li>
+          <li>SEPES – Entidad Estatal de Suelo, compravenda formal del sòl d'Operació Campament, octubre de 2023; aprovació inicial del projecte d'urbanització, 27 de febrer de 2025.</li>
+          <li>Comunitat de Madrid, <em>Plan de Choque de Vivienda 2026-2027</em>, presentat el setembre de 2025; Ley de Medidas Urgentes para la Vivienda, 22 d'abril de 2026.</li>
+          <li>Ajuntament de Rivas-Vaciamadrid, avenç del nou Pla General presentat el 5 de juny de 2025 (−46 % d'edificabilitat a Cristo de Rivas; eliminació d'uns 3.000 habitatges a Mirador Sur).</li>
+          <li>Ajuntament de Majadahonda, aprovació inicial del sector Arroyo del Arcipreste, 29 de maig de 2025 (363.000 m², 620 habitatges previstos, 286 protegits; després de 20 anys parat).</li>
+          <li>EY i ASPRIMA, <em>Estudio sobre los plazos administrativos en la vivienda</em>, maig de 2020 (retard mitjà de 12 mesos; sobrecost per al comprador de ~13.000 € per habitatge).</li>
+          <li>Idealista, diverses anàlisis sobre les llicències urbanístiques a Madrid (rang 6 mesos → 24 mesos segons districte) i sobre el cas Madrid Nuevo Norte, maig de 2025.</li>
+          <li>Observatorio Inmobiliario, dades sobre terminis de construcció de la promoció de Neinor a Esplugues (29 mesos, lliurament previst l'abril de 2028), 2025.</li>
+          <li>C. Barceló i P. Crespo, <em>La tenencia de vivienda y deuda hipotecaria de las familias españolas en los últimos veinte años</em>, EsadeEcPol, 2025, a partir de l'Enquesta Financera de les Famílies (EFF) del Banc d'Espanya.</li>
+          <li>Alokabide / Govern Basc, programa <strong>Bizigune</strong>: aglutina habitatges de propietaris privats mitjançant contractes d'usdefruit i els sotsarrenda a preus assequibles (~7.300 habitatges mobilitzats el 2023; ~1 de cada 130 llars basques).</li>
+          <li>Reformes autonòmiques posteriors al llibre sobre sòl, urbanisme i avaluació ambiental, 2020-2024: Andalusia, Llei 7/2021 i Decret 550/2022 (LISTA); Comunitat de Madrid, Llei 1/2020 i reformes posteriors; Comunitat Valenciana, Decret Legislatiu 1/2021 (TRLOTUP); Balears, Llei 7/2024; Canàries, Decret-llei 1/2024; Catalunya, Decret-llei 6/2024.</li>
+          <li>J. Monràs i J. García Montalvo, <em>Los efectos de la limitación de precios de los alquileres en Cataluña</em>, Policy Insight EsadeEcPol, 2022, <a href="https://www.esade.edu/ecpol/wp-content/uploads/2023/02/Esade_ControlAlq.pdf" rel="noopener">PDF</a> (versió divulgativa del Working Paper BSE 1345 amb les microdades completes de l'INCASOL durant la vigència de la Llei 11/2020).</li>
+          <li>Reial Decret 732/2019, de 20 de desembre, pel qual es modifica el Codi Tècnic de l'Edificació, en vigor des de setembre de 2020 (envolupants, aerotèrmia, fotovoltaica obligatòria, preinstal·lació de càrrega de vehicles elèctrics).</li>
+          <li>AESA – Agència Estatal de Seguretat Aèria, Resolució sobre servituds aeronàutiques de l'aeroport de Madrid-Barajas (límit de 45 m a les zones rellevants de l'est i oest de l'aeroport).</li>
+          <li>Col·legi Oficial d'Aparelladors, Arquitectes Tècnics i Enginyers d'Edificació de Madrid, estimació del sobrecost per la futura revisió del CTE en transposició de la Directiva (UE) 2024/1275 (~18.000 € addicionals per habitatge), 2024-2026; xifra contestada pel Ministeri d'Habitatge.</li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container container--wide footer__inner">
+      <div class="footer__write">
+        <p class="footer__label">// l'autor</p>
+        <a class="footer__author" href="https://jorgegalindo.eu" rel="noopener">jorge galindo</a>
+      </div>
+      <ul class="footer__links">
+        <li><a href="https://jorgegalindo.eu" rel="noopener">jorgegalindo.eu</a></li>
+        <li><a href="https://www.esade.edu/ecpol" rel="noopener">esadeecpol</a></li>
+        <li><a href="https://jorgegalindo.substack.com" rel="noopener">substack</a></li>
+        <li><a href="https://x.com/jorgegalindo" rel="noopener">x</a></li>
+      </ul>
+    </div>
+    <div class="container container--wide footer__bottom">
+      <p>// <span data-year></span> &nbsp; tres milions d'habitatges &nbsp; · &nbsp; debate &nbsp; · &nbsp; EOF</p>
+      <p class="footer__attrib">tessel·les del mapa · <a href="https://openfreemap.org" rel="noopener">OpenFreeMap</a> · <a href="https://openmaptiles.org" rel="noopener">OpenMapTiles</a> · © col·laboradors d'<a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="../app.js?v=20260519C"></script>
+  <script type="module" src="cap01-mapa.js?v=20260519C"></script>
+  <script type="module" src="../cap01-edificio.js?v=20260519C"></script>
+  <script type="module" src="../cap01-tiempo.js?v=20260519C"></script>
+  <script type="module" src="../cap01-coste.js?v=20260519C"></script>
+  <script type="module" src="../cap03-tabs.js?v=20260519C"></script>
+  <script type="module" src="cap03-sim.js?v=20260519C"></script>
+</body>
+</html>
