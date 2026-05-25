@@ -57,7 +57,7 @@
 /* ─────────────────────────  reset / base  ───────────────────────── */
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   margin: 0;
@@ -262,13 +262,17 @@ strong { font-weight: 600; }
   .nav__num  { display: none; }
 }
 @media (max-width: 720px) {
-  .nav__inner { gap: .5rem; }
+  .nav__inner { gap: .4rem; flex-wrap: nowrap; }
   .nav__list { gap: .55rem; flex-wrap: nowrap; font-size: .72rem; }
   .nav__list a { padding: .15rem .35rem; }
   .nav__num    { display: inline-block; margin-right: 0; opacity: .9; font-size: .72rem; }
   .nav__label  { display: none; }
-  .nav__lang   { margin-left: .25rem; font-size: .7rem; }
-  .nav__brand  { font-size: .76rem; }
+  .nav__lang   { margin-left: .25rem; gap: .25rem; font-size: .7rem; flex-shrink: 0; }
+  .nav__brand  { font-size: .76rem; flex-shrink: 0; }
+}
+@media (max-width: 420px) {
+  .nav__lang { font-size: .64rem; gap: .2rem; margin-left: .2rem; letter-spacing: 0.02em; }
+  .nav__lang-sep { opacity: .5; }
 }
 
 /* ─────────────────────────  hero (oscuro)  ───────────────────────── */
@@ -1081,6 +1085,8 @@ strong { font-weight: 600; }
 .biblio__list li {
   margin-bottom: .45rem;
   padding-left: .1rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .biblio__list li::marker {
   color: var(--ink-mute);
